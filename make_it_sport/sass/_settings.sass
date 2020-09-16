@@ -1,0 +1,86 @@
+html, body
+  box-sizing: border-box
+  -webkit-box-sizing:border-box
+  overflow: hidden
+  display: flex
+  flex-direction: column
+  font-family: 'Montserrat', sans-serif
+button
+  cursor: pointer 
+img
+  height: 100%   
+.section
+  min-height: 100vh
+  position: relative
+  display: flex
+  justify-content: center
+  overflow: hidden
+.container
+  display: flex
+  position: relative
+  width: 1170px
+.block-curs
+  margin-top: 1.6vh
+  margin-left: 68px
+  display: flex
+  flex-direction: column
+  justify-content: center
+  color: #ffffff 
+  z-index: 9
+.suptitle
+  font-size: 3vh  
+  font-weight: 300
+  letter-spacing: 0.1vh
+  opacity: 0.3
+.title
+  font-size: 7.83vh  
+  display: flex
+  flex-direction: column
+  font-weight: 800
+  margin-top: 0.6vh
+  text-shadow: 0 0 38px rgba(81, 81, 81, 0.21)
+  letter-spacing: 0.2vh
+.subtitle
+  font-weight: 300 
+.button
+  margin-top: 4.8vh  
+  &:active, button:focus 
+    outline: none
+.btn
+  font-size: 1.68vh
+  border: 1px solid #ffffff
+  background-color: transparent
+  color: #ffffff
+  font-weight: 400
+  border-radius: 24px
+  padding: 1.38vh 6vh
+  transition: 0.5s
+  &:last-child
+    margin-left: 4vh
+a
+  text-decoration: none   
+li
+  list-style: none   
+.description
+  position: absolute  
+  color: #ffffff
+  font-size: 1.88vh
+  line-height: 2.4vh
+  font-weight: 300
+  z-index: 99
+.arrow-down  
+  position: fixed
+  bottom: 0
+  margin: auto
+  display: flex
+  flex-direction: column
+  z-index: 999
+  &__img
+    margin: auto
+  &__description
+    font-weight: 400
+    font-size: 10px
+    text-transform: uppercase
+    letter-spacing: 0.5px
+    color: #ffffff
+    opacity: 0.45
