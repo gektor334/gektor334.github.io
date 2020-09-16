@@ -1,0 +1,41 @@
+.header
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  z-index: 999999
+  background-color: $dark
+  padding: 24px 0
+.menu
+  display: flex
+  justify-content: space-between
+  align-items: center
+.logo  
+  text-transform: uppercase 
+  font-size: 0.88rem
+  font-family: 'Futura Demi', sans-serif
+  &--active
+    text-decoration: none
+    color: $primary
+    &:hover
+      color: darken($primary, 10%)
+.nav
+  &__item
+    text-decoration: none
+    color: $light
+    text-transform: uppercase
+    margin-right: 2.63rem
+    transition: color 0.2s
+    &:hover
+      color: $primary
+.phone
+  color: $primary
+  font-family: 'Futura Demi', sans-serif
+  &--active
+    transition: 0.8s
+    &:hover
+      opacity: 0.5
+.contacts
+  &__phone
+    margin-right: 45px
+       
