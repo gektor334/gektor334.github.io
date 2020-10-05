@@ -456,7 +456,7 @@ header {
 .header-nav__portfolio::before {
   content: '';
   position: absolute;
-  background: url("/img/icon-portfolio.svg") no-repeat;
+  background: url("../img/icon-portfolio.svg") no-repeat;
   width: 16px;
   height: 16px;
   left: 0;
@@ -477,7 +477,7 @@ header {
 .header-nav__menu::before {
   content: '';
   position: absolute;
-  background: url("/img/burger.svg") no-repeat;
+  background: url("../img/burger.svg") no-repeat;
   width: 16px;
   height: 13px;
   left: 0;
