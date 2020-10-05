@@ -1,0 +1,62 @@
+header
+  position: fixed
+  z-index: 999
+.header
+  display: flex
+  height: 78px
+  width: 100vw
+  background: url('../img/background.jpg')
+  &-content
+    display: flex
+    width: 100%
+    padding: 0 7vw 0 3vw
+    align-items: center
+    justify-content: space-between
+  &-contact
+    display: flex
+    letter-spacing: 0.04em
+    &__social
+      display: flex
+      align-items: flex-end
+      padding-left: 3vw
+      &--img
+        margin-right: 2vw
+    &__phone
+      padding: 2px 3vw 2px 0
+      border-right: 2px solid rgba(255, 255, 255, 0.5)
+    &__mail
+      padding: 2px 3vw 2px 3vw
+      border-right: 2px solid rgba(255, 255, 255, 0.5)
+  &-nav
+    display: flex
+    letter-spacing: 0.04em
+    &__portfolio
+      padding-left: 2vw
+      position: relative
+      &::before
+        content: ''
+        position: absolute
+        background: url("/img/icon-portfolio.svg") no-repeat
+        width: 16px
+        height: 16px
+        left: 0
+    &__menu
+      position: relative
+      padding-left: 2vw
+      margin-left: 5vw
+      display: flex
+      align-items: flex-end
+      &::before
+        content: ''
+        position: absolute
+        background: url("/img/burger.svg") no-repeat
+        width: 16px
+        height: 13px
+        left: 0
+.logo
+  display: flex
+  align-items: center
+  height: 78px
+  padding: 0 10vw 0 135px
+  background: #F10826
+  clip-path: polygon( 0% 0%, 0% 0%, 100% 0%, 0% 280%)
