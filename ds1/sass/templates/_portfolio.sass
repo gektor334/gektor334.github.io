@@ -1,0 +1,72 @@
+.portfolio
+  display: flex
+  justify-content: center
+  padding: 126px 0 155px 0
+  text-align: center
+  &__title
+    color: #232323
+  &__button
+    margin-top: 55px
+    margin-bottom: 10px
+    text-align: left
+  &__btn
+    text-transform: lowercase
+    border: 1px solid #E40000
+    color: #e40000
+    background: transparent
+    line-height: 158.4%
+    border-radius: 14px
+    padding: 5px 14px
+    margin-right: 16px
+    cursor: pointer
+    transition: background 0.5s
+    transition: color 0.6s
+    &--active
+      background: #e40000
+      color: #ffffff
+    &:hover
+      background: #e40000
+      color: #ffffff
+.project
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  &__card
+    flex-basis: 49.45%
+    margin-bottom: 10px
+    &:nth-child(5n+3), &:nth-child(5n+4), &:nth-child(5n)
+      flex-basis: 32.65%
+      height: 50%
+.category
+  &-service
+    border: 2px dashed #232323
+    padding: 15px 14px 18px 12px
+    border-radius: 14px
+    display: none
+    flex-wrap: wrap
+    justify-content: space-between
+    margin-bottom: 10px
+  &-grade
+    border: 2px dashed #232323
+    padding: 15px 14px 18px 12px
+    border-radius: 14px
+    display: none
+    flex-wrap: wrap
+    justify-content: space-between
+    margin-bottom: 10px
+  &-active
+    display: flex
+  &__description
+    text-transform: lowercase
+    color: #232323
+    text-align: left
+    &:nth-child(5n+1)
+      flex-basis: 222px
+    &:nth-child(5n+2)
+      flex-basis: 292px
+    &:nth-child(5n+3)
+      flex-basis: 288px
+    &:nth-child(5n+4)
+      flex-basis: 211px
+    &:nth-child(-n+5)
+      margin-bottom: 15px
