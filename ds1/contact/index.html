@@ -43,36 +43,53 @@
       </div>
     </div>
   </header>
+  <!-- контакты -->
+  <section class="contacts">
+    <h2 class="title contacts__title">КОНТАКТЫ</h2>
+    <div class="contacts__card">
+      <div class="maps contacts__card--block">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1999.2396555742155!2d30.310385716384822!3d59.92816538187252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46963102577fe953%3A0x896bffbfacdacaa5!2z0JHQtdGA0YLQs9C-0LvRjNC0INGG0LXQvdGC0YA!5e0!3m2!1sru!2sru!4v1602056005199!5m2!1sru!2sru"
+          width="800" height="509" frameborder="0" style="border:0;" allowfullscreen="true" aria-hidden="false"
+          tabindex="0"></iframe>
+      </div>
+      <div class="contacts__card--block information">
+        <a class="information__desc information__address">Санкт-Петербург, Гражданская ул., 13-15, Бертгольд центр.</a>
+        <a class="information__desc information__phone" href="tel:+78123132492">Телефон: +7 (812) 313-24-92</a>
+        <a class="information__desc information__mail" href="mailto:sg@dsone.ru">E-mail: sg@dsone.ru</a>
+      </div>
+    </div>
+  </section>
 
-  <!-- Секция с информацией о компании -->
-  <h2 class="title company-title">о компании</h2>
-  <section class="brand brand--company">
-    <div class="container container-flex">
-      <div class="brand__logo">
-        <img src="../img/logo-brand.svg" alt="DS1 Брендинговое агенство">
+  <!-- обратная связь -->
+  <section class="feedback">
+    <div class="container">
+      <h2 class="title feedback__title">ОБРАТНАЯ СВЯЗЬ</h2>
+      <div class="feedback__card">
+
+        <div class="director">
+          <div class="director__img">
+            <img src="../img/director.jpg" alt="">
+          </div>
+          <div class="director__name"><b>Светлана Клупинска</b> генеральный директор</div>
+        </div>
+
+        <form action="" class="form">
+          <div class="form-block">
+            <label class="form-label" for="">Ваше имя: </label>
+            <input class="form-input" type="text">
+          </div>
+          <div class="form-block">
+            <label class="form-label" for="">Ваш e-mail: </label>
+            <input class="form-input" type="text">
+          </div>
+          <div class="form-block">
+            <label class="form-label" for="">Сообщение:</label>
+            <input class="form-input" type="text">
+          </div>
+        </form>
       </div>
-      <div class="brand__text">
-        <h2 class="brand__title">В сегменте FMCG скорость изменений особенно ощутима.</h2>
-        <p class="brand__description">
-          В ритме нового времени бренды как гоночные болиды движутся
-          на&nbsp;немыслимой скорости по непредсказуемой трассе
-          и&nbsp;только&nbsp;слаженная работа клиента и агентства в плотной связке
-          может привести к победе: точным, понятным и последовательным
-          коммуникациям.
-        </p>
-        <p class="brand__description">
-          Можно просто построить раллийный болид, но без постоянной работы
-          целой команды, точного маневрирования, выверенной стратегии
-          прохождения маршрута и механиков, которые ремонтируют
-          и&nbsp;совершенствуют его - это будет просто машина.
-        </p>
-      </div>
-      <div class="road road-left road-left__company">
-        <img src="../img/road-left.svg" alt="">
-      </div>
-      <div class="road road-right">
-        <img src="../img/road-right.svg" alt="">
-      </div>
+      <button class="form-button">отправить</button>
     </div>
   </section>
 
