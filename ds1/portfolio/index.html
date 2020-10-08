@@ -147,6 +147,21 @@
   <script src="../js/swiper-bundle.min.js"></script>
   <script src="../js/slick.min.js"></script>
   <script src="../js/main.js"></script>
+  <script>
+    const portfoliobtn = document.querySelector('.portfolio__button');
+    portfoliobtn.onclick = function (e) {
+      if (e.target.classList.contains('portfolio__btn')) {
+        for (let i = 0; i < portfoliobtn.children.length; i++) {
+          portfoliobtn.children[i].classList.remove('portfolio__btn--active');
+        }
+        e.target.classList.add('portfolio__btn--active');
+      }
+    }
+
+    document.querySelector('#portfolio1').onclick = categoryNoActive;
+    document.querySelector('#portfolio2').onclick = categoryActive1;
+    document.querySelector('#portfolio3').onclick = categoryActive2;
+  </script>
 </body>
 
 </html>

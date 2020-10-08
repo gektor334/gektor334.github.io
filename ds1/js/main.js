@@ -47,16 +47,6 @@ $(document).ready(function () {
   });
 });
 
-const portfoliobtn = document.querySelector('.portfolio__button');
-portfoliobtn.onclick = function (e) {
-  if (e.target.classList.contains('portfolio__btn')) {
-    for (let i = 0; i < portfoliobtn.children.length; i++) {
-      portfoliobtn.children[i].classList.remove('portfolio__btn--active');
-    }
-    e.target.classList.add('portfolio__btn--active');
-  }
-}
-
 let category1 = document.querySelector('.category-service');
 let category2 = document.querySelector('.category-grade');
 
@@ -73,6 +63,15 @@ function categoryActive2() {
   category2.classList.add('category-active');
 }
 
-document.querySelector('#portfolio1').onclick = categoryNoActive;
-document.querySelector('#portfolio2').onclick = categoryActive1;
-document.querySelector('#portfolio3').onclick = categoryActive2;
+
+
+const serviceBtn = document.querySelectorAll('.service__button');
+const serviceToggle = document.querySelectorAll('.service__toggle');
+
+
+document.querySelectorAll('.service__button').forEach(btn => {
+  btn.addEventListener('click', function (e) {
+    this.classList.toggle('service__button--active');
+    this.nextElementSibling.classList.toggle('service__toggle--active');
+  });
+});
