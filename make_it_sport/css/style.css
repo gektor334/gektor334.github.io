@@ -347,9 +347,8 @@ template {
 }
 
 html, body {
+  box-sizing: border-box;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -361,6 +360,10 @@ html, body {
 }
 
 button {
+  cursor: pointer;
+}
+
+a {
   cursor: pointer;
 }
 
@@ -377,6 +380,8 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin: 0;
+  padding: 0;
   overflow: hidden;
 }
 
@@ -499,12 +504,22 @@ li {
   opacity: 0.45;
 }
 
+.h1-title {
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+}
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   z-index: 9999;
   position: fixed;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
   top: 28px;
 }
 
@@ -1347,6 +1362,12 @@ li {
 }
 
 @media screen and (orientation: portrait) and (max-height: 932px) {
+  .section {
+    min-height: -webkit-fill-available;
+  }
+  .effective__img {
+    bottom: 0;
+  }
   .description {
     font-size: 17px;
   }
@@ -1400,7 +1421,7 @@ li {
 @media screen and (orientation: portrait) and (max-width: 510px) {
   .block-curs {
     position: absolute;
-    top: 29vh;
+    top: 24vh;
   }
   .title {
     font-size: 35px;
@@ -1429,15 +1450,16 @@ li {
   }
   .effective__img {
     left: 0;
-    height: 110vh;
-    bottom: 2px;
+    height: 80vh;
+    bottom: -2px;
   }
   .effective__description {
     left: 20vw;
-    bottom: 27vh;
+    bottom: 20vh;
   }
   .lower-back__img {
     left: 0;
+    height: 80vh;
   }
   .lower-back__description {
     margin-left: 0;
@@ -1446,6 +1468,7 @@ li {
   }
   .big-muscles__img {
     left: -50%;
+    height: 80vh;
   }
   .big-muscles__description {
     right: 5vh;
@@ -1454,6 +1477,7 @@ li {
   .mum__img {
     left: -10%;
     bottom: 0;
+    height: 80vh;
   }
   .mum__description {
     left: 0;
@@ -1462,7 +1486,7 @@ li {
   }
   .buttocks__img {
     left: -43%;
-    height: 87vh;
+    height: 75vh;
   }
   .buttocks__description {
     left: 70px;
@@ -1472,7 +1496,7 @@ li {
   .hard-month__img {
     left: -20%;
     bottom: 0;
-    height: 65vh;
+    height: 45vh;
   }
   .hard-month__title {
     margin-bottom: 40px;
@@ -1483,7 +1507,7 @@ li {
     left: 0;
   }
   .only-for-you__img {
-    height: 101vh;
+    height: 70vh;
     left: -80%;
     bottom: 0;
   }
@@ -1501,34 +1525,81 @@ li {
   }
 }
 
+@media screen and (orientation: portrait) and (max-width: 395px) {
+  .big-muscles br {
+    display: none;
+  }
+  .big-muscles br:last-child {
+    display: block;
+  }
+  .hard-month br {
+    display: none;
+  }
+  .big-muscles__description {
+    max-width: 250px;
+    left: 0;
+  }
+}
+
 @media screen and (orientation: portrait) and (max-height: 760px) {
   .lower-back__description {
-    bottom: 15vh;
+    top: 50vh;
   }
   .mum__description {
-    bottom: 15vh;
+    top: 60vh;
   }
   .only-for-you__description {
-    bottom: 125px;
-    font-size: 17px;
+    top: 50vh;
+    font-size: 13px;
   }
   .only-for-you__description--subdescription {
-    font-size: 17px;
-    bottom: 25px;
+    font-size: 13px;
+    top: 65vh;
   }
 }
 
 @media screen and (orientation: portrait) and (max-height: 640px) {
   .description {
-    font-size: 14px;
+    font-size: 12px;
+    max-width: 300px;
   }
   .only-for-you__description {
-    bottom: 125px;
-    font-size: 14px;
+    top: 335px;
+    font-size: 12px;
   }
   .only-for-you__description--subdescription {
-    font-size: 14px;
-    bottom: 45px s;
+    font-size: 12px;
+    top: 415px;
+  }
+  .only-for-you br {
+    display: none;
+  }
+  .lower-back__description {
+    top: 55vh;
+  }
+}
+
+@media screen and (orientation: portrait) and (max-height: 601px) {
+  .only-for-you__description {
+    top: 300px;
+  }
+  .only-for-you__description--subdescription {
+    top: 380px;
+    text-align: left;
+  }
+  .big-muscles__description {
+    top: 55vh;
+  }
+}
+
+@media screen and (orientation: portrait) and (max-width: 319px) {
+  .only-for-you__description {
+    top: 360px;
+    font-size: 12px;
+  }
+  .only-for-you__description--subdescription {
+    font-size: 12px;
+    top: 480px;
   }
 }
 /*# sourceMappingURL=style.css.map */
