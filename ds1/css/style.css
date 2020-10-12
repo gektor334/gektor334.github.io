@@ -348,6 +348,7 @@ body {
           box-sizing: content-box;
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
+  overflow-x: hidden;
 }
 
 .container {
