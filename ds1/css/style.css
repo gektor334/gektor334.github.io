@@ -534,15 +534,11 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 78px;
+  min-width: 95px;
   padding: 0 10vw 0 135px;
   background: #F10826;
   -webkit-clip-path: polygon(0% 0%, 0% 0%, 100% 0%, 0% 300%);
           clip-path: polygon(0% 0%, 0% 0%, 100% 0%, 0% 300%);
-}
-
-.logo img {
-  height: 95px;
 }
 
 .nav {
@@ -561,6 +557,7 @@ header {
           flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  z-index: 999999;
 }
 
 .nav-active {

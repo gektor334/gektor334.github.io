@@ -57,12 +57,11 @@ header
 .logo
   display: flex
   align-items: center
-  height: 78px
+  min-width: 95px
   padding: 0 10vw 0 135px
   background: #F10826
   clip-path: polygon( 0% 0%, 0% 0%, 100% 0%, 0% 300%)
   img
-    height: 95px
 .nav
   position: fixed
   right: 0
@@ -75,6 +74,7 @@ header
   display: none
   flex-direction: column
   justify-content: space-around
+  z-index: 999999
   &-active
     display: flex
   &-description
