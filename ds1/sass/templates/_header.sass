@@ -46,6 +46,7 @@ header
       margin-left: 5vw
       display: flex
       align-items: flex-end
+      cursor: pointer
       &::before
         content: ''
         position: absolute
@@ -62,3 +63,62 @@ header
   clip-path: polygon( 0% 0%, 0% 0%, 100% 0%, 0% 300%)
   img
     height: 95px
+.nav
+  position: fixed
+  right: 0
+  top: 0
+  height: 100vh
+  width: 583px
+  background-color: rgba(228, 0, 0, 0.9)
+  padding: 28px 0 28px 54px
+  text-align: left
+  display: none
+  flex-direction: column
+  justify-content: space-around
+  &-active
+    display: flex
+  &-description
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    height: 200px
+    line-height: 26px
+    font-size: 16px
+    font-weight: 600
+    color: #ffffff
+    max-width: 380px
+    &__contact
+      display: flex
+      flex-direction: column
+.close
+  width: 28px
+  position: absolute
+  right: 51px
+  top: 62px
+  cursor: pointer
+.link
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  height: 200px
+  font-weight: 600
+  font-size: 32px
+  line-height: 39px
+  letter-spacing: 0.04em
+.offer
+  &-button
+    position: fixed
+    left: 22px
+    bottom: 25px
+    color: #ffffff
+    background: #E40000
+    border: 1px solid #E40000
+    border-radius: 18px
+    padding: 13px 14px
+    font-weight: 600
+    cursor: pointer
+    transition: 0.4s
+    z-index: 1
+    &:hover
+      background: transparent
+      color: #E40000

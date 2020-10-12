@@ -17,10 +17,10 @@
     grid-gap: 10px
     grid-auto-rows: minmax(100px, auto)
   &__card
-    &--start
+    &:first-child
       grid-column-start: span 2
       grid-row-end: span 2
-    &--end
+    &:last-child
       grid-column-start: span 2
       grid-column-end: 4
       grid-row-start: 4
@@ -30,6 +30,7 @@
   flex-direction: column
   align-items: center
   margin-top: 48px
+  cursor: pointer
   &__img
     width: 41px
     height: 28px

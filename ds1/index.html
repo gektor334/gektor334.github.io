@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/swiper-bundle.min.css">
-  <link rel="stylesheet" href="css/slick.css">
-  <link rel="stylesheet" href="css/slick-theme.css">
+  <link rel="stylesheet" href="slick/slick.css">
+  <link rel="stylesheet" href="slick/slick-theme.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <title>Брендинговое агенство DS1</title>
@@ -28,19 +28,41 @@
             <a href="mailto:sg@dsone.ru">sg@dsone.ru</a>
           </div>
           <div class="header-contact__social">
-            <div class="header-contact__social--img">
+            <a href="#" class="header-contact__social--img">
               <img src="img/inst.svg" alt="instagram DS1">
-            </div>
-            <div class="header-contact__social--img">
+            </a>
+            <a href="#" class="header-contact__social--img">
               <img src="img/facebook.svg" alt="facebook DS1">
-            </div>
+            </a>
           </div>
         </div>
         <nav class="header-nav">
           <a href="portfolio/index.html" class="header-nav__portfolio">портфолио</a>
-          <a href="#" class="header-nav__menu">меню</a>
+          <a id="menu" class="header-nav__menu">меню</a>
         </nav>
       </div>
+    </div>
+    <nav id="nav" class="nav">
+      <div class="close">
+        <img src="img/close.svg" alt="закрыть">
+      </div>
+      <div class="link">
+        <a href="brand/index.html" class="nav__link">о компании</a>
+        <a href="service/index.html" class="nav__link">услуги</a>
+        <a href="contact/index.html" class="nav__link">контакты</a>
+      </div>
+      <div class="nav-description">
+        <span class="nav-description__contact">Санкт-Петербург, Гражданская ул., 13-15, Бертгольд центр</span>
+        <span class="nav-description__contact">пн-пт с 9:00 до 18:00</span>
+        <span class="nav-description__contact">
+          <a href="tel:+78123132492" class="nav-description__contact--phone">+7 (812) 313-24-92</a>
+          <a href="mailto:sg@dsone.ru" class="nav-description__contact--mail">sg@dsone.ru</a>
+        </span>
+      </div>
+    </nav>
+    <button class="offer-button">Получить коммерческое предложение</button>
+    <div class="offer">
+
     </div>
   </header>
 
@@ -48,9 +70,9 @@
   <section class="hero">
     <div class="swiper-container">
       <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="img/valio.jpg" alt=""></div>
-        <div class="swiper-slide">Slide 2</div>
-        <div class="swiper-slide">Slide 3</div>
+        <div class="swiper-slide"><img src="img/portfolio/2.gif" alt=""></div>
+        <div class="swiper-slide"><img src="img/portfolio/1.gif" alt=""></div>
+        <div class="swiper-slide"><img src="img/portfolio/3.gif" alt=""></div>
       </div>
       <div class="swiper-pagination"></div>
       <div class="swiper-button-prev"></div>
@@ -66,21 +88,40 @@
 
   <!-- Секция клиенты -->
   <section class="client">
-    <div class="client-content">
+    <div class="client-content ">
       <h2 class="title" style="color: #F10826; z-index: 9;">Наши клиенты:</h2>
-      <div class="client-slider">
-        <div class="client-slide"><img src="img/client/valio.png" alt="valio"></div>
-        <div class="client-slide"><img src="img/client/valio.png" alt="valio"></div>
-        <div class="client-slide"><img src="img/client/valio.png" alt="valio"></div>
-        <div class="client-slide"><img src="img/client/valio.png" alt="valio"></div>
-        <div class="client-slide"><img src="img/client/valio.png" alt="valio"></div>
-        <div class="client-slide"><img src="img/client/valio.png" alt="valio"></div>
-        <div class="client-slide"><img src="img/client/valio.png" alt="valio"></div>
-        <div class="client-slide"><img src="img/client/valio.png" alt="valio"></div>
-        <div class="client-slide"><img src="img/client/valio.png" alt="valio"></div>
-        <div class="client-slide"><img src="img/client/valio.png" alt="valio"></div>
-        <div class="client-slide"><img src="img/client/valio.png" alt="valio"></div>
-        <div class="client-slide"><img src="img/client/valio.png" alt="valio"></div>
+      <div class="client-slider slider">
+        <div class="client-slide"><img src="img/client/1.png" alt="valio"></div>
+        <div class="client-slide"><img src="img/client/2.png" alt="valio"></div>
+        <div class="client-slide"><img src="img/client/3.png" alt="valio"></div>
+        <div class="client-slide"><img src="img/client/4.png" alt="valio"></div>
+        <div class="client-slide"><img src="img/client/5.png" alt="valio"></div>
+        <div class="client-slide"><img src="img/client/6.png" alt="valio"></div>
+        <div class="client-slide"><img src="img/client/7.png" alt="valio"></div>
+        <div class="client-slide"><img src="img/client/8.png" alt="valio"></div>
+        <div class="client-slide"><img src="img/client/9.png" alt="valio"></div>
+        <div class="client-slide"><img src="img/client/10.png" alt="valio"></div>
+        <div class="client-slide"><img src="img/client/11.png" alt="valio"></div>
+        <div class="client-slide"><img src="img/client/12.jpg" alt="valio"></div>
+        <div class="client-slide"><img src="img/client/13.png" alt="valio"></div>
+        <div class="client-slide"><img src="img/client/14.png" alt="valio"></div>
+        <div class="client-slide"><img src="img/client/15.png" alt="valio"></div>
+        <div class="client-slide"><img src="img/client/16.png" alt="valio"></div>
+        <div class="client-slide"><img src="img/client/17.jpg" alt="valio"></div>
+        <div class="client-slide"><img src="img/client/18.png" alt="valio"></div>
+        <div class="client-slide"><img src="img/client/19.png" alt="valio"></div>
+        <div class="client-slide"><img src="img/client/20.png" alt="valio"></div>
+        <div class="client-slide"><img src="img/client/21.png" alt="valio"></div>
+        <div class="client-slide"><img src="img/client/22.jpg" alt="valio"></div>
+        <div class="client-slide"><img src="img/client/23.png" alt="valio"></div>
+        <div class="client-slide"><img src="img/client/24.png" alt="valio"></div>
+        <div class="client-slide"><img src="img/client/25.png" alt="valio"></div>
+        <div class="client-slide"><img src="img/client/26.png" alt="valio"></div>
+        <div class="client-slide"><img src="img/client/27.png" alt="valio"></div>
+        <div class="client-slide"><img src="img/client/28.png" alt="valio"></div>
+        <div class="client-slide"><img src="img/client/29.png" alt="valio"></div>
+        <div class="client-slide"><img src="img/client/30.png" alt="valio"></div>
+        <div class="client-slide"><img src="img/client/33.png" alt="valio"></div>
       </div>
       <p class="description client__description">Для нас каждый клиент - это участник ралли, в котором наша задача –
         помочь максимально эффективно и точно провести его по сложному и непредсказуемому маршруту к победе.
@@ -89,6 +130,7 @@
         глубоко понимать бизнес-задачи клиента, жить в его ритме, и четко настраивать команду для новых заездов.</p>
     </div>
   </section>
+
 
   <!-- Секция с информацией о компании -->
   <section class="brand">
@@ -128,14 +170,14 @@
         <h2 class="title work__title">НЕКОТОРЫЕ НАШИ РАБОТЫ:</h2>
 
         <div class="work__portfolio">
-          <div class="work__card work__card--start">
-            <img src="img/portfolio/hero/valio.jpg" alt="проект валио valio">
+          <a href="valio/index.html" class="work__card work__card--start">
+            <img src="img/portfolio/2.gif" alt="проект валио valio">
+          </a>
+          <div class="work__card">
+            <img src="img/portfolio/1.gif" alt="проект густо gusto">
           </div>
           <div class="work__card">
-            <img src="img/portfolio/hero/gusto.jpg" alt="проект густо gusto">
-          </div>
-          <div class="work__card">
-            <img src="img/portfolio/hero/hd.jpg" alt="проект хлебный дом">
+            <img src="img/portfolio/3.gif" alt="tomatti">
           </div>
           <div class="work__card">
             <img src="img/portfolio/hero/valio.jpg" alt="проект валио valio">
@@ -191,10 +233,48 @@
     </div>
   </footer>
 
+  <script>
+    window.replainSettings = { id: '6f880235-5ae2-4425-85bc-b36f77d0cd9e' };
+    (function (u) {
+      var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = u;
+      var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+    })('https://widget.replain.cc/dist/client.js');
+  </script>
   <script src="js/jquery-3.5.1.min.js"></script>
   <script src="js/swiper-bundle.min.js"></script>
-  <script src="js/slick.min.js"></script>
+  <script src="slick/slick.js"></script>
   <script src="js/main.js"></script>
+
+  <script>
+    $('.client-slider').slick({
+      centerMode: true,
+      centerPadding: '10px',
+      slidesToShow: 9,
+      centerMode: true,
+      autoplay: true,
+      autoplaySpeed: 1000,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            arrows: false,
+            centerMode: true,
+            centerPadding: '40px',
+            slidesToShow: 3
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            arrows: false,
+            centerMode: true,
+            centerPadding: '40px',
+            slidesToShow: 1
+          }
+        }
+      ]
+    });
+  </script>
 </body>
 
 </html>

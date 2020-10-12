@@ -19,33 +19,6 @@ var mySwiper = new Swiper('.swiper-container', {
   },
 });
 
-$(document).ready(function () {
-  $('.client-slider').slick({
-    centerMode: true,
-    centerPadding: '160px',
-    slidesToShow: 12,
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          arrows: false,
-          centerMode: true,
-          centerPadding: '40px',
-          slidesToShow: 3
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          arrows: false,
-          centerMode: true,
-          centerPadding: '40px',
-          slidesToShow: 1
-        }
-      }
-    ]
-  });
-});
 
 let category1 = document.querySelector('.category-service');
 let category2 = document.querySelector('.category-grade');
@@ -74,4 +47,48 @@ document.querySelectorAll('.service__button').forEach(btn => {
     this.classList.toggle('service__button--active');
     this.nextElementSibling.classList.toggle('service__toggle--active');
   });
+});
+
+let noHidden = document.querySelectorAll('.project__card');
+for (let i = 15; i < noHidden.length; i++) {
+  noHidden[i].classList.add('hidden');
+}
+
+
+let more = document.querySelectorAll('.more');
+
+for (var i = 0; i < more.length; i++) {
+  more[i].addEventListener('click', function () {
+    var showPerClick = 5;
+
+    var hidden = this.parentNode.querySelectorAll('div.hidden');
+    for (var i = 0; i < showPerClick; i++) {
+      if (!hidden[i]) return this.outerHTML = "";
+      hidden[i].classList.remove('hidden');
+    }
+  });
+}
+
+
+let nav = document.querySelector('.nav');
+
+function menu() {
+  nav.style.display = 'flex';
+}
+function close() {
+  nav.style.display = 'none';
+}
+
+document.querySelector('#menu').onclick = menu;
+document.querySelector('.close').onclick = close;
+
+document.body.addEventListener('click', (e) => {
+  let target = e.target;
+  if (target.className === 'header-nav__menu') {
+    return;
+  }
+  else if (target.className === 'nav') {
+    return;
+  }
+  nav.style.display = 'none';
 });

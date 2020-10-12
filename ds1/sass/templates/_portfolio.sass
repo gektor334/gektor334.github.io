@@ -58,15 +58,21 @@
     display: flex
   &__description
     text-transform: lowercase
-    color: #232323
     text-align: left
     &:nth-child(5n+1)
       flex-basis: 222px
     &:nth-child(5n+2)
       flex-basis: 292px
     &:nth-child(5n+3)
-      flex-basis: 288px
+      flex-basis: 268px
     &:nth-child(5n+4)
-      flex-basis: 211px
+      flex-basis: 231px
     &:nth-child(-n+5)
       margin-bottom: 15px
+    a
+      color: #232323
+      cursor: pointer
+      &:hover
+        color: #e40000
+.hidden
+  display: none
