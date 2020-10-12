@@ -1023,6 +1023,10 @@ img {
   color: #ffffff;
 }
 
+.portfolio__btn:focus {
+  display: none;
+}
+
 .project {
   display: -webkit-box;
   display: -ms-flexbox;
