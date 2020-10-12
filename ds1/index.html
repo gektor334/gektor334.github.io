@@ -93,13 +93,23 @@
     <div class="client-content ">
       <h2 class="title" style="color: #F10826; z-index: 9;">Наши клиенты:</h2>
       <div class="client-slider slider">
-        <div class="client-slide"><img src="img/client/1.png" alt="valio"></div>
+        <!--         <div class="client-slide"><img src="img/client/1.png" alt="valio"></div> -->
         <div class="client-slide"><img src="img/client/2.png" alt="valio"></div>
         <div class="client-slide"><img src="img/client/3.png" alt="valio"></div>
         <div class="client-slide"><img src="img/client/4.png" alt="valio"></div>
         <div class="client-slide"><img src="img/client/5.png" alt="valio"></div>
         <div class="client-slide"><img src="img/client/6.png" alt="valio"></div>
-        <div class="client-slide"><img src="img/client/7.png" alt="valio"></div>
+        <div class="client-slide"><img src="img/client/2.png" alt="valio"></div>
+        <div class="client-slide"><img src="img/client/3.png" alt="valio"></div>
+        <div class="client-slide"><img src="img/client/4.png" alt="valio"></div>
+        <div class="client-slide"><img src="img/client/5.png" alt="valio"></div>
+        <div class="client-slide"><img src="img/client/6.png" alt="valio"></div>
+        <div class="client-slide"><img src="img/client/2.png" alt="valio"></div>
+        <div class="client-slide"><img src="img/client/3.png" alt="valio"></div>
+        <div class="client-slide"><img src="img/client/4.png" alt="valio"></div>
+        <div class="client-slide"><img src="img/client/5.png" alt="valio"></div>
+        <div class="client-slide"><img src="img/client/6.png" alt="valio"></div>
+        <!--         <div class="client-slide"><img src="img/client/7.png" alt="valio"></div>
         <div class="client-slide"><img src="img/client/8.png" alt="valio"></div>
         <div class="client-slide"><img src="img/client/9.png" alt="valio"></div>
         <div class="client-slide"><img src="img/client/10.png" alt="valio"></div>
@@ -123,7 +133,7 @@
         <div class="client-slide"><img src="img/client/28.png" alt="valio"></div>
         <div class="client-slide"><img src="img/client/29.png" alt="valio"></div>
         <div class="client-slide"><img src="img/client/30.png" alt="valio"></div>
-        <div class="client-slide"><img src="img/client/33.png" alt="valio"></div>
+        <div class="client-slide"><img src="img/client/33.png" alt="valio"></div> -->
       </div>
       <p class="description client__description">Для нас каждый клиент - это участник ралли, в котором наша задача –
         помочь максимально эффективно и точно провести его по сложному и непредсказуемому маршруту к победе.
@@ -255,11 +265,23 @@
     $('.client-slider').slick({
       centerMode: true,
       centerPadding: '10px',
-      slidesToShow: 9,
+      slidesToShow: 8,
       centerMode: true,
       autoplay: true,
       autoplaySpeed: 1000,
       responsive: [
+        {
+          breakpoint: 1580,
+          settings: {
+            slidesToShow: 7
+          }
+        },
+        {
+          breakpoint: 1400,
+          settings: {
+            slidesToShow: 6
+          }
+        },
         {
           breakpoint: 768,
           settings: {

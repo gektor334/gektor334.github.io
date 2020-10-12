@@ -388,7 +388,7 @@ h2 {
 }
 
 .slider {
-  width: 90%;
+  width: 95%;
   margin: 50px auto;
 }
 
@@ -435,6 +435,10 @@ h2 {
 .background-line__finish {
   position: absolute;
   top: 240px;
+}
+
+.notification {
+  display: none !important;
 }
 
 header {
@@ -607,6 +611,10 @@ header {
           flex-direction: column;
 }
 
+.nav__link {
+  text-transform: uppercase;
+}
+
 .close {
   width: 28px;
   position: absolute;
@@ -758,8 +766,7 @@ img {
 }
 
 .client-slide div {
-  max-width: 110px;
-  max-height: 140px;
+  max-height: 200px;
 }
 
 .brand {
