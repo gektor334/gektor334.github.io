@@ -1035,7 +1035,7 @@ img {
 }
 
 .portfolio__btn:focus {
-  display: none;
+  outline: none;
 }
 
 .project {
