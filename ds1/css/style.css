@@ -425,6 +425,18 @@ h2 {
   top: -10px;
 }
 
+.background-line {
+  background: url("../img/bg-client.jpg") no-repeat;
+  background-size: cover;
+  height: 52px;
+  width: 100vw;
+}
+
+.background-line__finish {
+  position: absolute;
+  top: 240px;
+}
+
 header {
   position: fixed;
   z-index: 999;
@@ -719,7 +731,6 @@ img {
 
 .client {
   position: relative;
-  background: url("../img/bg-client.jpg");
   padding: 48px 0;
 }
 
@@ -763,6 +774,7 @@ img {
   position: relative;
   padding: 166px 0 152px 0;
   color: #ffffff;
+  overflow: hidden;
 }
 
 .brand--company {
@@ -819,7 +831,6 @@ img {
 }
 
 .work {
-  background: url("../img/bg-client.jpg");
   padding-top: 50px;
   margin-bottom: 163px;
 }
@@ -1500,7 +1511,6 @@ img {
 
 .project-finish {
   margin-top: 185px;
-  background: url("../img/bg-client.jpg");
   width: 100%;
   text-align: center;
   position: relative;
@@ -1611,5 +1621,18 @@ img {
 .finish-flag {
   position: absolute;
   top: -35px;
+}
+
+.finish-line {
+  position: relative;
+  height: 52px;
+  width: 100vw;
+}
+
+@media screen and (max-width: 1300px) {
+  .road-right {
+    top: -600px;
+    right: -190px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
