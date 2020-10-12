@@ -654,7 +654,6 @@ header {
 
 .swiper-container {
   width: 100vw;
-  height: 100vh;
   margin-left: auto;
   margin-right: auto;
 }
@@ -671,7 +670,6 @@ header {
       -ms-flex-align: center;
           align-items: center;
   width: 100vw;
-  height: 100vh;
 }
 
 .swiper-pagination {
