@@ -443,7 +443,7 @@ h2 {
 
 header {
   position: fixed;
-  z-index: 999;
+  z-index: 9999;
 }
 
 .header {
@@ -573,7 +573,7 @@ header {
           flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  z-index: 999999;
+  z-index: 9999999999999;
 }
 
 .nav-active {
@@ -654,7 +654,7 @@ header {
   cursor: pointer;
   -webkit-transition: 0.4s;
   transition: 0.4s;
-  z-index: 1;
+  z-index: 999;
 }
 
 .offer-button:hover {
@@ -672,8 +672,25 @@ header {
           justify-content: center;
 }
 
+.hero-container {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .swiper-container {
   width: 100vw;
+  height: 100vh;
   margin-left: auto;
   margin-right: auto;
 }
@@ -735,6 +752,26 @@ img {
 
 .mouse__img {
   margin-top: 5px;
+}
+
+.bac {
+  width: 100%;
+  height: 100vh;
+}
+
+.bac-1 {
+  background: url("../img/portfolio/0001.gif") no-repeat center;
+  background-size: cover;
+}
+
+.bac-2 {
+  background: url("../img/portfolio/1.gif") no-repeat center;
+  background-size: cover;
+}
+
+.bac-3 {
+  background: url("../img/portfolio/3.gif") no-repeat center;
+  background-size: cover;
 }
 
 .client {
@@ -855,7 +892,7 @@ img {
 
 .work__title {
   text-align: center;
-  margin-bottom: 92px;
+  margin-bottom: 62px;
   color: #232323;
 }
 
@@ -911,7 +948,7 @@ img {
 }
 
 .footer {
-  background: url("../img/back-brand.jpg");
+  background: url("../img/background.jpg");
   padding: 59px 5.8vw 59px 8vw;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1073,11 +1110,10 @@ img {
   padding: 15px 14px 18px 12px;
   border-radius: 14px;
   display: none;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-grid-rows: 50% 50%;
+      grid-template-rows: 50% 50%;
+  -ms-grid-columns: 20% 25% 25% 19% 20%;
+      grid-template-columns: 20% 25% 25% 19% 20%;
   margin-bottom: 10px;
 }
 
@@ -1086,43 +1122,21 @@ img {
   padding: 15px 14px 18px 12px;
   border-radius: 14px;
   display: none;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-grid-rows: 50% 50%;
+      grid-template-rows: 50% 50%;
+  -ms-grid-columns: 25% 30% 23% 17% 10%;
+      grid-template-columns: 25% 30% 23% 17% 10%;
   margin-bottom: 10px;
 }
 
 .category-active {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
 }
 
 .category__description {
   text-transform: lowercase;
   text-align: left;
-}
-
-.category__description:nth-child(5n+1) {
-  -ms-flex-preferred-size: 222px;
-      flex-basis: 222px;
-}
-
-.category__description:nth-child(5n+2) {
-  -ms-flex-preferred-size: 292px;
-      flex-basis: 292px;
-}
-
-.category__description:nth-child(5n+3) {
-  -ms-flex-preferred-size: 268px;
-      flex-basis: 268px;
-}
-
-.category__description:nth-child(5n+4) {
-  -ms-flex-preferred-size: 231px;
-      flex-basis: 231px;
 }
 
 .category__description:nth-child(-n+5) {
@@ -1161,7 +1175,7 @@ img {
 }
 
 .contacts__card {
-  background: url(../img/back-brand.jpg) no-repeat;
+  background: url(../img/back-contacts.jpg) no-repeat;
   background-size: cover;
   margin-top: 79px;
   display: -webkit-box;
@@ -1455,17 +1469,17 @@ img {
 
 .service__card:first-child::after {
   content: '';
-  height: 755px;
-  width: 24px;
-  background: url("../img/road-svg-3.svg");
+  height: 765px;
+  width: 15px;
+  background: url("../img/road-svg-2.svg");
   position: absolute;
-  left: -35px;
+  left: -29px;
   top: 60px;
 }
 
 .service__card:nth-child(2)::after {
   content: '';
-  height: 755px;
+  height: 765px;
   width: 25px;
   background: url("../img/road-svg-1.svg");
   position: absolute;
@@ -1483,7 +1497,7 @@ img {
 
 .service__card:nth-child(3)::after {
   content: '';
-  height: 755px;
+  height: 765px;
   width: 15px;
   background: url("../img/road-svg-2.svg");
   position: absolute;
@@ -1501,7 +1515,7 @@ img {
 
 .service__card:last-child::after {
   content: '';
-  height: 755px;
+  height: 765px;
   width: 25px;
   background: url("../img/road-svg-3.svg");
   position: absolute;

@@ -92,3 +92,5 @@ document.body.addEventListener('click', (e) => {
   }
   nav.style.display = 'none';
 });
+
+document.querySelector('.notification').style.display = 'none';
