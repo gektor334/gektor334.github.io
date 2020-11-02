@@ -575,6 +575,10 @@ h2 {
   background-position: center;
 }
 
+.notification[data-v-4fef7768] {
+  opacity: 0;
+}
+
 header {
   position: fixed;
   z-index: 9999;
@@ -1808,14 +1812,26 @@ img {
   width: 100vw;
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1400px) {
   .road-right {
-    top: -600px;
-    right: -190px;
+    position: absolute;
+    right: -70px;
+    top: 200px;
+  }
+}
+
+@media screen and (max-width: 1240px) {
+  .road-right {
+    position: absolute;
+    right: -120px;
+    top: 200px;
   }
 }
 
 @media screen and (max-width: 1190px) {
+  .road-right {
+    display: none;
+  }
   .project {
     margin: 0 20px;
   }
