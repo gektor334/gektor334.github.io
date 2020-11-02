@@ -7,37 +7,48 @@
   padding: 166px 0 152px 0
   color: #ffffff
   overflow: hidden
-  &--company
-    padding-bottom: 305px
+  &__text
+    margin-left: 64px
+  &__content
+    display: flex
   &__logo
     max-width: 347px
+    margin-top: -480px
   &__title
-    font-size: 31px
-    max-width: 763px
+    font-size: 38px
+    max-width: 507px
     text-transform: uppercase
-    line-height: 150.4%
-    letter-spacing: 0.03em
+    line-height: 47px
   &__description
-    max-width: 691px
-    font-size: 17px
+    max-width: 646px
+    font-size: 19px
     font-weight: 500
-    line-height: 181.4%
-    letter-spacing: 0.04em
-    margin-top: 55px
+    line-height: 29px
+    margin-top: 66px
     &:last-child
       margin-top: 30px
-.road
-  position: absolute
-  &-left
-    bottom: -155px
-    left: -60px
-    &__company
-      bottom: -308px
-  &-right
-    bottom: 38%
-    right: -364px
 .company
   &-title
     color: #232323
     padding: 127px 0 43px 0
     text-align: center
+.road
+  &-right
+    position: absolute
+    right: 0
+    top: 200px
+    &-top
+      mix-blend-mode: overlay
+    &-bottom
+      margin-top: 27px
+  &-left
+    &-bottom
+      position: absolute
+      bottom: -2px
+      left: 0
+      mix-blend-mode: overlay
+    &-top
+      position: absolute
+      top: 170px
+      left: 0
+      mix-blend-mode: overlay

@@ -93,4 +93,12 @@ document.body.addEventListener('click', (e) => {
   nav.style.display = 'none';
 });
 
-document.querySelector('.notification').style.display = 'none';
+let offer = document.querySelector('.offer');
+function offerButton() {
+  offer.style.display = 'flex';
+}
+function offerClose() {
+  offer.style.display = 'none';
+}
+document.querySelector('.offer-button').onclick = offerButton;
+document.querySelector('.offer-close').onclick = offerClose;
