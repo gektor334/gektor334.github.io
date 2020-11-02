@@ -342,6 +342,10 @@ template {
 [hidden] {
   display: none;
 }
+* {
+  -webkit-locale: auto;
+   white-space: normal;
+}
 
 body {
   -webkit-box-sizing: content-box;
