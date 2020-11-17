@@ -210,6 +210,10 @@
     &-prev
       left: -16px
 @media screen and (max-width: 645px)
+  .pc
+    display: none
+  .mobile
+    display: block
   .container
     width: 100vw
   .road
@@ -252,6 +256,8 @@
   .client
     &__description
       max-width: 420px
+      margin-left: 17px
+      margin-right: 10px
   .work
     &__portfolio
       display: flex
@@ -328,8 +334,6 @@
     height: 60vw
     background-position: bottom
   .client
-    &__description
-      max-width: 300px
     &__card
       flex-basis: 100%
       margin-bottom: 10px

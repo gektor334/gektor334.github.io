@@ -342,10 +342,6 @@ template {
 [hidden] {
   display: none;
 }
-* {
-  -webkit-locale: auto;
-   white-space: normal;
-}
 
 * {
   -webkit-locale: auto;
@@ -585,6 +581,10 @@ h2 {
 }
 
 .phone-portfolio {
+  display: none;
+}
+
+.mobile {
   display: none;
 }
 
@@ -943,7 +943,7 @@ img {
 }
 
 .client__description {
-  max-width: 873px;
+  max-width: 880px;
   margin-top: 33px;
   margin-bottom: 0;
   color: #232323;
@@ -2146,6 +2146,12 @@ img {
 }
 
 @media screen and (max-width: 645px) {
+  .pc {
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
   .container {
     width: 100vw;
   }
@@ -2205,6 +2211,8 @@ img {
   }
   .client__description {
     max-width: 420px;
+    margin-left: 17px;
+    margin-right: 10px;
   }
   .work__portfolio {
     display: -webkit-box;
@@ -2312,9 +2320,6 @@ img {
   .bac {
     height: 60vw;
     background-position: bottom;
-  }
-  .client__description {
-    max-width: 300px;
   }
   .client__card {
     -ms-flex-preferred-size: 100%;
