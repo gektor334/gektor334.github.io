@@ -342,6 +342,10 @@ template {
 [hidden] {
   display: none;
 }
+* {
+  -webkit-locale: auto;
+   white-space: normal;
+}
 
 * {
   -webkit-locale: auto;
