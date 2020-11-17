@@ -1,3 +1,6 @@
+*
+  -webkit-locale: auto
+  white-space: normal
 body
   box-sizing: content-box
   font-family: 'Montserrat', sans-serif
@@ -17,7 +20,7 @@ h2
   text-transform: uppercase
   letter-spacing: 0.03em
 .description
-  font-weight: 600
+  font-weight: 500
   font-size: 16px
   letter-spacing: 0.05em
   line-height: 1.56
@@ -42,6 +45,7 @@ h2
       transform: rotate(180deg)
       top: -10px
   &-next
+    right: 0
     &::before
       content: ''
       position: absolute
@@ -49,15 +53,6 @@ h2
       width: 17px
       height: 33px
       top: -10px
-.background
-  &-line
-    background: url('../img/bg-client.jpg') no-repeat
-    background-size: cover
-    height: 52px
-    width: 100vw
-    &__finish
-      position: absolute
-      top: 240px
 .notification
   display: none !important
 .offer
@@ -142,5 +137,10 @@ h2
   background: url('../img/checkbox.svg') no-repeat
   background-size: contain
   background-position: center
-.notification[data-v-4fef7768]
-  opacity: 0
+.notification
+  height: 0
+.phone
+  &-phone
+    display: none
+  &-portfolio
+    display: none

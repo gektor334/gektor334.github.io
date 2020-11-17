@@ -34,7 +34,15 @@
             <a href="#" class="header-contact__social--img">
               <img src="img/facebook.svg" alt="facebook DS1">
             </a>
+            <a href="#" class="header-contact__social--img">
+              <img src="img/be.svg" alt="beehance DS1">
+            </a>
           </div>
+        </div>
+        <div class="phone-phone">
+          <a href="tel: +78123132492">
+            <img src="../img/phone.svg" alt="телефон">
+          </a>
         </div>
         <nav class="header-nav">
           <a href="portfolio/index.html" class="header-nav__portfolio">портфолио</a>
@@ -50,6 +58,7 @@
         <a href="brand/index.html" class="nav__link">о компании</a>
         <a href="service/index.html" class="nav__link">услуги</a>
         <a href="contact/index.html" class="nav__link">контакты</a>
+        <a href="portfolio/index.html" class="nav__link phone-portfolio">портфолио</a>
       </div>
       <div class="nav-description">
         <span class="nav-description__contact">Санкт-Петербург, Гражданская ул., 13-15, "Бертгольд центр"</span>
@@ -105,14 +114,18 @@
         <div class="swiper-slide">
           <div class="bac-3 bac"></div>
         </div>
+        <div class="swiper-slide">
+          <div class="bac-2 bac"></div>
+        </div>
+        <div class="swiper-slide">
+          <div class="bac-3 bac"></div>
+        </div>
       </div>
       <div class="swiper-pagination"></div>
       <div class="swiper-button-prev"></div>
       <div class="swiper-button-next"></div>
     </div>
   </section>
-
-  <div class="background-line"></div>
 
   <!-- Секция клиенты -->
   <section class="client">
@@ -154,15 +167,15 @@
         <div class="client-slide"><img src="img/client/33.png" alt="valio"></div>
         <div class="client-slide"><img src="img/client/34.png" alt="valio"></div>
       </div>
-      <p class="description client__description">Для нас каждый клиент - это участник ралли, в котором наша задача –
-        помочь максимально эффективно и точно провести его по сложному и непредсказуемому маршруту к победе.
+      <p class="description client__description">Для нас каждый клиент - это&nbsp;участник ралли,
+        в котором наша задача –
+        помочь максимально эффективно и&nbsp;точно провести его по сложному и&nbsp;непредсказуемому маршруту к победе.
         Но&nbsp;гонка
-        не заканчивается никогда, и победа в одном сезоне – это только начало подготовки к следующему, поэтому так важно
-        глубоко понимать бизнес-задачи клиента, жить в его ритме, и четко настраивать команду для новых заездов.</p>
+        не&nbsp;заканчивается никогда, и&nbsp;победа в&nbsp;одном сезоне – это&nbsp;только начало подготовки
+        к&nbsp;следующему, поэтому так важно глубоко понимать бизнес-задачи клиента, жить в&nbsp;его ритме, и четко
+        настраивать команду для новых заездов.</p>
     </div>
   </section>
-
-  <div class="background-line"></div>
 
 
   <!-- Секция с информацией о компании -->
@@ -175,9 +188,9 @@
         <div class="brand__text">
           <h2 class="brand__title">В сегменте FMCG скорость изменений особенно ощутима.</h2>
           <p class="brand__description">
-            В ритме нового времени бренды как гоночные болиды
+            В ритме нового времени бренды&nbsp;как&nbsp;гоночные&nbsp;болиды
             движутся на немыслимой скорости по непредсказуемой
-            трассе и только слаженная работа клиента и агентства
+            трассе и&nbsp;только слаженная работа клиента и&nbsp;агентства
             в&nbsp;плотной связке может привести к победе:
             точным,&nbsp;понятным&nbsp;и&nbsp;последовательным коммуникациям.
           </p>
@@ -205,10 +218,16 @@
         <img src="img/road-right-red.svg" alt="">
       </div>
     </div>
+    <div class="road-mobile">
+      <div class="road-mobile-top">
+        <img src="img/road-mobile-top.svg" alt="">
+      </div>
+      <div class="road-mobile-bottom">
+        <img src="img/road-mobile-red.svg" alt="">
+      </div>
+    </div>
   </section>
 
-
-  <div class="background-line"></div>
   <!-- Секция наши работы -->
   <section class="work">
     <div class="work-block">
@@ -216,7 +235,7 @@
         <h2 class="title work__title">НЕКОТОРЫЕ НАШИ РАБОТЫ:</h2>
 
         <div class="work__portfolio">
-          <a href="valio/index.html" class="work__card work__card--start">
+          <a href="valio/index.html" class="work__card work__card">
             <img src="img/portfolio/2.gif" alt="проект валио valio">
           </a>
           <div class="work__card">
@@ -237,7 +256,7 @@
           <div class="work__card">
             <img src="img/portfolio/hero/hd.jpg" alt="проект хлебный дом">
           </div>
-          <div class="work__card work__card--end">
+          <div class="work__card work__card">
             <img src="img/portfolio/hero/zarenki.jpg" alt="проект хлебный дом">
           </div>
           <div class="work__card">
@@ -270,6 +289,9 @@
         </a>
         <a class="footer__social--img" href="#">
           <img src="img/facebook.svg" alt="наш фейсбук">
+        </a>
+        <a class="footer__social--img" href="#">
+          <img src="img/be.svg" alt="наш беханс">
         </a>
       </div>
     </div>
@@ -313,21 +335,35 @@
           }
         },
         {
+          breakpoint: 1200,
+          settings: {
+            slidesToShow: 5
+          }
+        },
+        {
+          breakpoint: 1000,
+          settings: {
+            slidesToShow: 4
+          }
+        },
+        {
           breakpoint: 768,
           settings: {
-            arrows: false,
-            centerMode: true,
-            centerPadding: '40px',
             slidesToShow: 3
+          }
+        },
+        {
+          breakpoint: 640,
+          settings: {
+            centerMode: true,
+            slidesToShow: 2
           }
         },
         {
           breakpoint: 480,
           settings: {
-            arrows: false,
             centerMode: true,
-            centerPadding: '40px',
-            slidesToShow: 1
+            slidesToShow: 2
           }
         }
       ]
