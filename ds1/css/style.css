@@ -167,6 +167,14 @@ textarea {
   /* 2 */
 }
 
+button:focus,
+input:focus,
+optgroup:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+}
+
 /**
  * Show the overflow in IE.
  * 1. Show the overflow in Edge.
@@ -887,6 +895,8 @@ img {
 
 .swiper-button-prev {
   left: 40px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .mouse {
@@ -907,7 +917,7 @@ img {
 }
 
 .bac-1 {
-  background: url("../img/portfolio/0001.gif") no-repeat center;
+  background: url("../img/valio.jpg") no-repeat center;
   background-size: cover;
 }
 
@@ -1394,7 +1404,7 @@ img {
 .information__address::before {
   content: '';
   position: absolute;
-  background: url("../img/address.svg");
+  background: url("../img/address.svg") no-repeat;
   width: 40px;
   height: 40px;
   left: -120px;
@@ -1404,11 +1414,12 @@ img {
 .information__phone::before {
   content: '';
   position: absolute;
-  background: url("../img/phone.svg");
+  background: url("../img/contacts-phone.svg") no-repeat;
+  background-size: contain;
   width: 40px;
   height: 40px;
   left: -120px;
-  bottom: 0;
+  bottom: 5px;
 }
 
 .information__mail::before {

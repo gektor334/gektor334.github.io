@@ -34,7 +34,7 @@
     &::before
       content: ''
       position: absolute
-      background: url('../img/address.svg')
+      background: url('../img/address.svg') no-repeat
       width: 40px
       height: 40px
       left: -120px
@@ -43,11 +43,12 @@
     &::before
       content: ''
       position: absolute
-      background: url('../img/phone.svg')
+      background: url('../img/contacts-phone.svg') no-repeat
+      background-size: contain
       width: 40px
       height: 40px
       left: -120px
-      bottom: 0
+      bottom: 5px
   &__mail
     &::before
       content: ''
