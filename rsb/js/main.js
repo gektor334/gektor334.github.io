@@ -31,12 +31,3 @@ let observer = new MutationObserver(function (mutations) {
 
 let target = document.querySelector('.hero-btn');
 observer.observe(target, { attributes: true, attributeFilter: ['style'] });
-
-let bgRu = document.querySelector('.hero-ru');
-window.onload = function () {
-  bgRu.style.backgroundImage = "url(../img/RSB_START_GIF-RU.gif?" + new Date().getTime() + ")";
-}
-let bgEn = document.querySelector('.hero-en');
-window.onload = function () {
-  bgEN.style.backgroundImage = "url(../img/RSB_START_GIF-EN.gif?" + new Date().getTime() + ")";
-}
