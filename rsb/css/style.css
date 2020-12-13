@@ -449,6 +449,12 @@ img {
   border-radius: 5px;
   padding: 15px 25px;
   background: #2E64FF;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.desc-btn:hover {
+  background: #fa6d90;
 }
 
 a:focus {
@@ -593,6 +599,12 @@ li {
   margin-left: -25vw;
   -webkit-animation: sub 4s infinite;
           animation: sub 4s infinite;
+  -webkit-transition: background 0.4s;
+  transition: background 0.4s;
+}
+
+.sub-btn:hover {
+  background: #002db3;
 }
 
 @-webkit-keyframes sub {
