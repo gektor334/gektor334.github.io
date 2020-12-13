@@ -17,7 +17,7 @@ document.body.onclick = function (e) {
 
 
 let btn = document.querySelector('.hero-btn');
-setTimeout(() => btn.style.display = 'block', 13000);
+setTimeout(() => btn.style.display = 'block', 14000);
 
 let observer = new MutationObserver(function (mutations) {
   mutations.forEach(function (mutationRecord) {
