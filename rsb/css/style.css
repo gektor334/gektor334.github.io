@@ -578,14 +578,16 @@ li {
   height: 100vh;
   background: url("../img/RSB_2nd_GIF.gif") no-repeat;
   background-color: #2d63ff;
-  background-position: center;
-  background-size: contain;
+  background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  z-index: 1;
+  position: relative;
+  background-position: center;
 }
 
 .logo {
