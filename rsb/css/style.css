@@ -476,15 +476,16 @@ li {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-position: center;
 }
 
 .hero-ru {
   background: url("../img/RSB_START_GIF-RU.gif") no-repeat;
+  background-position: center;
 }
 
 .hero-en {
   background: url("../img/RSB_START_GIF-EN.gif") no-repeat;
+  background-position: center;
 }
 
 .hero-btn {
