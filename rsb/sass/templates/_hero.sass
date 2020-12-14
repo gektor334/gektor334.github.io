@@ -60,11 +60,8 @@
   background: #ffffff
   margin-top: 57px
 .text
-  margin-left: 438px
-  width: 501px
+  flex-basis: 60%
 .sub-btn
-  position: absolute
-  bottom: 1.5vw
   margin: auto
   border: 2px solid #ffffff
   padding: 10px 22px
@@ -72,11 +69,22 @@
   font-size: 1.25vw
   font-weight: 700
   background: #0740E4
-  margin-left: -25vw
   animation: sub 4s infinite
   transition: background 0.4s
   &:hover
     background: #002db3
+.tower
+  height: 80vh
+  img
+    height: 100%
+.left-block
+  display: flex
+  flex-direction: column
+  align-items: center
+  flex-basis: 40%
+  margin-top: -40px
+  height: 100vh
+  justify-content: space-between
 @keyframes sub
   5%, 50%
     transform: scale(1)

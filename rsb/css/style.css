@@ -373,6 +373,17 @@ html, body {
   padding: 40px;
 }
 
+.container-two {
+  width: 1046px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 40px;
+}
+
 .fixed {
   width: 100vw;
   position: fixed;
@@ -434,8 +445,7 @@ img {
 }
 
 .desc {
-  max-width: 26.042vw;
-  font-size: 1.98vw;
+  font-size: 36px;
   color: #ffffff;
   font-weight: 500;
   line-height: 2.292vw;
@@ -463,6 +473,11 @@ a:focus {
 
 li {
   list-style: none;
+}
+
+.mt {
+  margin-top: 37px;
+  margin-bottom: 69px;
 }
 
 .hero {
@@ -585,13 +600,11 @@ li {
 }
 
 .text {
-  margin-left: 438px;
-  width: 501px;
+  -ms-flex-preferred-size: 60%;
+      flex-basis: 60%;
 }
 
 .sub-btn {
-  position: absolute;
-  bottom: 1.5vw;
   margin: auto;
   border: 2px solid #ffffff;
   padding: 10px 22px;
@@ -599,7 +612,6 @@ li {
   font-size: 1.25vw;
   font-weight: 700;
   background: #0740E4;
-  margin-left: -25vw;
   -webkit-animation: sub 4s infinite;
           animation: sub 4s infinite;
   -webkit-transition: background 0.4s;
@@ -608,6 +620,34 @@ li {
 
 .sub-btn:hover {
   background: #002db3;
+}
+
+.tower {
+  height: 80vh;
+}
+
+.tower img {
+  height: 100%;
+}
+
+.left-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+  margin-top: -40px;
+  height: 100vh;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 @-webkit-keyframes sub {
