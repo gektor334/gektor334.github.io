@@ -71,13 +71,15 @@ for (var i = 0; i < more.length; i++) {
 
 
 let nav = document.querySelector('.nav');
+let iconClose = document.querySelector('.nav-close');
 
 function menu() {
-  nav.style.transition = '0.4s';
+  nav.style.transition = '0.5s';
   nav.style.right = '0';
+  iconClose.style.transition = '0.5s';
 }
 function close() {
-  nav.style.transition = '0.4s';
+  nav.style.transition = '0.5s';
   nav.style.right = '-673px';
 }
 
@@ -108,6 +110,7 @@ function offerClose() {
 }
 document.querySelector('.offer-button').onclick = offerButton;
 document.querySelector('.offer-close').onclick = offerClose;
+document.querySelector('.mobile-close').onclick = offerClose;
 
 let headerMenu = document.querySelector('.header');
 let scrollPos = 0;
@@ -115,7 +118,7 @@ let scrollPos = 0;
 document.onscroll = function () {
   let position = window.scrollY;
   if (position > scrollPos) {
-    headerMenu.style.transition = '0.4s';
+    headerMenu.style.transition = '0.55s';
     headerMenu.style.marginTop = '-90px';
   }
   else {

@@ -54,7 +54,7 @@
     </div>
     <nav id="nav" class="nav">
       <div class="close">
-        <img src="img/close.svg" alt="закрыть">
+        <img src="img/close.svg" alt="закрыть" class="nav-close">
       </div>
       <div class="link">
         <a href="brand/index.html" class="nav__link">о компании</a>
@@ -75,8 +75,11 @@
   <button class="offer-button">Получить коммерческое предложение</button>
   <div class="offer">
     <div class="window">
-      <div class="offer-close">
+      <div class="offer-close pc">
         <img src="img/close.svg" alt="">
+      </div>
+      <div class="offer-close mobile-close">
+        <img src="img/black-close.svg" alt="">
       </div>
       <h2 class="window-title">Получить коммерческое предложение</h2>
       <form action="" class="offer__form">
@@ -179,7 +182,8 @@
         победе.
         <br class="pc">Но гонка не заканчивается никогда, и победа в одном сезоне – это только начало подготовки
         <br class="pc">к следующему, поэтому так важно глубоко понимать бизнес-задачи клиента, жить в его ритме,
-        <br class="pc"> и четко настраивать команду для новых заездов.</p>
+        <br class="pc"> и четко настраивать команду для новых заездов.
+      </p>
     </div>
   </section>
 
@@ -241,33 +245,60 @@
         <h2 class="title work__title">НЕКОТОРЫЕ НАШИ РАБОТЫ:</h2>
 
         <div class="work__portfolio">
-          <a href="valio/index.html" class="work__card work__card">
-            <img src="img/portfolio/2.gif" alt="проект валио valio">
+          <a href="valio/index.html" class="work__card">
+            <div class="work__card-img">
+              <img src="img/portfolio/2.gif" alt="проект валио valio">
+            </div>
+            <p class="work__card--desc nopc">СЫРЫ VALIO</p>
           </a>
-          <div class="work__card">
-            <img src="img/portfolio/1.gif" alt="проект густо gusto">
-          </div>
-          <div class="work__card">
-            <img src="img/portfolio/3.gif" alt="tomatti">
-          </div>
-          <div class="work__card">
-            <img src="img/portfolio/hero/valio.jpg" alt="проект валио valio">
-          </div>
-          <div class="work__card">
-            <img src="img/portfolio/hero/gusto.jpg" alt="проект густо gusto">
-          </div>
-          <div class="work__card">
-            <img src="img/portfolio/hero/hd.jpg" alt="проект хлебный дом">
-          </div>
-          <div class="work__card">
-            <img src="img/portfolio/hero/hd.jpg" alt="проект хлебный дом">
-          </div>
-          <div class="work__card work__card">
-            <img src="img/portfolio/hero/zarenki.jpg" alt="проект хлебный дом">
-          </div>
-          <div class="work__card">
-            <img src="img/portfolio/hero/hd.jpg" alt="проект хлебный дом">
-          </div>
+          <a href="#" class="work__card work__card">
+            <div class="work__card-img">
+              <img src="img/portfolio/1.gif" alt="проект густо gusto">
+            </div>
+            <p class="work__card--desc nopc">макароны gusto</p>
+          </a>
+          <a href="#" class="work__card">
+            <div class="work__card-img">
+              <img src="img/portfolio/3.gif" alt="tomatti">
+            </div>
+            <p class="work__card--desc nopc">паста tomatti</p>
+          </a>
+          <a class="work__card">
+            <div class="work__card-img">
+              <img src="img/portfolio/hero/valio.jpg" alt="проект валио valio">
+            </div>
+            <p class="work__card--desc nopc">СЫРЫ VALIO</p>
+          </a>
+          <a class="work__card">
+            <div class="work__card-img">
+              <img src="img/portfolio/hero/gusto.jpg" alt="проект густо gusto">
+            </div>
+            <p class="work__card--desc nopc">макароны gusto</p>
+          </a>
+          <a class="work__card">
+            <div class="work__card-img">
+              <img src="img/portfolio/hero/hd.jpg" alt="проект хлебный дом">
+            </div>
+            <p class="work__card--desc nopc">батон Хлебный дом</p>
+          </a>
+          <a class="work__card">
+            <div class="work__card-img">
+              <img src="img/portfolio/hero/hd.jpg" alt="проект хлебный дом">
+            </div>
+            <p class="work__card--desc nopc">батон Хлебный дом</p>
+          </a>
+          <a class="work__card work__card">
+            <div class="work__card-img">
+              <img src="img/portfolio/hero/hd.jpg" alt="проект хлебный дом">
+            </div>
+            <p class="work__card--desc nopc">батон Хлебный дом</p>
+          </a>
+          <a class="work__card">
+            <div class="work__card-img">
+              <img src="img/portfolio/hero/hd.jpg" alt="проект хлебный дом">
+            </div>
+            <p class="work__card--desc nopc">батон Хлебный дом</p>
+          </a>
         </div>
 
         <div class="onward">

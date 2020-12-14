@@ -21,12 +21,21 @@ header
       padding-left: 3vw
       &--img
         margin-right: 2vw
+        transition: 0.4s
+        &:hover
+          opacity: 0.5
     &__phone
       padding: 2px 3vw 2px 0
       border-right: 2px solid rgba(255, 255, 255, 0.5)
+      transition: 0.4s
+      &:hover
+        opacity: 0.5
     &__mail
       padding: 2px 3vw 2px 3vw
       border-right: 2px solid rgba(255, 255, 255, 0.5)
+      transition: 0.4s
+      &:hover
+        opacity: 0.5
   &-nav
     display: flex
     letter-spacing: 0.04em
@@ -40,6 +49,10 @@ header
         width: 16px
         height: 16px
         left: 0
+        transition: 0.7s
+      &:hover
+        &::before
+          transform: rotate(180deg)
     &__menu
       position: relative
       padding-left: 2vw
@@ -54,6 +67,10 @@ header
         width: 16px
         height: 13px
         left: 0
+        transition: 0.7s
+      &:hover
+        &::before
+          transform: rotate(180deg)
 .logo
   display: flex
   align-items: center
@@ -99,6 +116,9 @@ header
   right: 51px
   top: 62px
   cursor: pointer
+  transition: 0.4s
+  &:hover
+    opacity: 0.7
 .link
   display: flex
   flex-direction: column
@@ -131,3 +151,73 @@ header
     margin-left: 0
     &-img
       margin-left: 8vw
+@media screen and (max-width: 1170px)
+  .logo
+    min-width: 40vw
+    margin-left: -10vw
+    &-img
+      margin-left: 15vw
+@media screen and (max-width: 980px)
+  .logo
+    min-width: 45vw
+    margin-left: -17vw
+    &-img
+      margin-left: 23vw
+@media screen and ( min-width: 941px )
+  .mobile-close
+    display: none
+@media screen and (max-width: 855px)
+  .header
+    &-contact
+      &__phone
+        display: none
+      &__mail
+        display: none
+    &-nav
+      &__menu
+        margin-left: 20vw
+      &__portfolio
+        padding-left: 20px
+  .logo
+    min-width: 50vw
+    margin-left: -20vw
+    &-img
+      margin-left: 25vw
+@media screen and (max-width: 700px)
+  .logo
+    min-width: 60vw
+    margin-left: -20vw
+    &-img
+      margin-left: 27vw
+@media screen and (max-width: 600px)
+  .logo
+    min-width: 371px
+    margin-left: -180px
+    &-img
+      margin-left: 200px
+  .nav
+    width: 100vw
+    &-description
+      padding: 20px
+  .link
+    padding: 20px
+    line-height: 29px
+    font-size: 26px
+    height: 220px
+@media screen and ( max-width: 500px)
+  .header
+    &-content
+      justify-content: auto
+    &-contact
+      display: none
+    &-nav
+      &__portfolio
+        display: none
+      &__menu
+        margin-left: auto
+        position: absolute
+        right: 20px
+        margin-top: -9px
+  .phone
+    &-portfolio
+      display: block
