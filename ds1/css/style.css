@@ -2484,6 +2484,9 @@ img {
   .window-title {
     padding: 0 25px;
   }
+  .contact__card {
+    min-height: 831px;
+  }
 }
 
 @media screen and (max-width: 460px) {
