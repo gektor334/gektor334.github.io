@@ -29,19 +29,28 @@
   </section>
 
   <section class="subscription panel" id="subscription">
-    <div class="container">
-      <div class="logo">
-        <img src="../img/hd.png" alt="Кинопоиск">
+    <div class="container-two">
+      <div class="left-block">
+        <div class="tower">
+          <img src="../img/eifel.png" alt="башня">
+        </div>
+        <div class="mt">
+          <a href="https://hd.kinopoisk.ru/selection/5fb6a41f0bd70100213cdb0a?selectionWindowId=ya_external"
+            class="sub-btn">The best French films</a>
+        </div>
       </div>
+
       <div class="text">
+        <div class="logo">
+          <img src="../img/hd.png" alt="Кинопоиск">
+        </div>
         <p class="desc">Let us invite you to visit the best places of France together with Rosbank and annual
           subscription to Kinopoisk HD.
         </p>
         <a href="https://plus.yandex.ru/gift" class="desc-btn">Sign up</a>
         <div class="line"></div>
       </div>
-      <a href="https://hd.kinopoisk.ru/selection/5fb6a41f0bd70100213cdb0a?selectionWindowId=ya_external"
-        class="sub-btn">The best French films</a>
+
     </div>
   </section>
 
@@ -49,7 +58,12 @@
   <script>
     let bgEn = document.querySelector('.hero-en');
     window.onload = function () {
-      bgEN.style.backgroundImage = "url(../img/RSB_START_GIF-EN.gif?" + new Date().getTime() + ")";
+      bgEn.style.backgroundImage = "url(../img/RSB_START_GIF-EN.gif?" + new Date().getTime() + ")";
+      bgEn.style.backgroundSize = 'contain';
+      bgEn.style.backgroundColor = '#009aad';
+      setTimeout(() => bgEn.style.backgroundColor = '#0f95c8', 3490);
+      setTimeout(() => bgEn.style.backgroundColor = '#1f7ce4', 5895);
+      setTimeout(() => bgEn.style.backgroundColor = '#2e64ff', 8295);
     }
   </script>
 </body>
