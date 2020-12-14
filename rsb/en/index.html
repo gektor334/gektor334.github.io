@@ -12,21 +12,24 @@
 </head>
 
 <body>
-  <section class="hero hero-en panel">
-    <div class="container">
-      <div class="fixed">
-        <div class="fixed-container">
-          <ul class="language">
-            <li class="language-li">EN</li>
-            <li class="language-li language-li2"><a href="../index.html">RU</a></li>
-          </ul>
+  <div class="bg-en">
+    <section class="hero hero-en panel">
+      <div class="container">
+        <div class="fixed">
+          <div class="fixed-container">
+            <ul class="language">
+              <li class="language-li">EN</li>
+              <li class="language-li language-li2"><a href="../index.html">RU</a></li>
+            </ul>
+          </div>
         </div>
+        <a href="#subscription" class="hero-btn btn-animated">
+          <img src="../img/arrow.png" alt="Вниз">
+        </a>
       </div>
-      <a href="#subscription" class="hero-btn btn-animated">
-        <img src="../img/arrow.png" alt="Вниз">
-      </a>
-    </div>
-  </section>
+    </section>
+  </div>
+
 
   <section class="subscription panel" id="subscription">
     <div class="container-two">
@@ -57,13 +60,15 @@
   <script src="../js/main.js"></script>
   <script>
     let bgEn = document.querySelector('.hero-en');
+    let bgEn2 = document.querySelector('.bg-en');
     window.onload = function () {
+      bgEn2.style.backgroundImage = "url(../img/RSB_START_GIF-EN2.gif?" + new Date().getTime() + ")";
       bgEn.style.backgroundImage = "url(../img/RSB_START_GIF-EN.gif?" + new Date().getTime() + ")";
-      bgEn.style.backgroundSize = 'contain';
-      bgEn.style.backgroundColor = '#009aad';
-      setTimeout(() => bgEn.style.backgroundColor = '#0f95c8', 3490);
-      setTimeout(() => bgEn.style.backgroundColor = '#1f7ce4', 5895);
-      setTimeout(() => bgEn.style.backgroundColor = '#2e64ff', 8295);
+      //bgEn.style.backgroundSize = 'contain';
+      //bgEn.style.backgroundColor = '#009aad';
+      //setTimeout(() => bgEn.style.backgroundColor = '#0f95c8', 3490);
+      //setTimeout(() => bgEn.style.backgroundColor = '#1f7ce4', 5895);
+      //setTimeout(() => bgEn.style.backgroundColor = '#2e64ff', 8295);
     }
   </script>
 </body>

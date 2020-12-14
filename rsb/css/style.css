@@ -482,6 +482,34 @@ li {
           animation: sub 4s infinite;
 }
 
+.bg-ru {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: url("../img/RSB_START_GIF-RU2.gif") no-repeat;
+  background-size: cover;
+}
+
+.bg-en {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: url("../img/RSB_START_GIF-EN2.gif") no-repeat;
+  background-size: cover;
+}
+
 .hero {
   width: 100%;
   height: 100vh;
