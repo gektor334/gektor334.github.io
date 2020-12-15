@@ -603,7 +603,7 @@ li {
 .sub-btn {
   margin: auto;
   border: 2px solid #ffffff;
-  padding: 10px 22px;
+  padding: 0.4vw 0.8vw;
   border-radius: 5px;
   font-size: 1.25vw;
   font-weight: 700;
