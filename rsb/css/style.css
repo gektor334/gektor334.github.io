@@ -755,10 +755,10 @@ li {
 }
 
 @media screen and (orientation: portrait) {
-  .bg-ru {
+  .pc {
     display: none;
   }
-  .bg-m-ru {
+  .mb {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -833,12 +833,12 @@ li {
 }
 
 @media screen and (orientation: landscape) {
-  .bg-ru {
+  .pc {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-  .bg-m-ru {
+  .mb {
     display: none;
   }
 }

@@ -13,7 +13,7 @@
 
 <body>
   <!--pc(первый экран)-->
-  <div class="bg-ru">
+  <div class="bg-ru pc">
     <section class="hero hero-ru panel">
       <div class="container">
         <div class="fixed">
@@ -31,21 +31,23 @@
     </section>
   </div>
   <!--mobile(первый экран)-->
-  <section class="bg-m-ru hero hero-ru panel">
-    <div class="container">
-      <div class="fixed">
-        <div class="fixed-container">
-          <ul class="language">
-            <li class="language-li">RU</li>
-            <li class="language-li language-li2"><a href="en/index.html">EN</a></li>
-          </ul>
+  <div class="bg-ru mb">
+    <section class="bg-m-ru hero hero-ru panel">
+      <div class="container">
+        <div class="fixed">
+          <div class="fixed-container">
+            <ul class="language">
+              <li class="language-li">RU</li>
+              <li class="language-li language-li2"><a href="en/index.html">EN</a></li>
+            </ul>
+          </div>
         </div>
+        <a href="#subscription" class="hero-btn btn-animated">
+          <img src="img/arrow.png" alt="Вниз">
+        </a>
       </div>
-      <a href="#subscription" class="hero-btn btn-animated">
-        <img src="img/arrow.png" alt="Вниз">
-      </a>
-    </div>
-  </section>
+    </section>
+  </div>
 
   <!-- pc(второй экран) -->
   <section class="subscription panel" id="subscription">
@@ -80,10 +82,11 @@
   <script src="js/main.js"></script>
   <script>
     let bgRu = document.querySelector('.hero-ru');
-    let bgRu2 = document.querySelector('.bg-ru');
+    let bgRu2 = document.querySelectorAll('.bg-ru');
     let bgRuM = document.querySelector('.bg-m-ru');
     window.onload = function () {
-      bgRu2.style.backgroundImage = "url(img/RSB_START_GIF-RU2.gif?" + new Date().getTime() + ")";
+      bgRu2[1].style.backgroundImage = "url(img/RSB_START_GIF-RU2.gif?" + new Date().getTime() + ")";
+      bgRu2[0].style.backgroundImage = "url(img/RSB_START_GIF-RU2.gif?" + new Date().getTime() + ")";
       bgRu.style.backgroundImage = "url(img/RSB_START_GIF-RU.gif?" + new Date().getTime() + ")";
       bgRuM.style.backgroundImage = "url(img/1-mob-RU.gif?" + new Date().getTime() + ")";
       /*bgRu.style.backgroundSize = 'contain';
