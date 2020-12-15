@@ -767,6 +767,14 @@ li {
     min-height: 100vh;
     min-height: -webkit-fill-available;
   }
+  .hero-btn {
+    bottom: auto;
+    top: 45vh;
+    width: 10px;
+    max-width: 10px;
+    padding: 9px 4px;
+    left: 48vw;
+  }
   .pc {
     display: none;
   }
@@ -774,6 +782,13 @@ li {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0;
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
     background: url("../img/1-mob-RU.gif") no-repeat;
     background-size: 98vw;
     background-position: top center;
@@ -782,6 +797,13 @@ li {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0;
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
     background: url("../img/1-mob-En.gif") no-repeat;
     background-size: 98vw;
     background-position: top center;
@@ -791,11 +813,6 @@ li {
   }
   .fixed-container {
     padding: 0;
-  }
-  .hero-btn {
-    bottom: 35px;
-    max-width: 10px;
-    padding: 9px 4px;
   }
   .logo {
     position: absolute;
