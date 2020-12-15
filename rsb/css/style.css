@@ -769,7 +769,7 @@ li {
   }
   .hero-btn {
     bottom: auto;
-    top: 35vh;
+    top: 38vh;
     width: 10px;
     max-width: 10px;
     padding: 9px 4px;
@@ -790,7 +790,7 @@ li {
     min-height: 100vh;
     min-height: -webkit-fill-available;
     background: url("../img/1-mob-RU.gif") no-repeat;
-    background-size: 98vw;
+    background-size: 85vw;
     background-position: top center;
   }
   .bg-m-en {
@@ -805,7 +805,7 @@ li {
     min-height: 100vh;
     min-height: -webkit-fill-available;
     background: url("../img/1-mob-En.gif") no-repeat;
-    background-size: 98vw;
+    background-size: 85vw;
     background-position: top center;
   }
   .language {
@@ -866,6 +866,16 @@ li {
   .subscription {
     background: url("../img/2-mob.gif") no-repeat;
     background-size: cover;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0;
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
   }
 }
 
