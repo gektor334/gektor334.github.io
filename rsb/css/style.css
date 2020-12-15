@@ -601,7 +601,6 @@ li {
 }
 
 .sub-btn {
-  margin: auto;
   border: 2px solid #ffffff;
   padding: 0.4vw 0.8vw;
   border-radius: 5px;
@@ -612,6 +611,8 @@ li {
           animation: sub 4s infinite;
   -webkit-transition: background 0.4s;
   transition: background 0.4s;
+  min-width: 100%;
+  display: block;
 }
 
 .sub-btn:hover {
