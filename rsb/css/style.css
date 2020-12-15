@@ -355,6 +355,8 @@ html, body {
   font-family: 'Montserrat', sans-serif;
   overflow: hidden;
   scroll-behavior: smooth;
+  -webkit-locale: auto;
+  white-space: normal;
 }
 
 .container {
