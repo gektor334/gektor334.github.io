@@ -645,6 +645,7 @@ li {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  min-width: 40%;
 }
 
 @-webkit-keyframes sub {
@@ -750,6 +751,17 @@ li {
     opacity: 0.3;
     -webkit-transform: translateY(-20px);
             transform: translateY(-20px);
+  }
+}
+
+@media screen and (orientation: portrait) {
+  .bg-ru {
+    display: none;
+  }
+  .bg-m-ru {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 /*# sourceMappingURL=style.css.map */
