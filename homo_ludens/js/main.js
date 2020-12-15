@@ -97,3 +97,27 @@ try {
   }
 }
 catch { }
+
+let cursList = document.querySelector('.curs-list');
+document.querySelector('.link-relative').onclick = function () {
+  if (cursList.style.display == 'flex') {
+    cursList.style.maxHeight = '0';
+    setTimeout(() => cursList.style.display = 'none', 800);
+  }
+  else {
+    cursList.style.display = 'flex';
+    setTimeout(() => cursList.style.maxHeight = '12vw', 50);
+  }
+}
+
+document.body.addEventListener('click', (e) => {
+  let target = e.target;
+  if (target.className == 'curs-list') {
+    return;
+  }
+  else if (target.className == 'link link-relative') {
+    return;
+  }
+  cursList.style.maxHeight = '0';
+  setTimeout(() => cursList.style.display = 'none', 800);
+});
