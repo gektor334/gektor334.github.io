@@ -31,20 +31,24 @@ let observer = new MutationObserver(function (mutations) {
         window.location = '#subscription';
       }
     });
+    let arrTouch = [];
+    function startMobile(e) {
+      arrTouch = [];
+      let touches = e.changedTouches;
+      arrTouch.push(touches[0].pageY)
+    }
+    document.querySelector('.mb').addEventListener("touchstart", startMobile);
+
+    function endMobile(e) {
+      console.log(arrTouch);
+      let touches = e.changedTouches;
+      if (arrTouch[0] > touches[0].pageY) {
+        window.location = '#subscription';
+      }
+    }
+    document.querySelector('.mb').addEventListener("touchmove", endMobile);
   });
 });
 
 let target = document.querySelector('.hero-btn');
 observer.observe(target, { attributes: true, attributeFilter: ['style'] });
-
-function startMobile(e) {
-  let touches = e.changedTouches;
-  console.log(touches[0].pageY);
-}
-document.querySelector('.mb').addEventListener("touchstart", startMobile);
-
-function endMobile(e) {
-  let touches = e.changedTouches;
-  console.log(touches[0].pageY);
-}
-document.querySelector('.mb').addEventListener("touchend", endMobile);
