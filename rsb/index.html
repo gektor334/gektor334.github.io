@@ -31,23 +31,21 @@
     </section>
   </div>
   <!--mobile(первый экран)-->
-  <div class="bg-m-ru">
-    <section class="hero hero-ru panel">
-      <div class="container">
-        <div class="fixed">
-          <div class="fixed-container">
-            <ul class="language">
-              <li class="language-li">RU</li>
-              <li class="language-li language-li2"><a href="en/index.html">EN</a></li>
-            </ul>
-          </div>
+  <section class="bg-m-ru hero hero-ru panel">
+    <div class="container">
+      <div class="fixed">
+        <div class="fixed-container">
+          <ul class="language">
+            <li class="language-li">RU</li>
+            <li class="language-li language-li2"><a href="en/index.html">EN</a></li>
+          </ul>
         </div>
-        <a href="#subscription" class="hero-btn btn-animated">
-          <img src="img/arrow.png" alt="Вниз">
-        </a>
       </div>
-    </section>
-  </div>
+      <a href="#subscription" class="hero-btn btn-animated">
+        <img src="img/arrow.png" alt="Вниз">
+      </a>
+    </div>
+  </section>
 
   <!-- pc(второй экран) -->
   <section class="subscription panel" id="subscription">
@@ -83,10 +81,12 @@
   <script>
     let bgRu = document.querySelector('.hero-ru');
     let bgRu2 = document.querySelector('.bg-ru');
+    let bgRuM = document.querySelector('.bg-m-ru');
     window.onload = function () {
       bgRu2.style.backgroundImage = "url(img/RSB_START_GIF-RU2.gif?" + new Date().getTime() + ")";
       bgRu.style.backgroundImage = "url(img/RSB_START_GIF-RU.gif?" + new Date().getTime() + ")";
-      /*       bgRu.style.backgroundSize = 'contain';
+      bgRuM.style.backgroundImage = "url(img/1-mob-RU.gif?" + new Date().getTime() + ")";
+      /*bgRu.style.backgroundSize = 'contain';
             bgRu.style.backgroundColor = '#009aad';
             setTimeout(() => bgRu.style.backgroundColor = '#0f95c8', 3490);
             setTimeout(() => bgRu.style.backgroundColor = '#1f7ce4', 5895);

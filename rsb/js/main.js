@@ -1,24 +1,27 @@
-let ul = document.querySelector('.language');
+let ul = document.querySelectorAll('.language');
 let li = document.querySelectorAll('.language-li');
 
 document.body.onclick = function (e) {
-  if (e.target.className == 'language-li') {
-    if (ul.style.height == '34px') {
-      ul.style.height = '15px';
+  for (let i = 0; i < ul.length; i++) {
+    if (e.target.className == 'language-li') {
+      if (ul[i].style.height == '34px') {
+        ul[i].style.height = '15px';
+      }
+      else {
+        ul[i].style.height = '34px';
+      }
     }
     else {
-      ul.style.height = '34px';
+      ul[i].style.height = '15px';
     }
-  }
-  else {
-    ul.style.height = '15px';
   }
 }
 
 
-let btn = document.querySelector('.hero-btn');
+let btn = document.querySelectorAll('.hero-btn');
 
-setTimeout(() => btn.style.display = 'block', 14000);
+setTimeout(() => btn[0].style.display = 'block', 14000);
+setTimeout(() => btn[1].style.display = 'block', 14000);
 
 
 let observer = new MutationObserver(function (mutations) {
