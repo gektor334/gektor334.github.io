@@ -596,8 +596,8 @@ li {
 }
 
 .text {
-  -ms-flex-preferred-size: 60%;
-      flex-basis: 60%;
+  -ms-flex-preferred-size: 56%;
+      flex-basis: 56%;
 }
 
 .sub-btn {
@@ -638,8 +638,8 @@ li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-preferred-size: 40%;
-      flex-basis: 40%;
+  -ms-flex-preferred-size: 44%;
+      flex-basis: 44%;
   margin-top: -40px;
   height: 100vh;
   -webkit-box-pack: justify;
