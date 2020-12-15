@@ -36,3 +36,9 @@ let observer = new MutationObserver(function (mutations) {
 
 let target = document.querySelector('.hero-btn');
 observer.observe(target, { attributes: true, attributeFilter: ['style'] });
+
+function scroolMobile(e) {
+  let touches = e.changedTouches;
+  console.log(touches[0].pageY);
+}
+document.querySelector('.mb').addEventListener("touchmove", scroolMobile);

@@ -758,13 +758,21 @@ li {
   .pc {
     display: none;
   }
-  .mb {
+  .bg-m-ru {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     background: url("../img/1-mob-RU.gif") no-repeat;
-    background-size: cover;
-    background-position: center;
+    background-size: 98vw;
+    background-position: top center;
+  }
+  .bg-m-en {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background: url("../img/1-mob-En.gif") no-repeat;
+    background-size: 98vw;
+    background-position: top center;
   }
   .language {
     right: 24px;
