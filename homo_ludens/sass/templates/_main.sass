@@ -1,0 +1,378 @@
+.main
+  background: url('../img/bg.jpg')
+  display: flex
+  align-items: center
+  flex-direction: column
+.arrow-bottom
+  position: absolute
+  display: flex
+  left: 53%
+  bottom: 9vw
+  max-width: 1.8vw
+.hero
+  display: flex
+  width: 85vw
+  align-items: center
+  position: relative
+  &__desc
+    margin-top: -6vw
+  &__img
+    width: 52vw
+  &__subtitle
+    max-width: 36vw
+    letter-spacing: -0.03em
+    margin-bottom: 2vw
+  &__title
+    font-size: 2.7vw
+    font-weight: 700
+    color: #A5854F
+    letter-spacing: -0.03em
+    position: relative
+    text-transform: uppercase
+    max-width: 34vw
+    &::before
+      content: ''
+      position: absolute
+      width: 14vw
+      height: 3.1vw
+      bottom: -4.5vw
+      background: url('../img/h1.svg') no-repeat
+      background-size: contain
+.about-school
+  width: 85vw
+  display: flex
+  justify-content: space-between
+  &__desc
+    &-bold
+      color: #F2F2F2
+      position: relative
+      z-index: 2
+      text-transform: uppercase
+      margin-bottom: 4vw
+      &::before
+        content: ''
+        position: absolute
+        background: url('../img/v4.svg') no-repeat
+        background-size: contain
+        width: 43vw
+        height: 10vw
+        top: -2vw
+        left: -1.2vw
+        z-index: -1
+  &__left
+    display: flex
+    flex-direction: column
+    align-items: center
+    &-img
+      margin-top: 3vw
+      margin-bottom: 2.5vw
+      position: relative
+      max-width: 20vw
+      &::before
+        content: ''
+        position: absolute
+        background: url('../img/v3.svg') no-repeat
+        background-size: contain
+        width: 8vw
+        height: 9vw
+        bottom: 5vw
+        right: -9vw
+    &--li
+      position: relative
+      z-index: 2
+      &:nth-child(2)
+        &::after
+          content: ''
+          position: absolute
+          background: url('../img/ll1.svg') no-repeat
+          background-size: contain
+          width: 2.5vw
+          height: 2.5vw
+          top: -1vw
+          left: -1.5vw
+          z-index: -1
+      &:nth-child(3)
+        &::after
+          content: ''
+          position: absolute
+          background: url('../img/ll2.svg') no-repeat
+          background-size: contain
+          width: 3vw
+          height: 2.5vw
+          top: -0.7vw
+          left: -1.5vw
+          z-index: -1
+      &:nth-child(4)
+        &::after
+          content: ''
+          position: absolute
+          background: url('../img/ll3.svg') no-repeat
+          background-size: contain
+          width: 2.6vw
+          height: 2.5vw
+          top: -1vw
+          left: -1.3vw
+          z-index: -1
+      &:nth-child(5)
+        &::after
+          content: ''
+          position: absolute
+          background: url('../img/ll4.svg') no-repeat
+          background-size: contain
+          width: 3vw
+          height: 3vw
+          top: -1vw
+          left: -1.5vw
+          z-index: -1
+      &:nth-child(6)
+        &::after
+          content: ''
+          position: absolute
+          background: url('../img/ll5.svg') no-repeat
+          background-size: contain
+          width: 3vw
+          height: 2.5vw
+          top: -1vw
+          left: -1.5vw
+          z-index: -1
+  &__title
+    width: 10vw
+    position: relative
+    z-index: 2
+    &::after
+      content: ''
+      position: absolute
+      width: 6vw
+      height: 5.9vw
+      background: url('../img/img.svg') no-repeat
+      background-size: contain
+      top: 0
+      left: -7.6vw
+    &::before
+      content: ''
+      position: absolute
+      background: url('../img/v1.svg') no-repeat
+      background-size: contain
+      width: 16vw
+      height: 15vw
+      top: -5.2vw
+      left: 1.1vw
+      z-index: -1
+  &__right
+    display: flex
+    flex-direction: column
+    align-items: flex-end
+    &-video
+      max-width: 37vw
+      margin-bottom: 4.3vw
+    &--before
+      text-transform: uppercase
+      text-align: right
+      position: relative
+      &::before
+        content: ''
+        position: absolute
+        background: url('../img/v5.svg') no-repeat
+        background-size: contain
+        width: 13vw
+        height: 2vw
+        top: 1.6vw
+        right: -0.5vw
+    &-img
+      margin-top: 3.5vw
+      max-width: 37vw
+      position: relative
+      z-index: 2
+      &::before
+        content: ''
+        position: absolute
+        background: url('../img/v6.svg') no-repeat
+        background-size: contain
+        width: 27vw
+        height: 30vw
+        top: -11vw
+        right: -2vw
+        z-index: -1
+      &::after
+        content: ''
+        position: absolute
+        background: url('../img/v7.svg') no-repeat
+        background-size: contain
+        width: 35vw
+        height: 30vw
+        bottom: -15vw
+        left: -6vw
+        z-index: -1
+    &-rose
+      max-width: 14vw
+      margin-left: 40%
+      margin-top: 4vw
+      margin-bottom: 4vw
+    &--li
+      position: relative
+      z-index: 3
+      &:nth-child(1)
+        &::after
+          content: ''
+          position: absolute
+          background: url('../img/lr1.svg') no-repeat
+          background-size: contain
+          width: 1.5vw
+          height: 1.5vw
+          top: 0.3vw
+          left: -2vw
+      &:nth-child(2)
+        &::after
+          content: ''
+          position: absolute
+          background: url('../img/lr2.svg') no-repeat
+          background-size: contain
+          width: 1.5vw
+          height: 1.5vw
+          top: 0.3vw
+          left: -2vw
+      &:nth-child(3)
+        &::after
+          content: ''
+          position: absolute
+          background: url('../img/lr3.svg') no-repeat
+          background-size: contain
+          width: 1.5vw
+          height: 1.5vw
+          top: 0.3vw
+          left: -2vw
+      &:nth-child(4)
+        &::after
+          content: ''
+          position: absolute
+          background: url('../img/lr4.svg') no-repeat
+          background-size: contain
+          width: 1.5vw
+          height: 1.5vw
+          top: 0.3vw
+          left: -2vw
+.subdesc
+  font-style: italic
+  font-weight: 500
+  letter-spacing: -0.02em
+  font-size: 1.159vw
+  line-height: 1.7vw
+  max-width: 24vw
+  color: #222222
+.row
+  width: 100%
+.v2
+  position: relative
+  z-index: 2
+  &::after
+    content: ''
+    position: absolute
+    width: 24vw
+    height: 1.9vw
+    background: url('../img/v2.svg') no-repeat
+    background-size: contain
+    top: -0.1vw
+    left: 0
+    z-index: -1
+.new
+  background: #222222
+  width: 100%
+  display: flex
+  flex-direction: column
+  align-items: center
+  padding: 2vw 0 0 0
+  &-title
+    padding-bottom: 2vw
+    text-align: left
+    color: #222222
+    z-index: 2
+    font-size: 1.2vw
+    text-transform: uppercase
+    letter-spacing: 0.06em
+    margin-top: -0.7vw
+    margin-left: 4.4vw
+  &-date
+    color: #222222
+    font-size: 0.843vw
+    z-index: 2
+    text-align: left
+    letter-spacing: 0.06em
+  &-text
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin-top: 0.6vw
+    margin-left: -3vw
+.slick
+  &-prev, &-next
+    &::before
+      top: -4vw !important
+  &-slide
+    &:nth-child(3n + 2)
+      & div
+        & .new-slide
+          position: relative
+          &::before
+            content: ''
+            position: absolute
+            width: 16vw
+            height: 20vw
+            background: url('../img/new1.svg') no-repeat
+            background-size: contain
+            top: 11vw
+            left: 3vw
+    &:nth-child(3n + 3)
+      & div
+        & .new-slide
+          position: relative
+          &::before
+            content: ''
+            position: absolute
+            width: 16vw
+            height: 20vw
+            background: url('../img/new2.svg') no-repeat
+            background-size: contain
+            top: 12vw
+            left: 3vw
+    &:nth-child(3n + 4)
+      & div
+        & .new-slide
+          position: relative
+          &::before
+            content: ''
+            position: absolute
+            width: 16vw
+            height: 20vw
+            background: url('../img/new3.svg') no-repeat
+            background-size: contain
+            top: 11.3vw
+            left: 3vw
+.slider
+  width: 85vw
+  margin: 5vw auto
+.slick
+  &-slide
+    margin: 0px 3vw
+  &-track
+    display: flex
+    align-items: center
+  &-prev
+    &::before
+      content: ''
+      position: absolute
+      background: url('../img/arr.svg')  no-repeat
+      background-size: contain
+      width: 1vw
+      height: 2vw
+      transform: rotate(180deg)
+      top: -10px
+  &-next
+    right: 0
+    &::before
+      content: ''
+      position: absolute
+      background: url('../img/arr.svg') no-repeat
+      background-size: contain
+      width: 1vw
+      height: 2vw
+      top: -10px

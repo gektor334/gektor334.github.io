@@ -1,0 +1,103 @@
+.reviews
+  display: flex
+  justify-content: center
+  background: #F0ECE5
+  width: 100%
+  &-more
+    font-size: 0.95vw
+    letter-spacing: -0.02em
+    line-height: 1.35
+    color: #A7892B
+    cursor: pointer
+  &-desc
+    margin-top: 3vw
+    font-size: 0.95vw
+    letter-spacing: -0.02em
+    line-height: 1.35
+    color: #222222
+    max-height: 4vw
+    overflow: hidden
+    transition: 0.6s
+  &-title
+    margin-left: 2vw
+  &-container
+    flex-direction: column
+  &-content
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    margin-top: 6vw
+    transition: 1s
+  &-subtitle
+    margin-left: 3vw
+    margin-top: -1vw
+    color: #222222
+    font-size: 0.95vw
+    letter-spacing: -0.02em
+  &-card
+    flex-basis: 45%
+    display: flex
+    flex-direction: column
+    position: relative
+    margin-bottom: 6vw
+    transition: 1s
+    &:nth-child(4n + 1)
+      &::before
+        content: ''
+        position: absolute
+        top: 17.6vw
+        left: 0
+        width: 22vw
+        height: 10vw
+        background: url('../img/reviews/1.svg') no-repeat
+        background-size: contain
+    &:nth-child(4n + 2)
+      &::before
+        content: ''
+        position: absolute
+        top: 17.6vw
+        left: 0
+        width: 22vw
+        height: 10vw
+        background: url('../img/reviews/2.svg') no-repeat
+        background-size: contain
+    &:nth-child(4n + 3)
+      &::before
+        content: ''
+        position: absolute
+        top: 17.6vw
+        left: 0
+        width: 22vw
+        height: 10vw
+        background: url('../img/reviews/3.svg') no-repeat
+        background-size: contain
+    &:nth-child(4n + 4)
+      &::before
+        content: ''
+        position: absolute
+        top: 17.6vw
+        left: 0
+        width: 22vw
+        height: 10vw
+        background: url('../img/reviews/4.svg') no-repeat
+        background-size: contain
+    &-title
+      margin-left: 3vw
+      text-transform: uppercase
+      font-weight: 700
+  &-img
+    max-width: 30.365vw
+    margin-left: 3vw
+    transition: 1s
+.more-card
+  margin-top: 1vw
+  margin-bottom: 9vw
+  display: flex
+  justify-content: center
+  &__btn
+    color: #222222
+    border: 1px solid #222222
+    padding: 1.2vw 2vw
+    font-size: 0.94vw
+    font-weight: 700
+    border-radius: 35px

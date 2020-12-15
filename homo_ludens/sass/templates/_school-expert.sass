@@ -1,0 +1,58 @@
+.school-expert
+  width: 85vw
+  padding-bottom: 10vw
+  &__title
+    margin-left: 13vw
+    margin-top: 7.5vw
+    margin-bottom: 4vw
+    position: relative
+    letter-spacing: 0.05em
+    &::before
+      content: ''
+      position: absolute
+      background: url('../img/school-expert/vec1.svg')  no-repeat
+      background-size: contain
+      width: 8vw
+      height: 7vw
+      left: -7.5vw
+      top: -2.5vw
+      z-index: 1
+    &::after
+      content: ''
+      position: absolute
+      background: url('../img/school-expert/vec2.svg')  no-repeat
+      background-size: contain
+      width: 11vw
+      height: 9vw
+      left: -11.5vw
+      top: -4.8vw
+.teachers
+  display: flex
+  flex-wrap: wrap
+  width: 92vw
+  &__img
+    max-width: 23vw
+  &__desc
+    max-width: 23vw
+    margin-left: 2vw
+    margin-bottom: 3.3vw
+  &__card
+    margin-right: 6vw
+    margin-bottom: 3.6vw
+  &__title
+    text-transform: uppercase
+    margin-left: 2vw
+  &__btn
+    margin-left: 2vw
+    border: 2px solid #222222
+    color: #222222
+    font-weight: 700
+    font-size: 0.87vw
+    text-transform: uppercase
+    border-radius: 35px
+    padding: 1.15vw 2.605vw
+  &__describe
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    height: 17vw
