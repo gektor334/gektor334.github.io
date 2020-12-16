@@ -942,6 +942,7 @@ header {
   }
   .nav-description {
     padding: 20px;
+    padding-right: 40px;
   }
   .link {
     padding: 20px;
