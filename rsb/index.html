@@ -31,7 +31,7 @@
     </section>
   </div>
   <!--mobile(первый экран)-->
-  <div class="bg-ru-mb mb ">
+  <div class="bg-ru mb ">
     <section class="bg-m-ru hero panel">
       <div class="container">
         <div class="fixed">
@@ -83,21 +83,15 @@
     let bgRu = document.querySelector('.hero-ru');
     let bgRuM = document.querySelector('.bg-m-ru');
     let bgRuM2 = document.querySelector('.bg-ru-mb');
+    let bgRu2 = document.querySelectorAll('.bg-ru');
     window.onload = function () {
       bgRu.style.backgroundImage = "url(img/RSB_START_GIF-RU.gif?" + new Date().getTime() + ")";
+      bgRu2[0].style.backgroundImage = "url(img/bg-ru.gif?" + new Date().getTime() + ")";
+      bgRu2[1].style.backgroundImage = "url(img/bg-ru.gif?" + new Date().getTime() + ")";
       bgRuM.style.backgroundImage = "url(img/1-mob-RU.gif?" + new Date().getTime() + ")";
       bgRuM.style.backgroundPosition = "top";
       bgRuM.style.backgroundRepeat = "no-repeat";
       bgRu.style.backgroundSize = 'contain';
-      bgRu.style.backgroundColor = '#009aad';
-      bgRuM.style.backgroundColor = '#009aad';
-      setTimeout(() => bgRu.style.backgroundColor = '#0f95c8', 3490);
-      setTimeout(() => bgRu.style.backgroundColor = '#1f7ce4', 5895);
-      setTimeout(() => bgRu.style.backgroundColor = '#2e64ff', 8295);
-      setTimeout(() => bgRuM2.style.backgroundColor = '#0f95c8', 3200);
-      setTimeout(() => bgRuM2.style.backgroundColor = '#1f7ce4', 5600);
-      setTimeout(() => bgRuM2.style.backgroundColor = '#2e64ff', 8000);
-
 
       let ul = document.querySelectorAll('.language');
       let li = document.querySelectorAll('.language-li');

@@ -30,7 +30,7 @@
     </section>
   </div>
 
-  <div class="bg-en-mb mb">
+  <div class="bg-ru mb">
     <section class="bg-m-en hero panel">
       <div class="container">
         <div class="fixed">
@@ -78,21 +78,17 @@
   <script>
     let bgEn = document.querySelector('.hero-en');
     let bgEnM = document.querySelector('.bg-m-en');
-    let bgEnM2 = document.querySelector('.bg-en-mb');
+    let bgEn2 = document.querySelector('.bg-en');
+    let bgRu2 = document.querySelector('.bg-ru');
     window.onload = function () {
-      bgEn.style.backgroundImage = "url(../img/D-1-EN.gif?" + new Date().getTime() + ")";
+      bgEn.style.backgroundImage = "url(../img/RSB_START_GIF-EN.gif?" + new Date().getTime() + ")";
+      bgEn2.style.backgroundImage = "url(../img/bg-en.gif?" + new Date().getTime() + ")";
       bgEnM.style.backgroundImage = "url(../img/1-mob-EN.gif?" + new Date().getTime() + ")";
+      bgRu2.style.backgroundImage = "url(../img/bg-ru.gif?" + new Date().getTime() + ")";
       bgEnM.style.backgroundPosition = "top";
       bgEnM.style.backgroundRepeat = "no-repeat";
       bgEn.style.backgroundSize = 'contain';
-      bgEn.style.backgroundColor = '#009aad';
-      bgEnM.style.backgroundColor = '#009aad';
-      setTimeout(() => bgEn.style.backgroundColor = '#0f95c8', 4900);
-      setTimeout(() => bgEn.style.backgroundColor = '#1f7ce4', 8900);
-      setTimeout(() => bgEn.style.backgroundColor = '#2e64ff', 12900);
-      setTimeout(() => bgEnM2.style.backgroundColor = '#009aac', 4400);
-      setTimeout(() => bgEnM2.style.backgroundColor = '#0f94c7', 8400);
-      setTimeout(() => bgEnM2.style.backgroundColor = '#1f7be3', 12400);
+      bgEn2.style.backgroundSize = 'cover';
 
 
       let ul = document.querySelectorAll('.language');
