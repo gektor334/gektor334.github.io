@@ -2726,6 +2726,7 @@ li {
   margin-top: -1vw;
   position: relative;
   z-index: 1;
+  max-width: 28.55vw;
 }
 
 .club-row-right::before {
@@ -2850,6 +2851,7 @@ li {
 .club-bg2 {
   position: relative;
   z-index: 1;
+  max-width: 33vw;
 }
 
 .club-bg2::after {
@@ -2888,9 +2890,14 @@ li {
   max-width: 34vw;
 }
 
+.left-photo {
+  max-width: 33vw;
+}
+
 .right-photo {
   overflow: hidden;
   z-index: 1;
+  max-width: 33vw;
 }
 
 .right-photo img {
