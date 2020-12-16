@@ -3,6 +3,8 @@
     &-right
       right: -140px
 @media screen and (max-width: 1260px)
+  .object
+    flex-wrap: wrap
   .header
     &-contact
       &__phone
@@ -31,6 +33,83 @@
       &-top
         top: 100px
 @media screen and (max-width: 1190px)
+  .object
+    justify-content: center
+    margin-bottom: 0
+  .service
+    &__card
+      align-items: center
+      margin-left: 0
+      margin-right: 0
+      margin-top: 100px
+      &::before
+        display: none
+      &:first-child
+        margin-left: 0
+        margin-right: 0
+        margin-top: 0
+        &::after
+          content: ''
+          height: 43px
+          width: 352px
+          background: url('../img/mVector.svg') no-repeat
+          background-size: contain
+          position: absolute
+          left: -19px
+          top: 30px
+      &:nth-child(2)
+        &::after
+          content: ''
+          height: 43px
+          width: 352px
+          background: url('../img/mVector.svg') no-repeat
+          background-size: contain
+          position: absolute
+          left: -19px
+          top: 30px
+        .service
+          &__title
+            margin-left: 46px
+          &__desc
+            margin-left: 13px
+      &:nth-child(3)
+        &::after
+          content: ''
+          height: 43px
+          width: 352px
+          background: url('../img/mVector.svg') no-repeat
+          background-size: contain
+          position: absolute
+          left: -19px
+          top: 30px
+        .service
+          &__title
+            margin-left: 46px
+          &__desc
+            margin-left: 13px
+      &:nth-child(4)
+        &::after
+          content: ''
+          height: 43px
+          width: 352px
+          background: url('../img/mVector.svg') no-repeat
+          background-size: contain
+          position: absolute
+          left: -19px
+          top: 30px
+        .service
+          &__title
+            margin-left: 46px
+          &__desc
+            max-width: 280px
+            line-height: 1
+            span
+              margin-bottom: 10px
+      div
+        width: 310px
+        text-align: left
+    &__toggle
+      max-width: 287px
   .header
     &-content
       padding: 0 20px 0 0
@@ -83,6 +162,12 @@
       margin-bottom: -3px
   .information
     margin: 60px 0
+    &__phone
+      &::before
+        top: -7px
+    &__mail
+      &::before
+        top: 0
 @media screen and (max-width: 940px)
   .client
     &__description
