@@ -2594,6 +2594,9 @@ img {
   .swiper-button-prev, .swiper-button-next {
     display: none !important;
   }
+  .swiper-pagination {
+    margin-bottom: 5px !important;
+  }
 }
 
 @media screen and (max-width: 460px) {
