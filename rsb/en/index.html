@@ -30,7 +30,7 @@
     </section>
   </div>
 
-  <div class="bg-ru mb">
+  <div class="bg-en-mb mb">
     <section class="bg-m-en hero panel">
       <div class="container">
         <div class="fixed">
@@ -75,24 +75,80 @@
     </div>
   </section>
 
-  <script src="../js/main.js"></script>
   <script>
     let bgEn = document.querySelector('.hero-en');
-    let bgEn2 = document.querySelector('.bg-en');
     let bgEnM = document.querySelector('.bg-m-en');
-    let bgRu = document.querySelector('.bg-ru');
+    let bgEnM2 = document.querySelector('.bg-en-mb');
     window.onload = function () {
-      bgEn2.style.backgroundImage = "url(../img/RSB_START_GIF-EN2.gif?" + new Date().getTime() + ")";
-      bgRu.style.backgroundImage = "url(../img/RSB_START_GIF-RU2.gif?" + new Date().getTime() + ")";
-      bgEn.style.backgroundImage = "url(../img/RSB_START_GIF-EN.gif?" + new Date().getTime() + ")";
+      bgEn.style.backgroundImage = "url(../img/D-1-EN.gif?" + new Date().getTime() + ")";
       bgEnM.style.backgroundImage = "url(../img/1-mob-EN.gif?" + new Date().getTime() + ")";
       bgEnM.style.backgroundPosition = "top";
       bgEnM.style.backgroundRepeat = "no-repeat";
-      //bgEn.style.backgroundSize = 'contain';
-      //bgEn.style.backgroundColor = '#009aad';
-      //setTimeout(() => bgEn.style.backgroundColor = '#0f95c8', 3490);
-      //setTimeout(() => bgEn.style.backgroundColor = '#1f7ce4', 5895);
-      //setTimeout(() => bgEn.style.backgroundColor = '#2e64ff', 8295);
+      bgEn.style.backgroundSize = 'contain';
+      bgEn.style.backgroundColor = '#009aad';
+      bgEnM.style.backgroundColor = '#009aad';
+      setTimeout(() => bgEn.style.backgroundColor = '#0f95c8', 4900);
+      setTimeout(() => bgEn.style.backgroundColor = '#1f7ce4', 8900);
+      setTimeout(() => bgEn.style.backgroundColor = '#2e64ff', 12900);
+      setTimeout(() => bgEnM2.style.backgroundColor = '#009aac', 4400);
+      setTimeout(() => bgEnM2.style.backgroundColor = '#0f94c7', 8400);
+      setTimeout(() => bgEnM2.style.backgroundColor = '#1f7be3', 12400);
+
+
+      let ul = document.querySelectorAll('.language');
+      let li = document.querySelectorAll('.language-li');
+
+      document.body.onclick = function (e) {
+        for (let i = 0; i < ul.length; i++) {
+          if (e.target.className == 'language-li') {
+            if (ul[i].style.height == '34px') {
+              ul[i].style.height = '15px';
+            }
+            else {
+              ul[i].style.height = '34px';
+            }
+          }
+          else {
+            ul[i].style.height = '15px';
+          }
+        }
+      }
+
+
+      let btn = document.querySelectorAll('.hero-btn');
+
+      setTimeout(() => btn[0].style.display = 'block', 20000);
+      setTimeout(() => btn[1].style.display = 'block', 20000);
+
+
+      let observer = new MutationObserver(function (mutations) {
+        mutations.forEach(function (mutationRecord) {
+          window.addEventListener('wheel', function (e) {
+            if (e.deltaY >= 1) {
+              window.location = '#subscription';
+            }
+          });
+          let arrTouch = [];
+          function startMobile(e) {
+            arrTouch = [];
+            let touches = e.changedTouches;
+            arrTouch.push(touches[0].pageY)
+          }
+          document.querySelector('.mb').addEventListener("touchstart", startMobile);
+
+          function endMobile(e) {
+            console.log(arrTouch);
+            let touches = e.changedTouches;
+            if (arrTouch[0] > touches[0].pageY) {
+              window.location = '#subscription';
+            }
+          }
+          document.querySelector('.mb').addEventListener("touchmove", endMobile);
+        });
+      });
+
+      let target = document.querySelector('.hero-btn');
+      observer.observe(target, { attributes: true, attributeFilter: ['style'] });
     }
   </script>
 </body>

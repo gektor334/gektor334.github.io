@@ -10,18 +10,28 @@
     display: none
   .mb
   .bg
+    &-en
+      &-mb
+        min-height: 100vh
+        min-height: -webkit-fill-available
+        background-size: cover
+    &-ru
+      &-mb
+        min-height: 100vh
+        min-height: -webkit-fill-available
+        background-size: cover
     &-m
       &-ru
         min-height: 100vh
         min-height: -webkit-fill-available
         background: url('../img/1-mob-RU.gif') no-repeat
-        background-size: 85vw
+        background-size: 75vw
         background-position: top center
       &-en
         min-height: 100vh
         min-height: -webkit-fill-available
-        background: url('../img/1-mob-En.gif') no-repeat
-        background-size: 85vw
+        background: url('../img/1-mob-EN.gif') no-repeat
+        background-size: 75vw
         background-position: top center
   .language
     right: 24px
@@ -76,6 +86,19 @@
     margin-top: 30px
     width: 52vw
     margin-right: -6vw
+@media screen and (orientation: portrait) and (max-width: 340px)
+  .desc
+    font-size: 14px
+    line-height: 1.2
+  .tower
+    margin-top: 100px
+    width: 140px
+  .mt
+    width: 232px
+    margin-bottom: 0
+    margin-right: -180px
+  .desc
+    letter-spacing: -0.03em
 @media screen and (orientation: landscape)
   .pc
     display: flex

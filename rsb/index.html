@@ -31,7 +31,7 @@
     </section>
   </div>
   <!--mobile(первый экран)-->
-  <div class="bg-ru mb">
+  <div class="bg-ru-mb mb ">
     <section class="bg-m-ru hero panel">
       <div class="container">
         <div class="fixed">
@@ -79,23 +79,80 @@
     </div>
   </section>
 
-  <script src="js/main.js"></script>
   <script>
     let bgRu = document.querySelector('.hero-ru');
-    let bgRu2 = document.querySelectorAll('.bg-ru');
     let bgRuM = document.querySelector('.bg-m-ru');
+    let bgRuM2 = document.querySelector('.bg-ru-mb');
     window.onload = function () {
-      bgRu2[1].style.backgroundImage = "url(img/RSB_START_GIF-RU2.gif?" + new Date().getTime() + ")";
-      bgRu2[0].style.backgroundImage = "url(img/RSB_START_GIF-RU2.gif?" + new Date().getTime() + ")";
       bgRu.style.backgroundImage = "url(img/RSB_START_GIF-RU.gif?" + new Date().getTime() + ")";
       bgRuM.style.backgroundImage = "url(img/1-mob-RU.gif?" + new Date().getTime() + ")";
       bgRuM.style.backgroundPosition = "top";
       bgRuM.style.backgroundRepeat = "no-repeat";
-      /*bgRu.style.backgroundSize = 'contain';
-            bgRu.style.backgroundColor = '#009aad';
-            setTimeout(() => bgRu.style.backgroundColor = '#0f95c8', 3490);
-            setTimeout(() => bgRu.style.backgroundColor = '#1f7ce4', 5895);
-            setTimeout(() => bgRu.style.backgroundColor = '#2e64ff', 8295); */
+      bgRu.style.backgroundSize = 'contain';
+      bgRu.style.backgroundColor = '#009aad';
+      bgRuM.style.backgroundColor = '#009aad';
+      setTimeout(() => bgRu.style.backgroundColor = '#0f95c8', 3490);
+      setTimeout(() => bgRu.style.backgroundColor = '#1f7ce4', 5895);
+      setTimeout(() => bgRu.style.backgroundColor = '#2e64ff', 8295);
+      setTimeout(() => bgRuM2.style.backgroundColor = '#0f95c8', 3200);
+      setTimeout(() => bgRuM2.style.backgroundColor = '#1f7ce4', 5600);
+      setTimeout(() => bgRuM2.style.backgroundColor = '#2e64ff', 8000);
+
+
+      let ul = document.querySelectorAll('.language');
+      let li = document.querySelectorAll('.language-li');
+
+      document.body.onclick = function (e) {
+        for (let i = 0; i < ul.length; i++) {
+          if (e.target.className == 'language-li') {
+            if (ul[i].style.height == '34px') {
+              ul[i].style.height = '15px';
+            }
+            else {
+              ul[i].style.height = '34px';
+            }
+          }
+          else {
+            ul[i].style.height = '15px';
+          }
+        }
+      }
+
+
+      let btn = document.querySelectorAll('.hero-btn');
+
+      setTimeout(() => btn[0].style.display = 'block', 14000);
+      setTimeout(() => btn[1].style.display = 'block', 14000);
+
+
+      let observer = new MutationObserver(function (mutations) {
+        mutations.forEach(function (mutationRecord) {
+          window.addEventListener('wheel', function (e) {
+            if (e.deltaY >= 1) {
+              window.location = '#subscription';
+            }
+          });
+          let arrTouch = [];
+          function startMobile(e) {
+            arrTouch = [];
+            let touches = e.changedTouches;
+            arrTouch.push(touches[0].pageY)
+          }
+          document.querySelector('.mb').addEventListener("touchstart", startMobile);
+
+          function endMobile(e) {
+            console.log(arrTouch);
+            let touches = e.changedTouches;
+            if (arrTouch[0] > touches[0].pageY) {
+              window.location = '#subscription';
+            }
+          }
+          document.querySelector('.mb').addEventListener("touchmove", endMobile);
+        });
+      });
+
+      let target = document.querySelector('.hero-btn');
+      observer.observe(target, { attributes: true, attributeFilter: ['style'] });
     }
   </script>
 </body>
