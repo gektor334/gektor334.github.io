@@ -2591,6 +2591,9 @@ img {
   .contacts__card {
     min-height: 831px;
   }
+  .swiper-button-prev, .swiper-button-next {
+    display: none !important;
+  }
 }
 
 @media screen and (max-width: 460px) {
