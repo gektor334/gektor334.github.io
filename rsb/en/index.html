@@ -4,11 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="http://fonts.cdnfonts.com/css/montserrat" rel="stylesheet">
   <link rel="shortcut icon" href="../img/rsb.ico" type="image/x-icon">
   <link rel="stylesheet" href="../css/style.css">
-  <title>Росбанк</title>
+  <title>Rosbank _ with you despite the distance</title>
 </head>
 
 <body>
@@ -30,7 +29,7 @@
     </section>
   </div>
 
-  <div class="bg-ru mb">
+  <div class="bg-en-mb mb">
     <section class="bg-m-en hero panel">
       <div class="container">
         <div class="fixed">
@@ -79,13 +78,12 @@
     let bgEn = document.querySelector('.hero-en');
     let bgEnM = document.querySelector('.bg-m-en');
     let bgEn2 = document.querySelector('.bg-en');
-    let bgRu2 = document.querySelector('.bg-ru');
+    let bgEnM2 = document.querySelector('.bg-en-mb');
     window.onload = function () {
       bgEn.style.backgroundImage = "url(../img/RSB_START_GIF-EN.gif?" + new Date().getTime() + ")";
       bgEn2.style.backgroundImage = "url(../img/bg-en.gif?" + new Date().getTime() + ")";
       bgEnM.style.backgroundImage = "url(../img/1-mob-EN.gif?" + new Date().getTime() + ")";
-      bgRu2.style.backgroundImage = "url(../img/bg-ru.gif?" + new Date().getTime() + ")";
-      bgEnM.style.backgroundPosition = "top";
+      bgEnM2.style.backgroundImage = "url(../img/bg-en-mb.gif?" + new Date().getTime() + ")";
       bgEnM.style.backgroundRepeat = "no-repeat";
       bgEn.style.backgroundSize = 'contain';
       bgEn2.style.backgroundSize = 'cover';
@@ -114,7 +112,7 @@
       let btn = document.querySelectorAll('.hero-btn');
 
       setTimeout(() => btn[0].style.display = 'block', 20000);
-      setTimeout(() => btn[1].style.display = 'block', 20000);
+      setTimeout(() => btn[1].style.display = 'block', 19500);
 
 
       let observer = new MutationObserver(function (mutations) {

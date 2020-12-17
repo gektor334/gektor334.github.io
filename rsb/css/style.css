@@ -409,7 +409,7 @@ html, body {
 
 .language {
   position: absolute;
-  right: 0;
+  right: 20px;
   border: 2px solid #ffffff;
   padding: 7px 25px 7px 7px;
   -webkit-transition: 0.4s;
@@ -451,13 +451,14 @@ img {
   font-size: 36px;
   color: #ffffff;
   font-weight: 500;
-  line-height: 2.292vw;
+  line-height: 1.1;
   margin-top: 79px;
+  padding-right: 20px;
 }
 
 .desc-btn {
   font-weight: 600;
-  font-size: 1.094vw;
+  font-size: 16px;
   border: 2px solid #FFFFFF;
   border-radius: 5px;
   padding: 15px 25px;
@@ -876,6 +877,28 @@ li {
   }
   .mb {
     display: none;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .sub-desc {
+    font-size: 16px;
+  }
+  .hero-btn {
+    bottom: 80px;
+    padding: 18px 8px;
+    max-width: 20px;
+  }
+}
+
+@media screen and (orientation: portrait) and (min-width: 550px) and (max-width: 1024px) {
+  .bg-m-ru {
+    background-size: 75vw;
+    background-position: center -50px;
+  }
+  .bg-m-en {
+    background-size: 75vw;
+    background-position: center -50px;
   }
 }
 /*# sourceMappingURL=style.css.map */
