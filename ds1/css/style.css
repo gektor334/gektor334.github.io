@@ -2165,7 +2165,7 @@ img {
     max-width: 287px;
   }
   .header-content {
-    padding: 0 20px 0 0;
+    padding: 0 60px 0 0;
   }
   .header-contact__phone {
     padding-right: 15px;
@@ -2321,6 +2321,9 @@ img {
   .offer-close {
     right: 0;
     padding: 25px;
+  }
+  .header-content {
+    padding-right: 20px;
   }
 }
 
