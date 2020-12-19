@@ -663,8 +663,12 @@ li {
 
 @media screen and (max-width: 1200px) {
   .title {
-    font-size: 20px;
+    font-size: 24px;
     line-height: 1.1;
+  }
+  .desc {
+    font-size: 18px;
+    line-height: 1.3;
   }
 }
 
@@ -736,6 +740,40 @@ li {
   bottom: -4.5vw;
   background: url("../img/h1.svg") no-repeat;
   background-size: contain;
+}
+
+.video-before {
+  position: relative;
+}
+
+.video-before::before {
+  content: '';
+  position: absolute;
+  background: url("../img/video-before.jpg") no-repeat;
+  background-size: contain;
+  width: 38vw;
+  height: 23vw;
+  top: 0;
+  right: 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.video-before::after {
+  content: '';
+  position: absolute;
+  background: url("../img/video-btn.png") no-repeat;
+  background-size: contain;
+  width: 8vw;
+  height: 9vw;
+  top: 30%;
+  left: 40%;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.video-before:hover::after {
+  opacity: 0.6;
 }
 
 .about-school {
@@ -909,6 +947,8 @@ li {
 .about-school__right-video {
   max-width: 37vw;
   margin-bottom: 4.3vw;
+  position: relative;
+  cursor: pointer;
 }
 
 .about-school__right--before {
@@ -1208,12 +1248,215 @@ li {
             order: -1;
   }
   .hero__subtitle {
-    max-width: 500px;
+    max-width: 463px;
     margin-bottom: 20px;
   }
   .hero__title {
-    max-width: 400px;
-    font-size: 30px;
+    max-width: 429px;
+    font-size: 34px;
+  }
+  .arrow-bottom {
+    display: none;
+  }
+  .about-school {
+    position: relative;
+    margin-top: 50px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .about-school__right {
+    margin-top: 40px;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+  }
+  .about-school__right-video {
+    position: absolute;
+    left: 10%;
+    top: 120px;
+  }
+  .about-school__right-video iframe {
+    width: 70vw !important;
+    height: 40vw !important;
+  }
+  .about-school__right--before {
+    text-align: left;
+    padding-left: 40px;
+  }
+  .about-school__right--before::before {
+    left: 30px;
+    top: 21px;
+    height: 7px;
+    width: 204px;
+  }
+  .about-school__right-img {
+    max-width: 50vw;
+  }
+  .about-school__right-img::after {
+    left: auto;
+    width: 40vw;
+    height: 40vw;
+    bottom: 30vw;
+  }
+  .about-school__right--li {
+    position: relative;
+    z-index: 3;
+  }
+  .about-school__right--li:nth-child(1)::after {
+    width: 25px;
+    height: 25px;
+    top: 0;
+    left: -30px;
+  }
+  .about-school__right--li:nth-child(2)::after {
+    width: 25px;
+    height: 25px;
+    top: 0;
+    left: -30px;
+  }
+  .about-school__right--li:nth-child(3)::after {
+    width: 25px;
+    height: 25px;
+    top: 0;
+    left: -30px;
+  }
+  .about-school__right--li:nth-child(4)::after {
+    width: 25px;
+    height: 25px;
+    top: 0;
+    left: -30px;
+  }
+  .about-school__left {
+    margin-top: 60vw;
+  }
+  .about-school__left-img {
+    max-width: 35vw;
+  }
+  .about-school__left--li:nth-child(2)::after {
+    width: 50px;
+    height: 50px;
+    top: -25px;
+    left: -30px;
+  }
+  .about-school__left--li:nth-child(3)::after {
+    width: 50px;
+    height: 50px;
+    top: -10px;
+    left: -30px;
+  }
+  .about-school__left--li:nth-child(4)::after {
+    width: 50px;
+    height: 50px;
+    top: -20px;
+    left: -30px;
+  }
+  .about-school__left--li:nth-child(5)::after {
+    width: 50px;
+    height: 50px;
+    top: -20px;
+    left: -30px;
+  }
+  .about-school__left--li:nth-child(6)::after {
+    width: 50px;
+    height: 50px;
+    top: -20px;
+    left: -30px;
+  }
+  .about-school__title {
+    position: absolute;
+    width: 100%;
+    left: 18vw;
+    top: 0;
+  }
+  .about-school__title::after {
+    width: 70px;
+    height: 77px;
+    left: -80px;
+    top: -30px;
+  }
+  .about-school__title::before {
+    left: 10px;
+    top: -42px;
+    width: 119px;
+    height: 108px;
+  }
+  .about-school__desc-bold::before {
+    top: -37px;
+    left: -20px;
+    width: 653px;
+    height: 139px;
+  }
+  .video-before::before {
+    content: '';
+    position: absolute;
+    background: url("../img/video-before.jpg") no-repeat;
+    background-size: contain;
+    width: 70vw;
+    height: 41vw;
+    top: 0;
+    left: 0;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+  .video-before::after {
+    content: '';
+    position: absolute;
+    background: url("../img/video-btn.png") no-repeat;
+    background-size: contain;
+    width: 12vw;
+    height: 13vw;
+    top: 35%;
+    left: 80%;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+  .video-before:hover::after {
+    opacity: 0.6;
+  }
+  .subdesc {
+    font-size: 18px;
+    line-height: 1.3;
+    max-width: 372px;
+  }
+  .slick-slide:nth-child(3n + 2) div .new-slide::before {
+    width: 22vw;
+    height: 16vw;
+    top: 19.5vw;
+    left: 7vw;
+  }
+  .slick-slide:nth-child(3n + 3) div .new-slide::before {
+    width: 22vw;
+    height: 16vw;
+    top: 19.5vw;
+    left: 7vw;
+  }
+  .slick-slide:nth-child(3n + 4) div .new-slide::before {
+    width: 22vw;
+    height: 16vw;
+    top: 18.5vw;
+    left: 7vw;
+  }
+  .slick-prev::before {
+    width: 15px;
+    height: 27px;
+  }
+  .slick-next::before {
+    width: 15px;
+    height: 27px;
+  }
+  .new-data {
+    font-size: 12px;
+  }
+  .new-title {
+    font-size: 16px;
+    margin-top: -6px;
+    margin-left: 52px;
+    padding-bottom: 49px;
+  }
+  .slick-prev::before, .slick-next::before {
+    top: -53px !important;
   }
 }
 

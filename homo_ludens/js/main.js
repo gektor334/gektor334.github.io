@@ -121,3 +121,12 @@ document.body.addEventListener('click', (e) => {
   cursList.style.maxHeight = '0';
   setTimeout(() => cursList.style.display = 'none', 800);
 });
+
+let videoBtn = document.querySelector('.about-school__right-video');
+videoBtn.onclick = function () {
+  let autoPlay = document.querySelector('.about-school__right-video iframe');
+  autoPlay.src += '?autoplay=1';
+  console.log(autoPlay.src);
+  videoBtn.classList.remove('video-before');
+
+}
