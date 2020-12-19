@@ -3,6 +3,7 @@
   display: flex
   align-items: center
   flex-direction: column
+  background-size: cover
 .arrow-bottom
   position: absolute
   display: flex
@@ -376,3 +377,18 @@
       width: 1vw
       height: 2vw
       top: -10px
+@media screen and (max-width: 1200px)
+  .hero
+    flex-wrap: wrap
+    justify-content: center
+    &__img
+      width: 100%
+    &__desc
+      margin-top: 30px
+      order: -1
+    &__subtitle
+      max-width: 500px
+      margin-bottom: 20px
+    &__title
+      max-width: 400px
+      font-size: 30px

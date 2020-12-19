@@ -661,6 +661,13 @@ li {
   font-size: 0.7vw;
 }
 
+@media screen and (max-width: 1200px) {
+  .title {
+    font-size: 20px;
+    line-height: 1.1;
+  }
+}
+
 .main {
   background: url("../img/bg.jpg");
   display: -webkit-box;
@@ -673,6 +680,7 @@ li {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  background-size: cover;
 }
 
 .arrow-bottom {
@@ -1182,6 +1190,33 @@ li {
   top: -10px;
 }
 
+@media screen and (max-width: 1200px) {
+  .hero {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .hero__img {
+    width: 100%;
+  }
+  .hero__desc {
+    margin-top: 30px;
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+  }
+  .hero__subtitle {
+    max-width: 500px;
+    margin-bottom: 20px;
+  }
+  .hero__title {
+    max-width: 400px;
+    font-size: 30px;
+  }
+}
+
 .school-expert {
   width: 85vw;
   padding-bottom: 10vw;
@@ -1510,6 +1545,7 @@ li {
   height: 32vw;
   top: -17vw;
   right: -10vw;
+  z-index: -1;
 }
 
 .curs__li:nth-child(7)::after {
@@ -1663,7 +1699,7 @@ li {
 
 .life__vec1 {
   position: relative;
-  z-index: 2;
+  z-index: 3;
 }
 
 .life__vec1::after {
@@ -1880,6 +1916,7 @@ li {
   height: 32vw;
   top: -3vw;
   right: -10vw;
+  z-index: -1;
 }
 
 .storytelling-li:nth-child(5)::after {
