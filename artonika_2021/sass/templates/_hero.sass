@@ -1,0 +1,44 @@
+.hero
+  width: 100%
+  background: #f5df46
+  height: 100vh
+  display: flex
+  justify-content: center
+  &-left
+    flex-basis: 60%
+    margin-right: 4vw
+.title
+  font-size: 8.1vh
+  margin-top: 0
+.desc
+  font-size: 2.9vh
+  max-width: 54vh
+.btn
+  color: #939597
+  border-radius: 24px
+  background: #ffffff
+  font-size: 6vh
+  font-weight: 800
+  padding: 2vh 13vh
+  z-index: 2
+.button
+  margin-top: 13vh
+  position: relative
+  z-index: 1
+  &::before
+    content: ''
+    position: absolute
+    top: -26vh
+    left: -14vh
+    width: 74vh
+    height: 53vh
+    background: url('../img/2.png') no-repeat
+    background-size: contain
+    z-index: -1
+.logo
+  display: flex
+  justify-content: end
+  margin-top: 4vh
+  margin-bottom: 3vh
+  img
+    max-width: 19.4vh
