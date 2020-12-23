@@ -1002,7 +1002,8 @@ body {
 
 @media screen and (max-width: 640px) {
   .final-bg {
-    background: none;
+    background: url("../img/bg-mb.png") no-repeat;
+    background-size: 100% 92%;
   }
   .final-text {
     margin-top: 40px;
@@ -1027,6 +1028,8 @@ body {
   .final-bottom__right {
     bottom: 220px;
     max-width: 85vw;
+    -webkit-transition: 2.5s;
+    transition: 2.5s;
   }
   .final-btn {
     margin-bottom: 10px;
