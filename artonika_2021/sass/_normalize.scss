@@ -358,3 +358,8 @@ template {
 [hidden] {
   display: none;
 }
+
+::-webkit-input-placeholder {opacity: 0.3;}
+::-moz-placeholder          {opacity: 0.3;}/* Firefox 19+ */
+:-moz-placeholder           {opacity: 0.3;}/* Firefox 18- */
+:-ms-input-placeholder      {opacity: 0.3;}
