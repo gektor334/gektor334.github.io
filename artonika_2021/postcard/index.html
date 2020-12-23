@@ -110,20 +110,26 @@
     }
     let scrTop = 150;
     let finalBg = document.querySelector('.final-bg');
+    let bull2020 = document.querySelector('.final-bottom__right');
     document.onscroll = function () {
-      let final2020 = document.querySelector('.final');
       let position = window.scrollY;
-      if (position > scrTop) {
-        finalBg.style.backgroundPosition = 'center 15vh';
+      if (position > 0 && position < 690) {
+        finalBg.style.backgroundPosition = 'center 10vh';
+      }
+      else if (position > 700) {
+        finalBg.style.backgroundPosition = 'center 25vh';
       }
       else {
         finalBg.style.backgroundPosition = 'center -5vh';
       }
       scrTop = position;
-      let d2 = document.querySelector('body');
-      console.log(d2);
-      console.log(final2020.scrollHeight - position);
-      console.log(final2020);
+      let final = document.querySelector('.final').scrollHeight;
+      if ((window.innerHeight + 200) > (final - scrTop)) {
+        bull2020.style.bottom = '-7vh';
+      }
+      else {
+        bull2020.style.bottom = '-25vh';
+      }
     }
   </script>
 </body>

@@ -465,6 +465,13 @@ body {
   font-weight: 800;
   padding: 2vh 13vh;
   z-index: 2;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+.btn:hover {
+  background: #939597;
+  color: #ffffff;
 }
 
 .btn-next {
@@ -479,6 +486,34 @@ body {
           animation: bounce 3s infinite alternate;
 }
 
+.btn::before {
+  content: '';
+  position: absolute;
+  top: -13vh;
+  left: -10vh;
+  width: 9vh;
+  height: 9vh;
+  background: url("../img/s1.png") no-repeat;
+  background-size: contain;
+  z-index: -1;
+  -webkit-animation: var(--sq-animate);
+          animation: var(--sq-animate);
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  top: -10vh;
+  right: 20vh;
+  width: 7vh;
+  height: 7vh;
+  background: url("../img/s2.png") no-repeat;
+  background-size: contain;
+  z-index: -1;
+  -webkit-animation: var(--sq-animate);
+          animation: var(--sq-animate);
+}
+
 .button {
   margin-top: 13vh;
   position: relative;
@@ -488,13 +523,29 @@ body {
 .button::before {
   content: '';
   position: absolute;
-  top: -26vh;
-  left: -14vh;
-  width: 74vh;
-  height: 53vh;
-  background: url("../img/2.png") no-repeat;
+  bottom: -15vh;
+  left: 1vh;
+  width: 10vh;
+  height: 10vh;
+  background: url("../img/s4.png") no-repeat;
   background-size: contain;
   z-index: -1;
+  -webkit-animation: var(--sq-animate);
+          animation: var(--sq-animate);
+}
+
+.button::after {
+  content: '';
+  position: absolute;
+  bottom: -13vh;
+  right: 8vh;
+  width: 8vh;
+  height: 8vh;
+  background: url("../img/s5.png") no-repeat;
+  background-size: contain;
+  z-index: -1;
+  -webkit-animation: var(--sq-animate);
+          animation: var(--sq-animate);
 }
 
 .logo {
@@ -533,6 +584,47 @@ body {
   to {
     -webkit-transform: translateY(-9vh);
             transform: translateY(-9vh);
+  }
+}
+
+.s2 {
+  position: relative;
+  z-index: 1;
+}
+
+.s2::before {
+  content: '';
+  position: absolute;
+  bottom: -10vh;
+  right: -1vh;
+  width: 8.5vh;
+  height: 9vh;
+  background: url("../img/s3.png") 0 0 repeat;
+  background-size: contain;
+  z-index: -1;
+  -webkit-animation: var(--sq-animate);
+          animation: var(--sq-animate);
+}
+
+@-webkit-keyframes circle {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes circle {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 
@@ -798,9 +890,11 @@ body {
 
 .final-bottom__right {
   position: absolute;
-  bottom: -7vh;
+  bottom: -25vh;
   right: -6vh;
   max-width: 76vh;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .final-bottom__btn {
@@ -828,6 +922,13 @@ body {
       -ms-flex-align: center;
           align-items: center;
   margin-right: 2vh;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+.final-btn:hover {
+  background: #939597;
+  color: #ffffff;
 }
 
 .final-btn-last {
