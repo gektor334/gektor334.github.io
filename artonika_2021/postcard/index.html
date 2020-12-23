@@ -96,8 +96,8 @@
       let arr10 = document.querySelector('.arr10');
       let lsArr = localStorage.getItem('inputArrText');
       lsArr = JSON.parse(lsArr);
-      lsArr[0] = lsArr[0][0].toUpperCase() + lsArr[0].toLowerCase(1);
-      lsArr[1] = lsArr[1][0].toUpperCase() + lsArr[1].toLowerCase(1);
+      lsArr[0] = lsArr[0][0].toUpperCase() + lsArr[0].substr(1).toLowerCase(0);
+      lsArr[1] = lsArr[1][0].toUpperCase() + lsArr[1].substr(1).toLowerCase(0);
       lsArr[2] = lsArr[2].toLowerCase();
       lsArr[3] = lsArr[3].toLowerCase();
       lsArr[4] = lsArr[4].toLowerCase();
