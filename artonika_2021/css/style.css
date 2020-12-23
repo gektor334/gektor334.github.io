@@ -454,7 +454,7 @@ body {
   display: flex;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
-          justify-content: end;
+          justify-content: flex-end;
 }
 
 .btn {
@@ -554,7 +554,7 @@ body {
   display: flex;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
-          justify-content: end;
+          justify-content: flex-end;
   margin-top: 4vh;
   margin-bottom: 3vh;
   position: relative;
@@ -563,6 +563,7 @@ body {
 
 .logo img {
   max-width: 19.4vh;
+  max-height: 3vh;
 }
 
 @-webkit-keyframes bounce {
@@ -646,7 +647,7 @@ body {
   display: flex;
   -webkit-box-align: end;
       -ms-flex-align: end;
-          align-items: end;
+          align-items: flex-end;
   width: 100%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -673,7 +674,7 @@ body {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -ms-flex-line-pack: start;
-      align-content: start;
+      align-content: flex-start;
   -ms-flex-preferred-size: 55%;
       flex-basis: 55%;
   height: 100%;
@@ -691,7 +692,7 @@ body {
 .questions-input div:nth-child(4n + 4) {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
-          justify-content: end;
+          justify-content: flex-end;
 }
 
 .questions-input div:nth-child(4n + 3) {
@@ -880,7 +881,7 @@ body {
   display: flex;
   -webkit-box-align: end;
       -ms-flex-align: end;
-          align-items: end;
+          align-items: flex-end;
   margin-top: 24vh;
 }
 
