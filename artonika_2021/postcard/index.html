@@ -15,8 +15,10 @@
       <div class="container final-container">
         <div class="final-text">
           <div class="final-top">
-            <span class="arr1 arr"></span>
-            <span class="arr0 arr"></span>
+            <p class="final-desc">
+              <span class="arr1 arr"></span>
+              <span class="arr0 arr"></span>!
+            </p>
           </div>
           <p class="final-desc">Настолько <span class="arr2 arr"></span> был год, что
             <br>у нас просто нет слов. Поэтому впервые
@@ -96,6 +98,15 @@
       lsArr = JSON.parse(lsArr);
       lsArr[0] = lsArr[0][0].toUpperCase() + lsArr[0].slice(1);
       lsArr[1] = lsArr[1][0].toUpperCase() + lsArr[1].slice(1);
+      lsArr[2] = lsArr[2].toLowerCase();
+      lsArr[3] = lsArr[3].toLowerCase();
+      lsArr[4] = lsArr[4].toLowerCase();
+      lsArr[5] = lsArr[5].toLowerCase();
+      lsArr[6] = lsArr[6].toLowerCase();
+      lsArr[7] = lsArr[7].toLowerCase();
+      lsArr[8] = lsArr[8].toLowerCase();
+      lsArr[9] = lsArr[9].toLowerCase();
+      lsArr[10] = lsArr[10].toLowerCase();
       arr0.innerHTML = lsArr[0];
       arr1.innerHTML = lsArr[1] + '(ая)';
       arr2.innerHTML = lsArr[2];
@@ -113,11 +124,11 @@
     let bull2020 = document.querySelector('.final-bottom__right');
     document.onscroll = function () {
       let position = window.scrollY;
-      if (position > 0 && position < 690) {
-        finalBg.style.backgroundPosition = 'center 10vh';
+      if (position > 0 && position < 790) {
+        finalBg.style.backgroundPosition = 'center 0vh';
       }
-      else if (position > 700) {
-        finalBg.style.backgroundPosition = 'center 25vh';
+      else if (position > 800) {
+        finalBg.style.backgroundPosition = 'center 3vh';
       }
       else {
         finalBg.style.backgroundPosition = 'center -5vh';

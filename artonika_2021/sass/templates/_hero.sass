@@ -40,6 +40,17 @@
     max-width: 55vh
     transition: 3s
     animation: bounce 3s infinite alternate
+    &::before
+      content: ''
+      position: absolute
+      top: 29vh
+      left: -27vh
+      width: 93vh
+      height: 114vh
+      background: url('../img/next.png') no-repeat
+      background-size: contain
+      opacity: var(--sq-opacity)
+      transition: 1s
   &::before
     content: ''
     position: absolute

@@ -1,6 +1,8 @@
 let input = document.querySelectorAll('.input-test');
-
-
+let op0 = '0';
+let op1 = '1';
+let z1 = document.querySelector('.btn-next');
+z1.style.setProperty('--sq-opacity', op0);
 window.onload = function () {
   let inputArrText = [];
   for (let inp = 0; inp < input.length; inp++) {
@@ -10,9 +12,11 @@ window.onload = function () {
       localStorage.setItem('inputArrText', JSON.stringify(inputArrText));
       if (inputArrText.length == 11 && inputArrText[0].length >= 2 && inputArrText[1].length > 2 && inputArrText[2].length > 2 && inputArrText[3].length > 2 && inputArrText[4].length > 2 && inputArrText[5].length > 2 && inputArrText[6].length > 2 && inputArrText[7].length > 2 && inputArrText[8].length > 2 && inputArrText[9].length > 2 && inputArrText[10].length > 2) {
         document.querySelector('.btn-next').style.top = '-20vh';
+        setTimeout(() => z1.style.setProperty('--sq-opacity', op1), 3000);
       }
       else {
         document.querySelector('.btn-next').style.top = '-150vh';
+        z1.style.setProperty('--sq-opacity', op0);
       }
     });
   }
@@ -31,11 +35,13 @@ try {
   let top30 = '-30vh';
   let top52 = '-52vh';
   let top40 = '-40vh';
+
   b1.style.setProperty('--sq-top', top60);
   b2.style.setProperty('--sq-top', top80);
   b3.style.setProperty('--sq-top', top80);
   b4.style.setProperty('--sq-top', top80);
   b5.style.setProperty('--sq-top', top80);
+
 
   document.querySelector('#btn1').onclick = function () {
     setTimeout(() => b1.style.setProperty('--sq-top', top32), 100);

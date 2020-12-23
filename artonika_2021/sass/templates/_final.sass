@@ -69,8 +69,20 @@
   font-size: 5vh
   margin-left: 1vh
   margin-right: 1vh
-  padding: 1vh
+  padding: 0vh
+  &7, &9
+    border-bottom: 4px solid #f5df46
 .subdesc
   font-size: 2.1vh
   max-width: 105vh
   color: #ffffff
+  position: relative
+  &::before
+    content: ''
+    top: 0
+    left: -4vh
+    position: absolute
+    background: url('../img/final-z.png') no-repeat
+    width: 3vh
+    height: 3vh
+    background-size: contain
