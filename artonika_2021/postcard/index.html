@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/style.css">
+  <title>С Новым Годом</title>
+</head>
+
+<body>
+
+  <section class="final">
+    <div class="final-bg">
+      <div class="container final-container">
+        <div class="final-text">
+          <div class="final-top">
+            <span class="arr1 arr"></span>
+            <span class="arr0 arr"></span>
+          </div>
+          <p class="final-desc">Настолько <span class="arr2 arr"></span> был год, что
+            <br>у нас просто нет слов. Поэтому впервые
+            <br>мы сочиняем новогоднюю открытку для вас —
+            <br>вместе с вами.
+          </p>
+          <p class="final-desc">Искренне желаем, чтобы наступающий 2021
+            <br>обошелся без неприятных сюрпризов. Пусть
+            <br>он не подкачает и будет<span class="arr3 arr"></span>!
+          </p>
+          <p class="final-desc">
+            В любой непонятной ситуации — дышите
+            <br>глубже и делайте брендинг. Верим, что этот
+            <br><span class="arr4 arr"></span>вирус скоро пройдет, а пока
+            <br>со стрессом вам поможет справиться наш
+            <br><span class="arr5 arr"></span>креатив.
+          </p>
+          <p class="final-desc">
+            Спасибо за проекты и радость человеческого
+            <br>общения! Это был<span class="arr6 arr"></span>опыт
+            <br>(это не мы, это вы так сказали).
+          </p>
+          <p class="final-desc">
+            Давай, до свидания,<span class="arr7 arr"></span>2020!
+            <br>Приходи скорее,<span class="arr8 arr"></span>2021!
+          </p>
+          <p class="final-desc">
+            Ваш<span class="arr9 arr"></span>коллега
+            <br>и<span class="arr10 arr"></span>друг
+            <br>брендинговое и креативное агентство
+          </p>
+          <div class="final-logo">
+            <img src="../img/logo.png" alt="артоника">
+          </div>
+
+          <div class="final-bottom">
+            <div class="final-bottom__left">
+              <div class="final-bottom__btn">
+                <a href="" class="final-btn">
+                  <img src="../img/fb.png" alt="fb">
+                </a>
+                <a href="" class="final-btn">
+                  <img src="../img/vk.png" alt="vk">
+                </a>
+                <a href="../index.html" class="final-btn final-btn-last">переписать!</a>
+              </div>
+              <p class="subdesc">Почему новогодняя открытка серо-желтая? Потому что
+                это официальные цвета наступающего 2021 года по версии Pantone®: Ultimate Grey 17-5104 и
+                Illuminating
+                13-0647
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="final-bottom__right">
+          <img src="../img/2021.png" alt="бычок">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="../js/main.js"></script>
+  <script>
+    window.onload = function () {
+      let arr0 = document.querySelector('.arr0');
+      let arr1 = document.querySelector('.arr1');
+      let arr2 = document.querySelector('.arr2');
+      let arr3 = document.querySelector('.arr3');
+      let arr4 = document.querySelector('.arr4');
+      let arr5 = document.querySelector('.arr5');
+      let arr6 = document.querySelector('.arr6');
+      let arr7 = document.querySelector('.arr7');
+      let arr8 = document.querySelector('.arr8');
+      let arr9 = document.querySelector('.arr9');
+      let arr10 = document.querySelector('.arr10');
+      let lsArr = localStorage.getItem('inputArrText');
+      lsArr = JSON.parse(lsArr);
+      lsArr[0] = lsArr[0][0].toUpperCase() + lsArr[0].slice(1);
+      lsArr[1] = lsArr[1][0].toUpperCase() + lsArr[1].slice(1);
+      arr0.innerHTML = lsArr[0];
+      arr1.innerHTML = lsArr[1] + '(ая)';
+      arr2.innerHTML = lsArr[2];
+      arr3.innerHTML = lsArr[3];
+      arr4.innerHTML = lsArr[4];
+      arr5.innerHTML = lsArr[5];
+      arr6.innerHTML = lsArr[6];
+      arr7.innerHTML = lsArr[7];
+      arr8.innerHTML = lsArr[8];
+      arr9.innerHTML = lsArr[9];
+      arr10.innerHTML = lsArr[10];
+    }
+    let scrTop = 150;
+    let finalBg = document.querySelector('.final-bg');
+    document.onscroll = function () {
+      let final2020 = document.querySelector('.final');
+      let position = window.scrollY;
+      if (position > scrTop) {
+        finalBg.style.backgroundPosition = 'center 15vh';
+      }
+      else {
+        finalBg.style.backgroundPosition = 'center -5vh';
+      }
+      scrTop = position;
+      let d2 = document.querySelector('body');
+      console.log(d2);
+      console.log(final2020.scrollHeight - position);
+      console.log(final2020);
+    }
+  </script>
+</body>
+
+</html>

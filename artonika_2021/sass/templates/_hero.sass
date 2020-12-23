@@ -4,6 +4,8 @@
   height: 100vh
   display: flex
   justify-content: center
+  z-index: 10
+  position: relative
   &-left
     flex-basis: 60%
     margin-right: 4vw
@@ -13,6 +15,11 @@
 .desc
   font-size: 2.9vh
   max-width: 54vh
+  z-index: 2
+  position: relative
+  &-input
+    display: flex
+    justify-content: end
 .btn
   color: #939597
   border-radius: 24px
@@ -21,6 +28,14 @@
   font-weight: 800
   padding: 2vh 13vh
   z-index: 2
+  &-next
+    position: absolute
+    top: -150vh
+    right: 0
+    z-index: 9
+    max-width: 55vh
+    transition: 3s
+    animation: bounce 3s infinite alternate
 .button
   margin-top: 13vh
   position: relative
@@ -40,5 +55,13 @@
   justify-content: end
   margin-top: 4vh
   margin-bottom: 3vh
+  position: relative
+  z-index: 3
   img
     max-width: 19.4vh
+@keyframes bounce
+  from
+    transform: translateY(0)
+
+  to
+    transform: translateY(-9vh)
