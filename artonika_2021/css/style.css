@@ -690,6 +690,16 @@ body {
   .hero-logo img {
     max-width: 38vw;
   }
+  .hero-logo::before {
+    content: '';
+    position: absolute;
+    top: -30vw;
+    right: -9vw;
+    width: 37vw;
+    height: 66vw;
+    background: url("../img/m1.png") no-repeat;
+    background-size: contain;
+  }
   .title {
     text-align: center;
     font-size: 37px;
