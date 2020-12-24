@@ -665,18 +665,22 @@ body {
   .hero {
     min-height: 100vh;
     height: auto;
-    overflow: scroll;
+    overflow: hidden;
   }
   .hero-container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
   .hero-left {
     max-width: 50vw;
     -ms-flex-preferred-size: auto;
         flex-basis: auto;
+    margin-top: 0;
   }
   .hero-logo {
     position: absolute;
@@ -686,12 +690,18 @@ body {
   .title {
     text-align: center;
     font-size: 37px;
+    margin-bottom: 0;
+    margin-top: 0;
   }
   .desc {
     font-size: 16px;
   }
   .btn {
     font-size: 24px;
+  }
+  .button {
+    padding-top: 20px;
+    margin-top: 0;
   }
 }
 
@@ -881,10 +891,6 @@ body {
 }
 
 @media screen and (max-width: 1200px) {
-  .questions {
-    min-height: 100vh;
-    height: 100%;
-  }
   .before-1::before {
     display: none;
   }
