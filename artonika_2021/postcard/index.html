@@ -2,6 +2,7 @@
 <html lang="ru">
 
 <head>
+  <meta property="og:title" content="ds">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/style.css">
@@ -148,7 +149,28 @@
       Ваш ${lsArr[9]} коллега
       и ${lsArr[10]}друг,
       брендинговое и креативное агентство`;
-      console.log(titleHead.ownerDocument.title);
+      let metaHead = document.getElementsByTagName("META")[0];
+      metaHead.attributes[1].textContent = `${lsArr[1]}(ая) ${lsArr[0]}! 
+      Настолько ${lsArr[2]} был год, что
+      у нас просто нет слов. Поэтому впервые
+      мы сочиняем новогоднюю открытку для вас —
+      вместе с вами. 
+      Искренне желаем, чтобы наступающий 2021
+      обошелся без неприятных сюрпризов. Пусть
+      он не подкачает и будет ${lsArr[3]}! 
+      В любой непонятной ситуации — дышите
+      глубже и делайте брендинг. Верим, что этот
+      ${lsArr[4]} вирус скоро пройдет, а пока
+      со стрессом вам поможет справиться наш
+      ${lsArr[5]} креатив. 
+      Спасибо за проекты и радость человеческого
+      общения! Это был ${lsArr[6]} опыт
+      (это не мы, это вы так сказали)
+      Давай, до свидания, ${lsArr[7]} 2020!
+      Приходи скорее, ${lsArr[8]} 2021! 
+      Ваш ${lsArr[9]} коллега
+      и ${lsArr[10]}друг,
+      брендинговое и креативное агентство`;
     }
     let scrTop = 150;
     let finalBg = document.querySelector('.final-bg');
