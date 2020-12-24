@@ -112,16 +112,51 @@
       transition: 0.7s
 @media screen and ( max-width: 1200px )
   .questions
+    min-height: 100vh
+    height: 100%
+    display: none
+    padding-bottom: 50px
+    overflow: hidden
+    &-top
+      flex-direction: column
+      align-items: center
+      margin-top: 100px
+    &-input
+      flex-direction: column
+      flex-wrap: nowrap
+      div
+        justify-content: center
+        &:nth-child(4n + 4)
+          justify-content: center
+        &:nth-child(4n + 3)
+          justify-content: center
+        &:nth-child(4n + 2)
+          justify-content: center
+    &-logo
+      position: absolute
+      top: 7vw
+      right: 2vw
+      img
+        max-width: 30vw
   .before
     &-1
       &::before
-        display: none
+        top: var(--sq-top)
+        left: -120px
+        width: 80px
+        height: 150px
     &-2
       &::before
-        display: none
+        top: var(--sq-top)
+        left: -17px
+        width: 80px
+        height: 150px
     &-3
       &::before
-        display: none
+        top: var(--sq-top)
+        left: 100px
+        width: 60px
+        height: 90px
     &-4
       &::before
         display: none
@@ -129,4 +164,38 @@
         display: none
     &-5
       &::before
-        display: none
+        top: var(--sq-top)
+        left: auto
+        right: 0
+        width: 80px
+        height: 150px
+  .desc
+    &-input
+      justify-content: center
+  .input
+    font-size: 15px
+    width: 70%
+    padding: 10px
+    &-one
+      max-width: 70%
+      width: 70%
+      font-size: 15px
+      padding: 10px
+  .btn
+    &-next
+      position: absolute
+      bottom: 0
+      left: -70vw
+      z-index: 9
+      max-width: 70vw
+      transition: 3s
+      animation: none
+      top: auto
+      &::before
+        top: -114px
+        left: -62px
+        width: 320px
+        height: 464px
+        background: url('../img/mb-bg-next.png') no-repeat
+        background-size: contain
+        transform: rotate(90deg)
