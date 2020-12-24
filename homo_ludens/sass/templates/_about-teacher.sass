@@ -50,3 +50,53 @@
     margin: 5vw 0 10vw 0
   &-video
     margin-left: 5vw
+.teacher-video
+  &-before
+    position: relative
+    cursor: pointer
+    &::before
+      content: ''
+      position: absolute
+      background: url('../img/video-before.jpg') no-repeat
+      background-size: contain
+      width: 38vw
+      height: 23vw
+      top: 0
+      left: 0
+      transition: 0.4s
+    &::after
+      content: ''
+      position: absolute
+      background: url('../img/video-btn.png') no-repeat
+      background-size: contain
+      width: 8vw
+      height: 7vw
+      top: 25%
+      left: 45%
+      transition: 0.4s
+    &:hover
+      &::after
+        opacity: 0.6
+@media screen and ( max-width: 1200px )
+  .container
+    &-column
+      flex-direction: column
+  .teacher-video
+    iframe
+      width: 100% !important
+      height: 48vw !important
+    &::before
+      width: 100%
+      height: 50vw
+    &::after
+      top: 45%
+  .wide-block
+    margin-left: 0
+@media screen and ( max-width: 600px )
+  .about-teacher
+    &-container
+      flex-direction: column
+  .wide-block
+    order: 1
+  .teacher-photo
+    width: 100%

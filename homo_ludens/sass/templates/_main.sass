@@ -610,3 +610,94 @@
       padding-bottom: 49px
   .slick-prev::before, .slick-next::before
     top: -53px !important
+@media screen and (max-width: 730px)
+  .nopc
+    display: none
+  ul
+    padding-left: 10px
+  .title
+    font-size: 18px
+  .hero
+    &__title
+      font-size: 22px
+    &__img
+      display: flex
+      justify-content: center
+      img
+        width: 120%
+  .about
+    &-school
+      &__desc-bold
+        color: #7d8653
+        &::before
+          display: none
+      &__title
+        &::after
+          width: 60px
+          height: 67px
+          top: -20px
+          left: -70px
+      &__right
+        &--before
+          padding-left: 10px
+          &::before
+            left: 0
+        &-img
+          max-width: 100%
+        &-video
+          top: 90px
+          left: -2.5vw
+          iframe
+            width: 90vw !important
+            height: 50vw !important
+      &__left
+        &-img
+          max-width: 100%
+  .video-before
+    &::before
+      width: 95vw
+      height: 53vw
+    &::after
+      top: 40%
+      left: 120%
+  .subdesc
+    margin-top: 100px
+  .v2
+    &::after
+      display: none
+  .new
+    &-date
+      font-size: 12px
+    &-text
+      margin-left: -9vw
+  .slick
+    &-arrow
+      display: none !important
+    &-slide
+      &:nth-child(3n + 2)
+        & div
+          & .new-slide
+            &::before
+              width: 50vw
+              height: 40vw
+              top: auto
+              bottom: 0
+              left: 12vw
+      &:nth-child(3n + 3)
+        & div
+          & .new-slide
+            &::before
+              width: 50vw
+              height: 40vw
+              top: auto
+              bottom: 0
+              left: 12vw
+      &:nth-child(3n + 4)
+        & div
+          & .new-slide
+            &::before
+              width: 50vw
+              height: 40vw
+              top: auto
+              bottom: 0
+              left: 12vw

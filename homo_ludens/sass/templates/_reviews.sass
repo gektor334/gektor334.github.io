@@ -101,3 +101,52 @@
     font-size: 0.94vw
     font-weight: 700
     border-radius: 35px
+@media screen and ( max-width: 1200px )
+  .reviews
+    &-subtitle
+      font-size: 16px
+    &-desc
+      font-size: 16px
+      max-height: 40px
+    &-more
+      font-size: 16px
+  .more-card__btn
+    font-size: 14px
+@media screen and ( max-width: 767px )
+  .reviews
+    &-img
+      max-width: 90%
+    &-card
+      flex-basis: 100%
+      margin-bottom: 50px
+      &:nth-child(4n+1)::before
+        top: 45vw
+        left: 0
+        width: 200px
+        height: 87px
+      &:nth-child(4n+2)::before
+        top: 45vw
+        left: 0
+        width: 200px
+        height: 87px
+      &:nth-child(4n+3)::before
+        top: 45vw
+        left: 0
+        width: 200px
+        height: 87px
+      &:nth-child(4n+4)::before
+        top: 45vw
+        left: 0
+        width: 200px
+        height: 87px
+      &-title
+        margin-top: 5px
+        margin-bottom: 5px
+  .more-card
+    margin-bottom: 70px
+    &__btn
+      padding: 9px 14px
+  .club-title
+    margin-left: 0
+    &-img
+      max-width: 20vw

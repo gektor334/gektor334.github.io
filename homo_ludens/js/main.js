@@ -122,11 +122,11 @@ document.body.addEventListener('click', (e) => {
   setTimeout(() => cursList.style.display = 'none', 800);
 });
 
-let videoBtn = document.querySelector('.about-school__right-video');
+let videoBtn = document.querySelector('.go-video');
 videoBtn.onclick = function () {
-  let autoPlay = document.querySelector('.about-school__right-video iframe');
+  let autoPlay = document.querySelector('.go-video iframe');
   autoPlay.src += '?autoplay=1';
   console.log(autoPlay.src);
   videoBtn.classList.remove('video-before');
-
+  videoBtn.classList.remove('teacher-video-before');
 }
