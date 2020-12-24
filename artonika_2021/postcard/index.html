@@ -4,8 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="страница ">
   <link rel="stylesheet" href="../css/style.css">
-  <title>С Новым Годом</title>
+  <script type="text/javascript" src="https://vk.com/js/api/share.js?93" charset="windows-1251"></script>
+  <title><span class="arr1 arr"></span>
+    <span class="arr0 arr"></span>!
+  </title>
 </head>
 
 <body>
@@ -60,9 +64,17 @@
                 <a href="" class="final-btn">
                   <img src="../img/fb.png" alt="fb">
                 </a>
-                <a href="" class="final-btn">
-                  <img src="../img/vk.png" alt="vk">
-                </a>
+                <script type="text/javascript">
+                  document.write(VK.Share.button({
+                    url: 'https://gektor334.github.io/artonika_2021/postcard',
+                    title: 'Всем привет',
+                  },
+                    {
+                      type: 'custom',
+                      text: '<a href="https://vk.com/share.php?url=https%3A%2F%2Fgektor334.github.io%2Fartonika_2021%2Fpostcard" class="final-btn"><img src="../img/vk.png" alt="vk"></a>"'
+                    }));
+                  console.log(VK.Share.button);
+                </script>
                 <a href="../index.html" class="final-btn final-btn-last">переписать!</a>
               </div>
               <p class="subdesc">Почему новогодняя открытка серо-желтая? Потому что
