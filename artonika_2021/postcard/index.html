@@ -2,36 +2,11 @@
 <html lang="ru">
 
 <head>
-  <script>let arr0 = document.querySelector('.arr0');
-    let arr1 = document.querySelector('.arr1');
-    let arr2 = document.querySelector('.arr2');
-    let arr3 = document.querySelector('.arr3');
-    let arr4 = document.querySelector('.arr4');
-    let arr5 = document.querySelector('.arr5');
-    let arr6 = document.querySelector('.arr6');
-    let arr7 = document.querySelector('.arr7');
-    let arr8 = document.querySelector('.arr8');
-    let arr9 = document.querySelector('.arr9');
-    let arr10 = document.querySelector('.arr10');
-    let lsArr = localStorage.getItem('inputArrText');
-    lsArr = JSON.parse(lsArr);
-    lsArr[0] = lsArr[0][0].toUpperCase() + lsArr[0].substr(1).toLowerCase(0);
-    lsArr[1] = lsArr[1][0].toUpperCase() + lsArr[1].substr(1).toLowerCase(0);
-    lsArr[2] = lsArr[2].toLowerCase();
-    lsArr[3] = lsArr[3].toLowerCase();
-    lsArr[4] = lsArr[4].toLowerCase();
-    lsArr[5] = lsArr[5].toLowerCase();
-    lsArr[6] = lsArr[6].toLowerCase();
-    lsArr[7] = lsArr[7].toLowerCase();
-    lsArr[8] = lsArr[8].toLowerCase();
-    lsArr[9] = lsArr[9].toLowerCase();
-    lsArr[10] = lsArr[10].toLowerCase();</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/style.css">
   <script type="text/javascript" src="https://vk.com/js/api/share.js?93" charset="windows-1251"></script>
   <title>
-    <script></script>
   </title>
 </head>
 
@@ -146,7 +121,7 @@
                   брендинговое и креативное агентство`;
                   document.write(VK.Share.button({
                     url: 'https://gektor334.github.io/artonika_2021/postcard',
-                    title: `${share2021}`,
+                    title: share2021,
                     noparse: true
                   },
                     {
