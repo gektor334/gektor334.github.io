@@ -674,7 +674,9 @@ body {
             flex-direction: column;
   }
   .hero-left {
-    width: 50vw;
+    max-width: 50vw;
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
   }
   .hero-logo {
     position: absolute;
@@ -880,7 +882,26 @@ body {
 
 @media screen and (max-width: 1200px) {
   .questions {
+    min-height: 100vh;
     height: 100%;
+  }
+  .before-1::before {
+    display: none;
+  }
+  .before-2::before {
+    display: none;
+  }
+  .before-3::before {
+    display: none;
+  }
+  .before-4::before {
+    display: none;
+  }
+  .before-4::after {
+    display: none;
+  }
+  .before-5::before {
+    display: none;
   }
 }
 

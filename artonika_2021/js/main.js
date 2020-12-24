@@ -44,10 +44,12 @@ try {
 
 
   document.querySelector('#btn1').onclick = function () {
+    if (window.innerWidth > 1200) {
+      setTimeout(() => b2.style.marginLeft = '0.5vh', 800);
+      setTimeout(() => b2.style.marginRight = '1.4vh', 800);
+    }
     setTimeout(() => b1.style.setProperty('--sq-top', top32), 100);
     setTimeout(() => b2.style.setProperty('--sq-top', top30), 300);
-    setTimeout(() => b2.style.marginLeft = '0.5vh', 800);
-    setTimeout(() => b2.style.marginRight = '1.4vh', 800);
     setTimeout(() => b3.style.setProperty('--sq-top', top52), 600);
     setTimeout(() => b4.style.setProperty('--sq-top', top52), 900);
     setTimeout(() => b5.style.setProperty('--sq-top', top40), 1200);
