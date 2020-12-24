@@ -687,6 +687,9 @@ body {
     top: 7vw;
     right: 5vw;
   }
+  .hero-logo img {
+    max-width: 38vw;
+  }
   .title {
     text-align: center;
     font-size: 37px;
@@ -697,11 +700,59 @@ body {
     font-size: 16px;
   }
   .btn {
-    font-size: 24px;
+    font-size: 26px;
+  }
+  .btn::before {
+    top: -1vh;
+    left: 0;
+    width: 5vh;
+    height: 5vh;
+  }
+  .btn::after {
+    top: -2vh;
+    right: 100px;
+    width: 5vh;
+    height: 5vh;
   }
   .button {
-    padding-top: 20px;
+    padding-top: 6vh;
     margin-top: 0;
+  }
+  .button::before {
+    bottom: -10vh;
+    left: 40px;
+    width: 7vh;
+    height: 7vh;
+  }
+  .button::after {
+    right: 50px;
+    width: 6vh;
+    height: 6vh;
+    bottom: -8vh;
+  }
+  .s2::before {
+    bottom: -5vh;
+    right: -1vh;
+    width: 6vh;
+    height: 6vh;
+  }
+}
+
+@media screen and (max-width: 321px) {
+  .button {
+    padding-top: 4vh;
+  }
+  .desc {
+    margin-top: 10px;
+  }
+  .hero-left {
+    max-width: 40vw;
+  }
+  .btn::before {
+    top: -3vh;
+  }
+  .btn::after {
+    top: -4vh;
   }
 }
 
