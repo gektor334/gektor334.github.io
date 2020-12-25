@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/html2canvas.js"></script>
+  <script src="../js/html2canvas.min.js"></script>
   <script src="../js/FileSaver.min.js"></script>
   <title>С новый годом</title>
   <style>
@@ -13,6 +15,7 @@
       color: #939597;
       padding: 0;
       margin: 0;
+      background: #f5df46;
     }
 
     .final-btn {
@@ -97,8 +100,6 @@
       </div>
     </div>
   </section>
-
-  <script src="../js/html2canvas.js"></script>
   <script src="../js/main.js"></script>
   <script>
     window.onload = function () {
@@ -202,7 +203,7 @@
   </script>
 
 
-  <div id="result" target="_blank" style="position: absolute; top: 50%; transform: scale(0.5);"></div>
+  <div id="result" style="position: fixed; transform: scale(0.5);"></div>
 </body>
 
 </html>
