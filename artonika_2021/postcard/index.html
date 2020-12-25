@@ -5,13 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/style.css">
-  <meta property="og:image" content="https://telegram.org/img/t_logo.png">
   <title>С новый годом</title>
 </head>
 
 <body>
 
-  <section class="final">
+  <section class="final" id="content">
     <div class="final-bg">
       <div class="container final-container">
         <div class="final-text">
@@ -61,7 +60,7 @@
                 <a href="" class="final-btn">
                   <img src="../img/fb.png" alt="fb">
                 </a>
-                <a href="" class="final-btn vk-btn">
+                <a href="" rel="nofollow" class="final-btn vk-btn">
                   <img src="../img/vk.png" alt="vk">
                 </a>
                 </script>
@@ -72,6 +71,7 @@
                 Illuminating
                 13-0647
               </p>
+              <a href="javascript: void(0);" id="get_images">Сделать скриншот элемента</a>
             </div>
           </div>
         </div>
@@ -82,7 +82,7 @@
     </div>
   </section>
 
-
+  <script src="../js/html2canvas.js"></script>
   <script src="../js/main.js"></script>
   <script>
     window.onload = function () {
@@ -128,9 +128,19 @@
 Приходи скорее, ${lsArr[8]} ! Ваш ${lsArr[9]} коллега ${lsArr[10]} друг,
 брендинговое и креативное агентство артоника`;
       let vk = document.querySelector('.vk-btn');
-      vk.href = `https://t.me/share/url?url=https://gektor334.github.io/artonika_2021&photo="../img/34.png"`;
-      console.log(vk);
+      vk.href = `https://t.me/share/url?url=https://gektor334.github.io/artonika_2021/img/34.png&text=https://gektor334.github.io/artonika_2021 ${share2021}`;
+      document.getElementById("get_images").onclick = function () {
 
+        html2canvas(document.getElementById("content")).then(function (canvas) {
+
+          var my_screen = canvas;
+          console.log(html2canvas);
+
+          document.getElementById("result").appendChild(my_screen);
+
+        });
+
+      };
     }
     let scrTop = 150;
     let finalBg = document.querySelector('.final-bg');
@@ -166,6 +176,8 @@
       }
     }
   </script>
+
+  <div id="result" style="position: absolute; top: 0; transform: scale(0.5); background:black"></div>
 </body>
 
 </html>
