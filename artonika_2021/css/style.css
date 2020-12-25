@@ -662,6 +662,10 @@ body {
 }
 
 @media screen and (max-width: 1200px) {
+  .logo {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
   .hero {
     min-height: 100vh;
     height: auto;
@@ -976,6 +980,7 @@ body {
             flex-direction: column;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
+    padding: 15px;
   }
   .questions-input div {
     -webkit-box-pack: center;
@@ -999,7 +1004,7 @@ body {
   }
   .questions-logo {
     position: absolute;
-    top: 7vw;
+    top: 12vw;
     right: 2vw;
   }
   .questions-logo img {
@@ -1043,14 +1048,16 @@ body {
   }
   .input {
     font-size: 15px;
-    width: 70%;
-    padding: 10px;
+    width: 80%;
+    padding: 10px 10px;
+    min-height: 30px;
   }
   .input-one {
     max-width: 70%;
     width: 70%;
     font-size: 15px;
-    padding: 10px;
+    padding: 10px 10px;
+    min-height: 30px;
   }
   .btn-next {
     position: absolute;
