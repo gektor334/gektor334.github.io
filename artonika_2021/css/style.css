@@ -977,6 +977,11 @@ body {
         -ms-flex-align: center;
             align-items: center;
     margin-top: 100px;
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
   .questions-input {
     -webkit-box-orient: vertical;
@@ -985,7 +990,6 @@ body {
             flex-direction: column;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
-    padding: 15px;
   }
   .questions-input div {
     -webkit-box-pack: center;
@@ -1053,7 +1057,7 @@ body {
   }
   .input {
     font-size: 15px;
-    width: 80%;
+    width: 70%;
     padding: 10px 10px;
     min-height: 30px;
   }
