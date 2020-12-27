@@ -1034,6 +1034,7 @@ body {
         -ms-flex-align: center;
             align-items: center;
     margin-top: 100px;
+    height: 100%;
     -ms-flex-preferred-size: auto;
         flex-basis: auto;
     -webkit-box-pack: start;
@@ -1045,10 +1046,11 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
     margin-bottom: 0;
     margin-top: 0;
   }
