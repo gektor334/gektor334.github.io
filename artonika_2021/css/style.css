@@ -1050,13 +1050,13 @@ body {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
     margin-bottom: 0;
-    margin-top: 20px;
+    margin-top: 0;
   }
   .questions-input div {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin-top: 20px;
+    margin-top: 0;
   }
   .questions-input div:nth-child(4n + 4) {
     -webkit-box-pack: center;
@@ -1105,9 +1105,6 @@ body {
   .before-4::after {
     display: none;
   }
-  .before-5 {
-    margin-bottom: 30px;
-  }
   .before-5::before {
     top: var(--sq-top);
     left: auto;
@@ -1154,6 +1151,10 @@ body {
     background-size: contain;
     -webkit-transform: rotate(90deg);
             transform: rotate(90deg);
+  }
+  input {
+    margin-bottom: 10px;
+    margin-top: 10px;
   }
 }
 
