@@ -806,8 +806,16 @@ body {
     max-width: 90vh;
     margin-top: 5vh;
   }
+  .mb-lads__text img {
+    -webkit-transform: rotate(12deg);
+            transform: rotate(12deg);
+  }
   .mb-lads__img {
     position: absolute;
+  }
+  .mb-lads__img img {
+    -webkit-animation: circle 4s infinite linear;
+            animation: circle 4s infinite linear;
   }
   .hero {
     display: none;
