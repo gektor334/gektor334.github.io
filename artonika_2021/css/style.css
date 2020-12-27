@@ -1429,10 +1429,10 @@ body {
 
 @media screen and (max-width: 1200px) and (orientation: landscape) {
   .final {
-    display: none;
+    display: none !important;
   }
   #result {
-    display: none;
+    display: none !important;
   }
 }
 /*# sourceMappingURL=style.css.map */
