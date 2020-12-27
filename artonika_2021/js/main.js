@@ -114,7 +114,7 @@ catch { }
 try {
   if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
     if (window.innerWidth <= 1200) {
-      document.querySelector('.questions-input').style.paddingTop = '40px';
+      document.querySelector('.questions-top').style.marginBottom = '80px';
     }
   }
 }
