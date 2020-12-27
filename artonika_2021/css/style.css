@@ -992,7 +992,7 @@ body {
         flex-wrap: nowrap;
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
-    margin-bottom: -20px;
+    margin-bottom: 0;
   }
   .questions-input div {
     -webkit-box-pack: center;
