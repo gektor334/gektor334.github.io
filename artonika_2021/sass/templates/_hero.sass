@@ -134,6 +134,8 @@
     transform: rotate(0)
   to
     transform: rotate(360deg)
+.mb-lads
+  display: none
 @media screen and ( max-width: 1200px )
   .logo
     margin-bottom: 0
@@ -215,3 +217,26 @@
       top: -3vh
     &::after
       top: -4vh
+@media screen and ( max-width: 1200px ) and (orientation: landscape)
+  html, body
+    overflow: hidden
+  .mb-lads
+    display: flex
+    justify-content: center
+    align-items: center
+    min-height: 100vh
+    width: 100vw
+    background: #f5df46
+    &__text
+      display: flex
+      align-items: center
+      justify-content: center
+      position: relative
+      max-width: 90vh
+      margin-top: 5vh
+    &__img
+      position: absolute
+  .hero
+    display: none
+  .questions
+    display: none !important
