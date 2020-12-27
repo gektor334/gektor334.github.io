@@ -777,6 +777,7 @@ body {
 @media screen and (max-width: 1200px) and (orientation: landscape) {
   html, body {
     overflow: hidden;
+    background: #f5df46;
   }
   .mb-lads {
     display: -webkit-box;
@@ -791,6 +792,7 @@ body {
     min-height: 100vh;
     width: 100vw;
     background: #f5df46;
+    overflow: hidden;
   }
   .mb-lads__text {
     display: -webkit-box;
@@ -1101,6 +1103,9 @@ body {
   }
   .before-4::after {
     display: none;
+  }
+  .before-5 {
+    margin-bottom: 30px;
   }
   .before-5::before {
     top: var(--sq-top);
