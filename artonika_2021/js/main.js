@@ -113,7 +113,9 @@ catch { }
 
 try {
   if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
-    document.querySelector('.questions-top').style.paddingBottom = '40px';
+    if (window.innerWidth <= 1200) {
+      document.querySelector('.questions-input').style.marginTop = '40px';
+    }
   }
 }
 catch { }
