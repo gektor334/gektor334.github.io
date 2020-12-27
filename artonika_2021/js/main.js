@@ -110,3 +110,10 @@ try {
   }
 }
 catch { }
+
+try {
+  if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+    document.querySelector('.questions-top').style.paddingBottom = '40px';
+  }
+}
+catch { }
