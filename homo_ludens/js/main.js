@@ -120,22 +120,30 @@ document.body.addEventListener('click', (e) => {
   cursList.style.maxHeight = '0';
   setTimeout(() => cursList.style.display = 'none', 800);
 });
+try {
+  let videoBtn = document.querySelector('.go-video');
+  videoBtn.onclick = function () {
+    let autoPlay = document.querySelector('.go-video iframe');
+    autoPlay.src += '?autoplay=1';
+    videoBtn.classList.remove('video-before');
+    videoBtn.classList.remove('teacher-video-before');
+    videoBtn.classList.remove('curs-video-before');
+    videoBtn.classList.remove('luba-curs-video');
+    videoBtn.classList.remove('singing-video-before');
+    videoBtn.classList.remove('childrens-video-before');
+  }
 
-let videoBtn = document.querySelector('.go-video');
-videoBtn.onclick = function () {
-  let autoPlay = document.querySelector('.go-video iframe');
-  autoPlay.src += '?autoplay=1';
-  videoBtn.classList.remove('video-before');
-  videoBtn.classList.remove('teacher-video-before');
-  videoBtn.classList.remove('curs-video-before');
-  videoBtn.classList.remove('luba-curs-video');
-  videoBtn.classList.remove('singing-video-before');
-  videoBtn.classList.remove('childrens-video-before');
+  let govideo = document.querySelector('.govideo');
+  govideo.onclick = function () {
+    let play = document.querySelector('.govideo iframe');
+    play.src += '?autoplay=1';
+    govideo.classList.remove('tatyana-video');
+  }
 }
+catch { }
 
-let govideo = document.querySelector('.govideo');
-govideo.onclick = function () {
-  let play = document.querySelector('.govideo iframe');
-  play.src += '?autoplay=1';
-  govideo.classList.remove('tatyana-video');
+let burger = document.querySelector('.burger');
+let burgerMenu = document.querySelector('.mobile-menu');
+burger.onclick = function () {
+  burgerMenu.classList.toggle('burger-flex');
 }
