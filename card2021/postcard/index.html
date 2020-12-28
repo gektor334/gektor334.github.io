@@ -24,10 +24,8 @@
     }
 
     .final-btn {
-      color: #939597;
-      background: #ffffff;
       border-radius: 37px;
-      color: #939597;
+      color: #f5df46;
       padding: 1vh 4.5vh;
     }
   </style>
@@ -155,7 +153,7 @@
         html2canvas(document.getElementById("content")).then(function (canvas) {
           var my_screen = canvas;
           canvas.toBlob(function (blob) {
-            saveAs(blob, "artonica.png");
+            saveAs(blob, "artonicard2021.png");
           });
           document.getElementById("result").appendChild(my_screen);
         });

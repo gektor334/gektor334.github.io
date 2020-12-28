@@ -1245,7 +1245,7 @@ body {
 .final-btn {
   background: #ffffff;
   border-radius: 37px;
-  color: #939597;
+  color: #939597 !important;
   padding: 1vh 4.5vh;
   display: -webkit-box;
   display: -ms-flexbox;
