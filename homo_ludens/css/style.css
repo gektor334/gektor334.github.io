@@ -4300,7 +4300,8 @@ li {
   }
   .three {
     margin-top: -15px;
-    max-width: 60px;
+    width: 120px;
+    max-width: 120px;
   }
   .left-desc {
     max-width: 100%;
@@ -4328,16 +4329,18 @@ li {
     margin-bottom: 50px;
   }
   .four {
-    max-width: 60px;
+    width: 140px;
+    max-width: 140px;
   }
   .five .desc {
     max-width: 100%;
   }
   .five-img {
-    max-width: 60px;
+    width: 120px;
+    max-width: 120px;
   }
   .img-number {
-    max-width: 60px;
+    width: 120px;
   }
   .number-1::before {
     width: 60px;
