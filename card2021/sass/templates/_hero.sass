@@ -1,0 +1,248 @@
+.hero
+  width: 100%
+  background: #f5df46
+  height: 100vh
+  display: flex
+  justify-content: center
+  z-index: 10
+  position: relative
+  &-left
+    flex-basis: 60%
+    margin-right: 4vw
+.title
+  font-size: 8.1vh
+  margin-top: 0
+.desc
+  font-size: 2.9vh
+  max-width: 54vh
+  z-index: 2
+  position: relative
+  &-input
+    display: flex
+    justify-content: flex-end
+.btn
+  color: #939597
+  border-radius: 24px
+  background: #ffffff
+  font-size: 6vh
+  font-weight: 800
+  padding: 2vh 13vh
+  z-index: 2
+  transition: 0.8s
+  &:hover
+    background: #939597
+    color: #ffffff
+  &-next
+    position: absolute
+    top: -150vh
+    right: 0
+    z-index: 9
+    max-width: 55vh
+    transition: 3s
+    animation: bounce 3s infinite alternate
+    &::before
+      content: ''
+      position: absolute
+      top: 29vh
+      left: -27vh
+      width: 93vh
+      height: 114vh
+      background: url('../img/next.png') no-repeat
+      background-size: contain
+      opacity: var(--sq-opacity)
+      transition: 1s
+  &::before
+    content: ''
+    position: absolute
+    top: -13vh
+    left: -10vh
+    width: 9vh
+    height: 9vh
+    background: url('../img/s1.png') no-repeat
+    background-size: contain
+    z-index: -1
+    animation: var(--sq-animate)
+  &::after
+    content: ''
+    position: absolute
+    top: -10vh
+    right: 20vh
+    width: 7vh
+    height: 7vh
+    background: url('../img/s2.png') no-repeat
+    background-size: contain
+    z-index: -1
+    animation: var(--sq-animate)
+.button
+  margin-top: 13vh
+  position: relative
+  z-index: 1
+  &::before
+    content: ''
+    position: absolute
+    bottom: -14vh
+    left: 1vh
+    width: 10vh
+    height: 10vh
+    background: url('../img/s4.png') no-repeat
+    background-size: contain
+    z-index: -1
+    animation: var(--sq-animate)
+  &::after
+    content: ''
+    position: absolute
+    bottom: -12vh
+    right: 8vh
+    width: 8vh
+    height: 8vh
+    background: url('../img/s5.png') no-repeat
+    background-size: contain
+    z-index: -1
+    animation: var(--sq-animate)
+.logo
+  display: flex
+  justify-content: flex-end
+  margin-top: 4vh
+  margin-bottom: 3vh
+  position: relative
+  z-index: 3
+  img
+    max-width: 19.4vh
+    max-height: 3vh
+@keyframes bounce
+  from
+    transform: translateY(0)
+
+  to
+    transform: translateY(-9vh)
+.s2
+  position: relative
+  z-index: 1
+  &::before
+    content: ''
+    position: absolute
+    bottom: -10vh
+    right: -1vh
+    width: 8.5vh
+    height: 9vh
+    background: url('../img/s3.png') 0 0 repeat
+    background-size: contain
+    z-index: -1
+    animation: var(--sq-animate)
+@keyframes circle
+  from
+    transform: rotate(0)
+  to
+    transform: rotate(360deg)
+.mb-lads
+  display: none
+@media screen and ( max-width: 1200px )
+  .logo
+    margin-bottom: 0
+    margin-top: 0
+  .hero
+    min-height: 100vh
+    height: auto
+    overflow: hidden
+    &-container
+      flex-direction: column
+      justify-content: flex-start
+    &-left
+      max-width: 50vw
+      flex-basis: auto
+      margin-top: 0
+    &-logo
+      position: absolute
+      top: 7vw
+      right: 5vw
+      img
+        max-width: 38vw
+      &::before
+        content: ''
+        position: absolute
+        top: -30vw
+        right: -9vw
+        width: 37vw
+        height: 66vw
+        background: url('../img/m1.png') no-repeat
+        background-size: contain
+  .title
+    text-align: center
+    font-size: 37px
+    margin-bottom: 0
+    margin-top: 0
+  .desc
+    font-size: 16px
+  .btn
+    font-size: 26px
+    &::before
+      top: -1vh
+      left: 0
+      width: 5vh
+      height: 5vh
+    &::after
+      top: -2vh
+      right: 100px
+      width: 5vh
+      height: 5vh
+  .button
+    padding-top: 6vh
+    margin-top: 0
+    &::before
+      bottom: -10vh
+      left: 40px
+      width: 7vh
+      height: 7vh
+    &::after
+      right: 50px
+      width: 6vh
+      height: 6vh
+      bottom: -8vh
+  .s2
+    &::before
+      bottom: -5vh
+      right: -1vh
+      width: 6vh
+      height: 6vh
+@media screen and ( max-width: 321px )
+  .button
+    padding-top: 4vh
+  .desc
+    margin-top: 10px
+  .hero
+    &-left
+      max-width: 40vw
+  .btn
+    &::before
+      top: -3vh
+    &::after
+      top: -4vh
+@media screen and ( max-width: 1200px ) and (orientation: landscape)
+  html, body
+    overflow: hidden
+    background: #f5df46
+  .mb-lads
+    display: flex
+    justify-content: center
+    align-items: center
+    min-height: 100vh
+    width: 100vw
+    background: #f5df46
+    overflow: hidden
+    &__text
+      display: flex
+      align-items: center
+      justify-content: center
+      position: relative
+      max-width: 90vh
+      margin-top: 5vh
+      img
+        transform: rotate(12deg)
+    &__img
+      position: absolute
+      img
+        animation: circle 4s infinite linear
+  .hero
+    display: none
+  .questions
+    display: none !important

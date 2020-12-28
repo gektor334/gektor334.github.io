@@ -1,0 +1,209 @@
+.questions
+  height: 100vh
+  width: 100%
+  display: flex
+  justify-content: center
+  background: #f5df46
+  &-top
+    display: flex
+    align-items: flex-end
+    width: 100%
+    justify-content: space-between
+    flex-basis: 45%
+  &-container
+    flex-direction: column
+    justify-content: space-between
+    position: relative
+  &-input
+    display: flex
+    flex-wrap: wrap
+    align-content: flex-start
+    flex-basis: 55%
+    height: 100%
+    div
+      flex-basis: 25%
+      margin-top: 5vh
+      display: flex
+      &:nth-child(4n + 4)
+        justify-content: flex-end
+      &:nth-child(4n + 3)
+        justify-content: center
+      &:nth-child(4n + 2)
+        justify-content: center
+.before
+  &-1
+    position: relative
+    z-index: 1
+    &::before
+      content: ''
+      top: var(--sq-top)
+      left: -11vh
+      position: absolute
+      background: url('../img/joyn1.png') no-repeat
+      width: 21vh
+      height: 28vh
+      background-size: contain
+      z-index: -1
+      transition: 0.7s
+  &-2
+    position: relative
+    &::before
+      content: ''
+      top: var(--sq-top)
+      left: -5vh
+      position: absolute
+      background: url('../img/joyn2.png') no-repeat
+      width: 17vh
+      height: 42vh
+      background-size: contain
+      transition: 0.7s
+  &-3
+    position: relative
+    z-index: 1
+    &::before
+      content: ''
+      top: var(--sq-top)
+      left: 0
+      position: absolute
+      background: url('../img/joyn3.png') no-repeat
+      width: 18vh
+      height: 27vh
+      background-size: contain
+      z-index: -1
+      transition: 0.7s
+  &-4
+    position: relative
+    z-index: 1
+    &::before
+      content: ''
+      top: var(--sq-top)
+      left: -17vh
+      position: absolute
+      background: url('../img/joyn4.png') no-repeat
+      width: 15vh
+      height: 28vh
+      background-size: contain
+      z-index: -1
+      transition: 0.7s
+    &::after
+      content: ''
+      top: var(--sq-top)
+      left: -7vh
+      position: absolute
+      background: url('../img/joyn5.png') no-repeat
+      width: 21vh
+      height: 35vh
+      background-size: contain
+      z-index: -1
+      transition: 0.7s
+  &-5
+    position: relative
+    z-index: 1
+    &::before
+      content: ''
+      top: var(--sq-top)
+      right: -10vh
+      position: absolute
+      background: url('../img/joyn6.png') no-repeat
+      width: 15vh
+      height: 32vh
+      background-size: contain
+      z-index: -1
+      transition: 0.7s
+@media screen and ( max-width: 1200px )
+  .questions
+    min-height: 100vh
+    height: 100%
+    display: none
+    padding-bottom: 50px
+    overflow: hidden
+    &-container
+      justify-content: flex-start
+    &-top
+      flex-direction: column
+      align-items: center
+      margin-top: 100px
+      flex-basis: auto
+      justify-content: flex-start
+    &-input
+      flex-direction: column
+      flex-wrap: nowrap
+      flex-basis: 100%
+      margin-bottom: -20px
+      div
+        justify-content: center
+        &:nth-child(4n + 4)
+          justify-content: center
+        &:nth-child(4n + 3)
+          justify-content: center
+        &:nth-child(4n + 2)
+          justify-content: center
+    &-logo
+      position: absolute
+      top: 12vw
+      right: 2vw
+      img
+        max-width: 30vw
+  .before
+    &-1
+      &::before
+        top: var(--sq-top)
+        left: -120px
+        width: 80px
+        height: 150px
+    &-2
+      &::before
+        top: var(--sq-top)
+        left: -17px
+        width: 80px
+        height: 150px
+    &-3
+      &::before
+        top: var(--sq-top)
+        left: 100px
+        width: 60px
+        height: 90px
+    &-4
+      &::before
+        display: none
+      &::after
+        display: none
+    &-5
+      &::before
+        top: var(--sq-top)
+        left: auto
+        right: 0
+        width: 80px
+        height: 150px
+  .desc
+    &-input
+      justify-content: center
+  .input
+    font-size: 15px
+    width: 70%
+    padding: 10px 10px
+    min-height: 30px
+    &-one
+      max-width: 70%
+      width: 70%
+      font-size: 15px
+      padding: 10px 10px
+      min-height: 30px
+  .btn
+    &-next
+      position: absolute
+      bottom: 0
+      left: -70vw
+      z-index: 9
+      max-width: 70vw
+      transition: 3s
+      animation: none
+      top: auto
+      &::before
+        top: -114px
+        left: -62px
+        width: 320px
+        height: 464px
+        background: url('../img/mb-bg-next.png') no-repeat
+        background-size: contain
+        transform: rotate(90deg)

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" href="../img/favicon180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../img/favicon192.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="../img/favicon96.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon16.png">
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/FileSaver.min.js"></script>
+  <script src="../js/html2canvas.js"></script>
+  <title>С новый годом</title>
+  <style>
+    html,
+    body {
+      color: #939597;
+      padding: 0;
+      margin: 0;
+      background: #f5df46;
+    }
+
+    .final-btn {
+      color: #939597;
+      background: #ffffff;
+      border-radius: 37px;
+      color: #939597;
+      padding: 1vh 4.5vh;
+    }
+  </style>
+</head>
+
+<body>
+  <section class="mb-lads">
+    <div class="mb-lads__text">
+      <img src="../img/mb112.png" alt="переверните устройство">
+      <div class="mb-lads__img">
+        <img src="../img/mb113.png" alt="звездочка">
+      </div>
+    </div>
+  </section>
+
+  <section class="final" id="content">
+    <div class="final-bg">
+      <div class="container final-container">
+        <div class="final-text">
+          <div class="final-top">
+            <p class="final-desc">
+              <span class="arr1 arr"></span>
+              <span class="arr0 arr"></span>!
+            </p>
+          </div>
+          <p class="final-desc">Настолько <span class="arr2 arr"></span> был год, что
+            <br class="pc">у нас просто нет слов. Поэтому впервые
+            <br class="pc">мы сочиняем новогоднюю открытку для вас —
+            <br class="pc">вместе с&nbsp;вами.
+          </p>
+          <p class="final-desc">Искренне желаем, чтобы наступающий 2021
+            <br class="pc">обошелся без неприятных сюрпризов. Пусть
+            <br class="pc">он не подкачает и будет<span class="arr3 arr"></span>!
+          </p>
+          <p class="final-desc">
+            В любой непонятной ситуации — дышите
+            <br class="pc">глубже и делайте брендинг. Верим, что этот
+            <br class="pc"><span class="arr4 arr"></span>вирус скоро пройдет, а пока
+            <br class="pc">со стрессом вам поможет справиться наш
+            <br class="pc"><span class="arr5 arr"></span>креатив.
+          </p>
+          <p class="final-desc">
+            Спасибо за проекты и радость человеческого
+            <br class="pc">общения! Это был<span class="arr6 arr"></span>опыт
+            <br class="pc">(это не мы, это вы так сказали).
+          </p>
+          <p class="final-desc">
+            Давай, до свидания,<span class="arr7 arr"></span>2020!
+            <br class="pc">Приходи скорее,<span class="arr8 arr"></span>2021!
+          </p>
+          <p class="final-desc">
+            Ваш<span class="arr9 arr"></span>коллега
+            <br class="pc">и<span class="arr10 arr"></span>друг,
+            <br class="pc">брендинговое и&nbsp;креативное агентство
+          </p>
+          <a href="https://artonica.ru/" target="_blank">
+            <div class="final-logo">
+              <img src="../img/logo.png" alt="артоника">
+            </div>
+          </a>
+
+          <div class="final-bottom">
+            <div class="final-bottom__left">
+              <div class="final-bottom__btn">
+                <a href="javascript: void(0);" id="get_images" class="final-btn save">получить открытку</a>
+                <a href="../index.html" class="final-btn final-btn-last">переписать!</a>
+              </div>
+              <p class="subdesc">Почему новогодняя открытка серо-желтая? Потому что
+                это официальные цвета наступающего 2021 года по версии Pantone®: Ultimate Grey 17-5104 и
+                Illuminating
+                13-0647
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="final-bottom__right">
+          <img src="../img/2021.png" alt="бычок">
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="../js/main.js"></script>
+  <script>
+    window.onload = function () {
+      try {
+        let arr0 = document.querySelector('.arr0');
+        let arr1 = document.querySelector('.arr1');
+        let arr2 = document.querySelector('.arr2');
+        let arr3 = document.querySelector('.arr3');
+        let arr4 = document.querySelector('.arr4');
+        let arr5 = document.querySelector('.arr5');
+        let arr6 = document.querySelector('.arr6');
+        let arr7 = document.querySelector('.arr7');
+        let arr8 = document.querySelector('.arr8');
+        let arr9 = document.querySelector('.arr9');
+        let arr10 = document.querySelector('.arr10');
+        let lsArr = localStorage.getItem('inputArrText');
+        lsArr = JSON.parse(lsArr);
+        lsArr[0] = lsArr[0][0].toUpperCase() + lsArr[0].substr(1).toLowerCase(0);
+        lsArr[1] = lsArr[1][0].toUpperCase() + lsArr[1].substr(1).toLowerCase(0);
+        lsArr[2] = lsArr[2].toLowerCase();
+        lsArr[3] = lsArr[3].toLowerCase();
+        lsArr[4] = lsArr[4].toLowerCase();
+        lsArr[5] = lsArr[5].toLowerCase();
+        lsArr[6] = lsArr[6].toLowerCase();
+        lsArr[7] = lsArr[7].toLowerCase();
+        lsArr[8] = lsArr[8].toLowerCase();
+        lsArr[9] = lsArr[9].toLowerCase();
+        lsArr[10] = lsArr[10].toLowerCase();
+        arr0.innerHTML = lsArr[0];
+        arr1.innerHTML = lsArr[1] + '(ая)';
+        arr2.innerHTML = lsArr[2];
+        arr3.innerHTML = lsArr[3];
+        arr4.innerHTML = lsArr[4];
+        arr5.innerHTML = lsArr[5];
+        arr6.innerHTML = lsArr[6];
+        arr7.innerHTML = lsArr[7];
+        arr8.innerHTML = lsArr[8];
+        arr9.innerHTML = lsArr[9];
+        arr10.innerHTML = lsArr[10];
+      }
+      catch { }
+
+      document.getElementById("get_images").onclick = function () {
+        html2canvas(document.getElementById("content")).then(function (canvas) {
+          var my_screen = canvas;
+          canvas.toBlob(function (blob) {
+            saveAs(blob, "artonica.png");
+          });
+          document.getElementById("result").appendChild(my_screen);
+        });
+      }
+    }
+    let scrTop = 150;
+    let finalBg = document.querySelector('.final-bg');
+    let bull2020 = document.querySelector('.final-bottom__right');
+    document.onscroll = function () {
+      let position = window.scrollY;
+      if (window.innerWidth > 1200) {
+        if (position > 0 && position < 790) {
+          finalBg.style.backgroundPosition = 'center 0vh';
+        }
+        else if (position > 800) {
+          finalBg.style.backgroundPosition = 'center 3vh';
+        }
+        else {
+          finalBg.style.backgroundPosition = 'center -5vh';
+        }
+      }
+      else {
+        if (position > 0 && position < 790) {
+          finalBg.style.backgroundPosition = 'center -1vh';
+        }
+        else if (position > 800) {
+          finalBg.style.backgroundPosition = 'center 2.5vh';
+        }
+        else {
+          finalBg.style.backgroundPosition = 'center -7.5vh';
+        }
+      }
+      scrTop = position;
+      let final = document.querySelector('.final').scrollHeight;
+      if (window.innerWidth > 1200) {
+        if ((window.innerHeight + 200) > (final - scrTop)) {
+          bull2020.style.bottom = '-7vh';
+        }
+        else {
+          bull2020.style.bottom = '-25vh';
+        }
+      }
+      else {
+        if ((window.innerHeight + 200) > (final - scrTop)) {
+          bull2020.style.right = '0';
+        }
+        else {
+          bull2020.style.right = '-37vh';
+        }
+      }
+    }
+  </script>
+
+
+  <div id="result" style="opacity: 0; height: 1px !important; transform: translateY(100%);"></div>
+</body>
+
+</html>
