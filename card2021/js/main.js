@@ -50,6 +50,7 @@ try {
   let topM2 = '-101px';
   let topM0 = '-250px';
   let topM3 = '-500px';
+  let topM4 = '-550px';
   let topM30 = '-700px';
   let topM5 = '-355px';
   let topM1 = '-110px';
@@ -82,7 +83,7 @@ try {
       document.querySelector('.questions').style.display = 'flex';
       setTimeout(() => b1.style.setProperty('--sq-top', topM1), 100);
       setTimeout(() => b2.style.setProperty('--sq-top', topM2), 300);
-      setTimeout(() => b3.style.setProperty('--sq-top', topM3), 600);
+      setTimeout(() => b3.style.setProperty('--sq-top', topM4), 600);
       setTimeout(() => b5.style.setProperty('--sq-top', topM5), 1200);
     }
     setTimeout(() => b4.style.setProperty('--sq-top', top52), 900);
