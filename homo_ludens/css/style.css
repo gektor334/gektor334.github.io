@@ -1483,6 +1483,7 @@ li {
   }
   .hero__img img {
     width: 120%;
+    height: 100%;
   }
   .about-school__desc-bold {
     color: #7d8653;
