@@ -92,9 +92,8 @@
           <div class="final-bottom">
             <div class="final-bottom__left">
               <div class="final-bottom__btn">
-                <a href="javascript: void(0);" id="get_images" class="final-btn save"
-                  data-html2canvas-ignore="true">получить открытку</a>
-                <a href="../index.html" class="final-btn final-btn-last" data-html2canvas-ignore="true">переписать!</a>
+                <a href="javascript: void(0);" id="get_images" class="final-btn save">получить открытку</a>
+                <a href="../index.html" class="final-btn final-btn-last">переписать!</a>
               </div>
               <p class="subdesc">Почему новогодняя открытка серо-желтая? Потому что
                 это официальные цвета наступающего 2021 года по версии Pantone®: Ultimate Grey 17-5104 и
@@ -156,7 +155,7 @@
         html2canvas(document.getElementById("content")).then(function (canvas) {
           var my_screen = canvas;
           canvas.toBlob(function (blob) {
-            saveAs(blob, "artonica.png");
+            saveAs(blob, "artonicard2021.png");
           });
           document.getElementById("result").appendChild(my_screen);
         });
