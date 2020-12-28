@@ -353,3 +353,6 @@ template {
 li {
   list-style-type: none;
 }
+html {
+  height: -webkit-fill-available;
+}

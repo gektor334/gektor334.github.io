@@ -347,6 +347,10 @@ li {
   list-style-type: none;
 }
 
+html {
+  height: -webkit-fill-available;
+}
+
 html, body {
   font-family: 'Montserrat', sans-serif;
   overflow-x: hidden;
