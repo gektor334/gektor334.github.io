@@ -1,38 +1,44 @@
-let input = document.querySelectorAll('.input-test');
-let op0 = '0';
-let op1 = '1';
-let z1 = document.querySelector('.btn-next');
-z1.style.setProperty('--sq-opacity', op0);
-window.onload = function () {
-  let inputArrText = [];
-  for (let inp = 0; inp < input.length; inp++) {
-    inputArrText[inp] = input[inp].value;
-    input[inp].addEventListener('input', function () {
+try {
+  let input = document.querySelectorAll('.input-test');
+  let op0 = '0';
+  let op1 = '1';
+  let z1 = document.querySelector('.btn-next');
+  z1.style.setProperty('--sq-opacity', op0);
+  window.onload = function () {
+    let inputArrText = [];
+    for (let inp = 0; inp < input.length; inp++) {
       inputArrText[inp] = input[inp].value;
-      localStorage.setItem('inputArrText', JSON.stringify(inputArrText));
-      if (window.innerWidth <= 1200) {
-        if (inputArrText.length == 11 && inputArrText[0].length >= 2 && inputArrText[1].length > 2 && inputArrText[2].length > 2 && inputArrText[3].length > 2 && inputArrText[4].length > 2 && inputArrText[5].length > 2 && inputArrText[6].length > 2 && inputArrText[7].length > 2 && inputArrText[8].length > 2 && inputArrText[9].length > 2 && inputArrText[10].length > 2) {
-          document.querySelector('.btn-next img').src = 'img/mb-next.png';
-          document.querySelector('.btn-next').style.left = '0';
-          document.querySelector('.btn-next').style.right = '0';
-          document.querySelector('.btn-next').style.margin = 'auto';
-          document.querySelector('.btn-next').style.textAlign = 'center';
-          setTimeout(() => z1.style.setProperty('--sq-opacity', op1), 3000);
-        }
-      }
-      else {
-        if (inputArrText.length == 11 && inputArrText[0].length >= 2 && inputArrText[1].length > 2 && inputArrText[2].length > 2 && inputArrText[3].length > 2 && inputArrText[4].length > 2 && inputArrText[5].length > 2 && inputArrText[6].length > 2 && inputArrText[7].length > 2 && inputArrText[8].length > 2 && inputArrText[9].length > 2 && inputArrText[10].length > 2) {
-          document.querySelector('.btn-next').style.top = '-20vh';
-          setTimeout(() => z1.style.setProperty('--sq-opacity', op1), 3000);
+      input[inp].addEventListener('input', function () {
+        inputArrText[inp] = input[inp].value;
+        localStorage.setItem('inputArrText', JSON.stringify(inputArrText));
+        if (window.innerWidth <= 1200) {
+          if (inputArrText.length == 11 && inputArrText[0].length >= 2 && inputArrText[1].length > 2 && inputArrText[2].length > 2 && inputArrText[3].length > 2 && inputArrText[4].length > 2 && inputArrText[5].length > 2 && inputArrText[6].length > 2 && inputArrText[7].length > 2 && inputArrText[8].length > 2 && inputArrText[9].length > 2 && inputArrText[10].length > 2) {
+            document.querySelector('.btn-next img').src = 'img/mb-next.png';
+            document.querySelector('.btn-next').style.left = '0';
+            document.querySelector('.btn-next').style.right = '0';
+            document.querySelector('.btn-next').style.margin = 'auto';
+            document.querySelector('.btn-next').style.textAlign = 'center';
+            setTimeout(() => z1.style.setProperty('--sq-opacity', op1), 3000);
+          }
         }
         else {
-          document.querySelector('.btn-next').style.top = '-150vh';
-          z1.style.setProperty('--sq-opacity', op0);
+          if (inputArrText.length == 11 && inputArrText[0].length >= 2 && inputArrText[1].length > 2 && inputArrText[2].length > 2 && inputArrText[3].length > 2 && inputArrText[4].length > 2 && inputArrText[5].length > 2 && inputArrText[6].length > 2 && inputArrText[7].length > 2 && inputArrText[8].length > 2 && inputArrText[9].length > 2 && inputArrText[10].length > 2) {
+            document.querySelector('.btn-next').style.top = '-20vh';
+            setTimeout(() => z1.style.setProperty('--sq-opacity', op1), 3000);
+          }
+          else {
+            document.querySelector('.btn-next').style.top = '-150vh';
+            z1.style.setProperty('--sq-opacity', op0);
+          }
         }
-      }
-    });
+      });
+    }
   }
 }
+catch {
+
+}
+
 
 try {
   let b1 = document.querySelector('.before-1');
