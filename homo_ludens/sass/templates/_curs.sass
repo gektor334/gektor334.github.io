@@ -413,6 +413,18 @@
         top: 0.7vw
         left: -4.5vw
 .singing
+  &__title
+    margin-left: 11vw
+    position: relative
+    &::before
+      content: ""
+      position: absolute
+      top: -4vw
+      left: -13vw
+      width: 12vw
+      height: 11vw
+      background: url('../img/curs/sing-vec.svg') no-repeat
+      background-size: contain
   &__autor
     margin-top: 5vw
     &--img
@@ -553,3 +565,359 @@
         height: 4vw
         top: 0
         left: -4.5vw
+.teacher-video
+  &-before
+    position: relative
+    cursor: pointer
+    &::before
+      content: ''
+      position: absolute
+      background: url('../img/video-before.jpg') no-repeat
+      background-size: contain
+      width: 38vw
+      height: 23vw
+      top: 0
+      left: 0
+      transition: 0.4s
+    &::after
+      content: ''
+      position: absolute
+      background: url('../img/video-btn.png') no-repeat
+      background-size: contain
+      width: 8vw
+      height: 7vw
+      top: 25%
+      left: 45%
+      transition: 0.4s
+    &:hover
+      &::after
+        opacity: 0.6
+.luba-curs
+  margin-top: 2vw
+  &-video
+    position: relative
+    cursor: pointer
+    &::before
+      content: ''
+      position: absolute
+      background: url('../img/video-before.jpg') no-repeat
+      background-size: contain
+      width: 38vw
+      height: 23vw
+      top: 0
+      left: 0
+      transition: 0.4s
+    &::after
+      content: ''
+      position: absolute
+      background: url('../img/video-btn.png') no-repeat
+      background-size: contain
+      width: 8vw
+      height: 7vw
+      top: 25%
+      left: 45%
+      transition: 0.4s
+    &:hover
+      &::after
+        opacity: 0.6
+.singing-video-before
+  position: relative
+  cursor: pointer
+  &::before
+    content: ''
+    position: absolute
+    background: url('../img/video-before.jpg') no-repeat
+    background-size: contain
+    width: 38vw
+    height: 23vw
+    top: 0
+    left: 0
+    transition: 0.4s
+  &::after
+    content: ''
+    position: absolute
+    background: url('../img/video-btn.png') no-repeat
+    background-size: contain
+    width: 8vw
+    height: 7vw
+    top: 33%
+    left: 45%
+    transition: 0.4s
+  &:hover
+    &::after
+      opacity: 0.6
+@media screen and ( max-width: 1200px )
+  .singing
+    &__autor
+      &--img
+        margin-left: -4vw
+    &-desc
+      margin-left: 0
+    &-video
+      width: 100%
+      z-index: 5
+      &-before
+        &::before
+          width: 100%
+          height: 50vw
+          top: 0
+          left: 0
+        &::after
+          top: 45%
+          left: 45%
+  .luba-curs
+    &-video
+      &::before
+        width: 100% !important
+        height: 50vw
+      &::after
+        top: 33%
+  .effective__title
+    width: 80%
+    max-width: 80%
+    &::after
+      width: 100px
+      height: 104px
+      top: -20px
+      left: -110px
+  .curs
+    &-container
+      align-items: flex-start
+    &__video
+      margin-left: 0
+      iframe
+        width: 100% !important
+        height: 48vw !important
+    &-video
+      &-before
+        width: 100%
+        &::before
+          width: 100%
+          height: 50vw
+        &::after
+          top: 45%
+    &__autor
+      &--img
+        max-width: 70%
+    &-column
+      &__desc
+        width: 100%
+@media screen and ( max-width: 650px )
+  .singing
+    &__autor
+      &--img
+        margin-left: -45px
+    &__title
+      &::before
+        top: -12px
+        left: -70px
+        width: 70px
+        height: 63px
+  .effective__title
+    width: 90%
+    max-width: 90%
+    &::after
+      width: 55px
+      height: 55px
+      top: 0
+      left: -55px
+  .storytelling__title
+    &::after
+      width: 55px
+      height: 55px
+      top: -20px
+      left: -55px
+  .life
+    &__title
+      margin-left: 50px
+      &::after
+        width: 60px
+        height: 50px
+        left: -60px
+        top: -10px
+  .img-curs
+    margin-top: -65px
+    margin-left: -10px
+  .curs
+    &__autor
+      flex-direction: column
+      align-items: center
+      &--title
+        margin-bottom: -16px
+      &--desc
+        margin-left: 0
+      &--img
+        max-width: 100%
+    &-btn
+      padding: 12px
+    &__li
+      position: relative
+      z-index: 2
+      &:nth-child(1)
+        &::after
+          width: 30px
+          height: 14px
+          top: 5px
+          left: -34px
+      &:nth-child(2)
+        &::after
+          width: 30px
+          height: 25px
+          top: 5px
+          left: -34px
+      &:nth-child(3)
+        &::after
+          width: 30px
+          height: 14px
+          top: 5px
+          left: -34px
+      &:nth-child(4)
+        &::after
+          width: 30px
+          height: 20px
+          top: 5px
+          left: -34px
+      &:nth-child(5)
+        &::after
+          width: 30px
+          height: 14px
+          top: 5px
+          left: -34px
+      &:nth-child(6)
+        &::after
+          width: 30px
+          height: 24px
+          top: 5px
+          left: -34px
+      &:nth-child(7)
+        &::after
+          width: 30px
+          height: 14px
+          top: 5px
+          left: -34px
+      &:nth-child(8)
+        &::after
+          width: 30px
+          height: 25px
+          top: 5px
+          left: -34px
+      &:nth-child(9)
+        &::after
+          width: 30px
+          height: 18px
+          top: 5px
+          left: -34px
+      &:nth-child(10)
+        &::after
+          width: 30px
+          height: 18px
+          top: 5px
+          left: -34px
+      &:nth-child(11)
+        &::after
+          width: 30px
+          height: 14px
+          top: 5px
+          left: -34px
+  .storytelling
+    &-li
+      &:nth-child(1)
+        &::after
+          width: 32px
+          height: 20px
+          top: 5px
+          left: -34px
+      &:nth-child(2)
+        &::after
+          width: 32px
+          height: 34px
+          top: 5px
+          left: -34px
+      &:nth-child(3)
+        &::after
+          width: 32px
+          height: 20px
+          top: 5px
+          left: -34px
+      &:nth-child(4)
+        &::after
+          width: 32px
+          height: 20px
+          top: 5px
+          left: -34px
+      &:nth-child(5)
+        &::after
+          width: 32px
+          height: 20px
+          top: 5px
+          left: -34px
+      &:nth-child(6)
+        &::after
+          width: 32px
+          height: 30px
+          top: 5px
+          left: -34px
+  .singing
+    &-li
+      position: relative
+      z-index: 2
+      &:nth-child(2)
+        &::after
+          width: 33px
+          height: 20px
+          top: 5px
+          left: -35px
+      &:nth-child(3)
+        &::after
+          width: 33px
+          height: 20px
+          top: 5px
+          left: -35px
+      &:nth-child(4)
+        &::after
+          width: 33px
+          height: 20px
+          top: 5px
+          left: -35px
+      &:nth-child(5)
+        &::after
+          width: 36px
+          height: 34px
+          top: 5px
+          left: -35px
+      &:nth-child(6)
+        &::after
+          width: 33px
+          height: 20px
+          top: 5px
+          left: -35px
+      &:nth-child(7)
+        &::after
+          width: 33px
+          height: 32px
+          top: 5px
+          left: -35px
+      &:nth-child(8)
+        &::after
+          width: 33px
+          height: 20px
+          top: 5px
+          left: -35px
+      &:nth-child(9)
+        &::after
+          width: 33px
+          height: 20px
+          top: 5px
+          left: -35px
+      &:nth-child(10)
+        &::after
+          width: 33px
+          height: 20px
+          top: 5px
+          left: -35px
+      &:nth-child(11)
+        &::after
+          width: 33px
+          height: 20px
+          top: 5px
+          left: -35px

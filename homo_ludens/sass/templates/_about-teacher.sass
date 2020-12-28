@@ -50,7 +50,7 @@
     margin: 5vw 0 10vw 0
   &-video
     margin-left: 5vw
-.teacher-video
+.curs-video
   &-before
     position: relative
     cursor: pointer
@@ -71,27 +71,88 @@
       background-size: contain
       width: 8vw
       height: 7vw
-      top: 25%
+      top: 33%
       left: 45%
       transition: 0.4s
     &:hover
       &::after
         opacity: 0.6
+.oleg-row
+  .teacher-video
+    &-before
+      &::after
+        top: 33%
+.tatyana-video
+  position: relative
+  cursor: pointer
+  overflow: hidden
+  &::before
+    content: ''
+    position: absolute
+    background: url('../img/video-before.jpg') no-repeat
+    background-size: contain
+    width: 38vw
+    height: 33vw
+    top: 0
+    left: 0
+    transition: 0.4s
+    background-position: -3vw top
+  &::after
+    content: ''
+    position: absolute
+    background: url('../img/video-btn.png') no-repeat
+    background-size: contain
+    width: 8vw
+    height: 7vw
+    top: 33%
+    left: 45%
+    transition: 0.4s
+  &:hover
+    &::after
+      opacity: 0.6
 @media screen and ( max-width: 1200px )
+  .tatyana-video
+    margin-left: 0
+    &::before
+      width: 100vw
+      height: 52vw
+    &::after
+      top: 42%
   .container
     &-column
       flex-direction: column
   .teacher-video
+    width: 100%
     iframe
       width: 100% !important
       height: 48vw !important
-    &::before
-      width: 100%
-      height: 50vw
-    &::after
-      top: 45%
+    &-before
+      &::before
+        width: 100% !important
+        height: 50vw !important
+      &::after
+        top: 45%
   .wide-block
     margin-left: 0
+  .oleg
+    &-row
+      width: 100%
+      align-items: flex-start
+    &-vec
+      &1
+        margin-top: 40px
+      &2
+        margin-top: 40px
+        max-width: 30vw
+        margin-left: 60px
+  .oleg-row
+    .teacher-video
+      &-before
+        &::after
+          top: 45%
+  .lubov
+    &-vec
+      display: none
 @media screen and ( max-width: 600px )
   .about-teacher
     &-container
@@ -100,3 +161,9 @@
     order: 1
   .teacher-photo
     width: 100%
+  .oleg
+    &-vec
+      &1
+        margin-top: 10px
+      &2
+        margin-top: 0

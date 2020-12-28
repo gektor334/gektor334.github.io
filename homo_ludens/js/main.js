@@ -82,7 +82,6 @@ try {
   let more = document.querySelectorAll('.reviews-desc');
   let moreBtn = document.querySelectorAll('.reviews-more');
 
-  console.log('да');
   for (let btn = 0; btn < moreBtn.length; btn++) {
     moreBtn[btn].onclick = function () {
       if (moreBtn[btn].innerText == 'скрыть') {
@@ -126,7 +125,17 @@ let videoBtn = document.querySelector('.go-video');
 videoBtn.onclick = function () {
   let autoPlay = document.querySelector('.go-video iframe');
   autoPlay.src += '?autoplay=1';
-  console.log(autoPlay.src);
   videoBtn.classList.remove('video-before');
   videoBtn.classList.remove('teacher-video-before');
+  videoBtn.classList.remove('curs-video-before');
+  videoBtn.classList.remove('luba-curs-video');
+  videoBtn.classList.remove('singing-video-before');
+  videoBtn.classList.remove('childrens-video-before');
+}
+
+let govideo = document.querySelector('.govideo');
+govideo.onclick = function () {
+  let play = document.querySelector('.govideo iframe');
+  play.src += '?autoplay=1';
+  govideo.classList.remove('tatyana-video');
 }

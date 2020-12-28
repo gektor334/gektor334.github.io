@@ -178,6 +178,32 @@
     opacity: .4
   to
     opacity: 1
+.childrens-video-before
+  position: relative
+  cursor: pointer
+  &::before
+    content: ''
+    position: absolute
+    background: url('../img/video-before.jpg') no-repeat
+    background-size: contain
+    width: 50vw
+    height: 33vw
+    top: 0
+    left: 0
+    transition: 0.4s
+  &::after
+    content: ''
+    position: absolute
+    background: url('../img/video-btn.png') no-repeat
+    background-size: contain
+    width: 8vw
+    height: 7vw
+    top: 40%
+    left: 45%
+    transition: 0.4s
+  &:hover
+    &::after
+      opacity: 0.6
 @media screen and ( max-width: 1200px )
   .slider
     &-img
@@ -188,6 +214,22 @@
       top: 33%
     &-next
       top: 33%
+  .childrens-video
+    &__video
+      width: 85%
+      max-width: 85%
+      iframe
+        width: 100% !important
+        height: 50vw !important
+    &-before
+      position: relative
+      cursor: pointer
+      &::before
+        width: 101%
+        height: 50vw
+      &::after
+        top: 45%
+        left: 45%
 @media screen and ( max-width: 660px )
   .childrens
     &-top
