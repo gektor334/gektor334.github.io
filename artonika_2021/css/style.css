@@ -1372,7 +1372,7 @@ body {
 @media screen and (max-width: 465px) {
   .final-bg {
     background: url("../img/bg-mb.png") no-repeat;
-    background-size: 92% 92%;
+    background-size: 92%;
   }
   .final-text {
     margin-top: 40px;

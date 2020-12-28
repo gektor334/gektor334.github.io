@@ -3,7 +3,13 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" href="../img/favicon180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../img/favicon192.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="../img/favicon96.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon16.png">
   <link rel="stylesheet" href="../css/style.css">
   <script src="../js/FileSaver.min.js"></script>
   <script src="../js/html2canvas.js"></script>
@@ -77,9 +83,11 @@
             <br class="pc">и<span class="arr10 arr"></span>друг,
             <br class="pc">брендинговое и&nbsp;креативное агентство
           </p>
-          <div class="final-logo">
-            <img src="../img/logo.png" alt="артоника">
-          </div>
+          <a href="https://artonica.ru/" target="_blank">
+            <div class="final-logo">
+              <img src="../img/logo.png" alt="артоника">
+            </div>
+          </a>
 
           <div class="final-bottom">
             <div class="final-bottom__left">
@@ -147,7 +155,7 @@
         html2canvas(document.getElementById("content")).then(function (canvas) {
           var my_screen = canvas;
           canvas.toBlob(function (blob) {
-            saveAs(blob, "pretty image.png");
+            saveAs(blob, "artonica.png");
           });
           document.getElementById("result").appendChild(my_screen);
         });
