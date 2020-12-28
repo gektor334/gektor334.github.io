@@ -750,6 +750,22 @@ li {
 }
 
 @media screen and (max-width: 767px) {
+  .list-script {
+    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 0;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-transition: 0.8s;
+    transition: 0.8s;
+    margin-top: 20px;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
   .mobile-menu {
     min-height: 100vh;
     /* mobile viewport bug fix */
@@ -765,15 +781,32 @@ li {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 40px 20px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .mobile-menu-top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 65vh;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .mobile-link {
     color: #c5c5c5;
     font-size: 20px;
     font-weight: 600;
-    margin-left: 20px;
+    -webkit-transition: 0.9s;
+    transition: 0.9s;
   }
   .mobile-link-list {
     display: -webkit-box;
@@ -783,18 +816,15 @@ li {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    height: auto;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
     position: relative;
+    cursor: pointer;
   }
   .mobile-link-list::after {
     content: '\25BC';
     position: absolute;
     left: 75px;
     font-size: 10px;
-    top: 10px;
+    top: 9px;
     -webkit-transform: rotate(0);
             transform: rotate(0);
   }
@@ -804,7 +834,6 @@ li {
     font-size: 15px;
   }
   .mobile-tel {
-    margin-top: 90px;
     color: #f3c075;
     position: relative;
   }
@@ -852,6 +881,9 @@ li {
     height: 3px;
     background: #222222;
     margin-top: 3px;
+  }
+  .burger-block {
+    display: block;
   }
   .nav__link {
     display: none;

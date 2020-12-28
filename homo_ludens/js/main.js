@@ -147,3 +147,16 @@ let burgerMenu = document.querySelector('.mobile-menu');
 burger.onclick = function () {
   burgerMenu.classList.toggle('burger-flex');
 }
+let cursMobList = document.querySelector('.mobile-link-list');
+cursMobList.onclick = function () {
+  let listMenu = document.querySelector('.list-script');
+  listMenu.classList.toggle('burger-flex');
+  if (listMenu.classList.contains('burger-flex')) {
+    setTimeout(() => document.querySelector('.list-script').style.height = '160px', 20);
+    cursMobList.style.color = '#5a5d73';
+  }
+  else {
+    document.querySelector('.list-script').style.height = '0';
+    cursMobList.style.color = '#c5c5c5';
+  }
+}

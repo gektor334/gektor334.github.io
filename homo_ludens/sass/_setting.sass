@@ -235,6 +235,15 @@ li
   .information
     font-size: 10px
 @media screen and ( max-width: 767px )
+  .list-script
+    display: none
+    flex-direction: column
+    height: 0
+    justify-content: space-between
+    transition: 0.8s
+    margin-top: 20px
+    overflow: hidden
+    margin-bottom: 20px
   .mobile
     &-menu
       min-height: 100vh
@@ -248,31 +257,36 @@ li
       z-index: 99
       display: none
       flex-direction: column
-      justify-content: space-evenly
+      justify-content: space-between
+      padding: 40px 20px
+      box-sizing: border-box
+      &-top
+        display: flex
+        flex-direction: column
+        height: 65vh
+        justify-content: space-between
     &-link
       color: #c5c5c5
       font-size: 20px
       font-weight: 600
-      margin-left: 20px
+      transition: 0.9s
       &-list
         display: flex
         flex-direction: column
-        height: auto/** 180px **/
-        justify-content: space-between
         position: relative
+        cursor: pointer
         &::after
           content: '\25BC'
           position: absolute
           left: 75px
           font-size: 10px
-          top: 10px
+          top: 9px
           transform: rotate(0)
       &__curs
         color: #c5c5c5
         font-weight: 400
         font-size: 15px
     &-tel
-      margin-top: 90px
       color: #f3c075
       position: relative
       &::before
@@ -308,6 +322,8 @@ li
       height: 3px
       background: #222222
       margin-top: 3px
+    &-block
+      display: block
   .nav
     &__link
       display: none
