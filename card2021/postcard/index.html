@@ -25,7 +25,9 @@
 
     .final-btn {
       color: #939597;
+      background: #ffffff;
       border-radius: 37px;
+      color: #939597;
       padding: 1vh 4.5vh;
     }
   </style>
@@ -89,7 +91,7 @@
 
           <div class="final-bottom">
             <div class="final-bottom__left">
-              <div class="final-bottom__btn" data-html2canvas-ignore="true">
+              <div class="final-bottom__btn">
                 <a href="javascript: void(0);" id="get_images" class="final-btn save">получить открытку</a>
                 <a href="../index.html" class="final-btn final-btn-last">переписать!</a>
               </div>
@@ -153,7 +155,7 @@
         html2canvas(document.getElementById("content")).then(function (canvas) {
           var my_screen = canvas;
           canvas.toBlob(function (blob) {
-            saveAs(blob, "artonicard2021.png");
+            saveAs(blob, "artonica.png");
           });
           document.getElementById("result").appendChild(my_screen);
         });
