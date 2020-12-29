@@ -144,13 +144,16 @@ catch { }
 
 let burger = document.querySelector('.burger');
 let burgerMenu = document.querySelector('.mobile-menu');
+let menuBack = document.querySelector('.mobile-menu-back');
 let l1 = document.querySelector('.line-1');
 let l2 = document.querySelector('.line-2');
 let l3 = document.querySelector('.line-3');
 burger.onclick = function () {
   burgerMenu.classList.toggle('active');
   if (burgerMenu.classList.contains('active')) {
+    menuBack.classList.add('burger-flex');
     burgerMenu.classList.add('burger-flex');
+    setTimeout(() => menuBack.style.opacity = '1', 100);
     setTimeout(() => burgerMenu.style.opacity = '1', 100);
     setTimeout(() => l2.style.opacity = '0', 300);
     setTimeout(() => l1.style.transform = 'rotate(45deg)', 300);
@@ -164,6 +167,7 @@ burger.onclick = function () {
   }
   else {
     burgerMenu.style.opacity = '0';
+    setTimeout(() => menuBack.classList.remove('burger-flex'), 600);
     setTimeout(() => burgerMenu.classList.remove('burger-flex'), 600);
     setTimeout(() => l2.style.opacity = '1', 300);
     setTimeout(() => l1.style.transform = 'rotate(0)', 300);
