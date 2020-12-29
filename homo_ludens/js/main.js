@@ -144,19 +144,54 @@ catch { }
 
 let burger = document.querySelector('.burger');
 let burgerMenu = document.querySelector('.mobile-menu');
+let l1 = document.querySelector('.line-1');
+let l2 = document.querySelector('.line-2');
+let l3 = document.querySelector('.line-3');
 burger.onclick = function () {
-  burgerMenu.classList.toggle('burger-flex');
+  burgerMenu.classList.toggle('active');
+  if (burgerMenu.classList.contains('active')) {
+    burgerMenu.classList.add('burger-flex');
+    setTimeout(() => burgerMenu.style.opacity = '1', 100);
+    setTimeout(() => l2.style.opacity = '0', 300);
+    setTimeout(() => l1.style.transform = 'rotate(45deg)', 300);
+    setTimeout(() => l1.style.marginTop = '9px', 300);
+    setTimeout(() => l1.style.width = '25px', 300);
+    setTimeout(() => l3.style.transform = 'rotate(-45deg)', 300);
+    setTimeout(() => l3.style.marginTop = '-9px', 300);
+    setTimeout(() => l3.style.width = '25px', 300);
+  }
+  else {
+    burgerMenu.style.opacity = '0';
+    setTimeout(() => burgerMenu.classList.remove('burger-flex'), 600);
+    setTimeout(() => l2.style.opacity = '1', 300);
+    setTimeout(() => l1.style.transform = 'rotate(0)', 300);
+    setTimeout(() => l1.style.marginTop = '0', 300);
+    setTimeout(() => l3.style.transform = 'rotate(0)', 300);
+    setTimeout(() => l3.style.marginTop = '3px', 300);
+    setTimeout(() => l1.style.width = '21px', 300);
+    setTimeout(() => l3.style.width = '21px', 300);
+  }
 }
 let cursMobList = document.querySelector('.mobile-link-list');
 cursMobList.onclick = function () {
   let listMenu = document.querySelector('.list-script');
-  listMenu.classList.toggle('burger-flex');
-  if (listMenu.classList.contains('burger-flex')) {
-    setTimeout(() => document.querySelector('.list-script').style.height = '160px', 20);
+  listMenu.classList.toggle('active');
+  let deg180 = 'rotate(-180deg)';
+  let deg0 = 'rotate(0)';
+  if (listMenu.classList.contains('active')) {
+    listMenu.classList.add('burger-flex');
+    setTimeout(() => document.querySelector('.list-script').style.height = '160px', 100);
+    setTimeout(() => document.querySelector('.list-script').style.margin = '20px 0', 300);
+    setTimeout(() => document.querySelector('.list-script').style.opacity = '1', 200);
     cursMobList.style.color = '#5a5d73';
+    cursMobList.style.setProperty('--sq-transform', deg180);
   }
   else {
     document.querySelector('.list-script').style.height = '0';
+    document.querySelector('.list-script').style.margin = '0';
+    document.querySelector('.list-script').style.opacity = '0';
     cursMobList.style.color = '#c5c5c5';
+    cursMobList.style.setProperty('--sq-transform', deg0);
+    setTimeout(() => listMenu.classList.remove('burger-flex'), 500);
   }
 }

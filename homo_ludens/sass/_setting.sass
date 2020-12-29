@@ -240,10 +240,11 @@ li
     flex-direction: column
     height: 0
     justify-content: space-between
-    transition: 0.8s
-    margin-top: 20px
+    transition: 0.5s
+    margin-top: 0
     overflow: hidden
-    margin-bottom: 20px
+    margin-bottom: 0
+    opacity: 0
   .mobile
     &-menu
       min-height: 100vh
@@ -260,6 +261,8 @@ li
       justify-content: space-between
       padding: 40px 20px
       box-sizing: border-box
+      transition: 0.7s
+      opacity: 0
       &-top
         display: flex
         flex-direction: column
@@ -281,7 +284,8 @@ li
           left: 75px
           font-size: 10px
           top: 9px
-          transform: rotate(0)
+          transform: var(--sq-transform)
+          transition: 0.7s
       &__curs
         color: #c5c5c5
         font-weight: 400
@@ -322,6 +326,7 @@ li
       height: 3px
       background: #222222
       margin-top: 3px
+      transition: 0.5s
     &-block
       display: block
   .nav
