@@ -141,13 +141,6 @@ try {
   }
 }
 catch { }
-window.addEventListener("load", function () {
-  // Set a timeout...
-  setTimeout(function () {
-    // Hide the address bar!
-    window.scrollTo(0, 1);
-  }, 0);
-});
 
 let burger = document.querySelector('.burger');
 let burgerMenu = document.querySelector('.mobile-menu');
