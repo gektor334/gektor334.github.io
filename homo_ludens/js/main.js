@@ -147,35 +147,38 @@ let burgerMenu = document.querySelector('.mobile-menu');
 let l1 = document.querySelector('.line-1');
 let l2 = document.querySelector('.line-2');
 let l3 = document.querySelector('.line-3');
-burger.onclick = function () {
-  burgerMenu.classList.toggle('active');
-  if (burgerMenu.classList.contains('active')) {
-    burgerMenu.classList.add('burger-flex');
-    setTimeout(() => burgerMenu.style.opacity = '1', 100);
-    setTimeout(() => l2.style.opacity = '0', 300);
-    setTimeout(() => l1.style.transform = 'rotate(45deg)', 300);
-    setTimeout(() => l1.style.marginTop = '9px', 300);
-    setTimeout(() => l1.style.width = '25px', 300);
-    setTimeout(() => l3.style.transform = 'rotate(-45deg)', 300);
-    setTimeout(() => l3.style.marginTop = '-9px', 300);
-    setTimeout(() => l3.style.width = '25px', 300);
-    document.querySelector('body').style.overflow = 'hidden';
-    document.querySelector('html').style.overflow = 'hidden';
+window.addEventListener('scroll', function () {
+  burger.onclick = function () {
+    burgerMenu.classList.toggle('active');
+    if (burgerMenu.classList.contains('active')) {
+      burgerMenu.classList.add('burger-flex');
+      setTimeout(() => burgerMenu.style.opacity = '1', 100);
+      setTimeout(() => l2.style.opacity = '0', 300);
+      setTimeout(() => l1.style.transform = 'rotate(45deg)', 300);
+      setTimeout(() => l1.style.marginTop = '9px', 300);
+      setTimeout(() => l1.style.width = '25px', 300);
+      setTimeout(() => l3.style.transform = 'rotate(-45deg)', 300);
+      setTimeout(() => l3.style.marginTop = '-9px', 300);
+      setTimeout(() => l3.style.width = '25px', 300);
+      document.querySelector('body').style.overflow = 'hidden';
+      document.querySelector('html').style.overflow = 'hidden';
+    }
+    else {
+      burgerMenu.style.opacity = '0';
+      setTimeout(() => burgerMenu.classList.remove('burger-flex'), 600);
+      setTimeout(() => l2.style.opacity = '1', 300);
+      setTimeout(() => l1.style.transform = 'rotate(0)', 300);
+      setTimeout(() => l1.style.marginTop = '0', 300);
+      setTimeout(() => l3.style.transform = 'rotate(0)', 300);
+      setTimeout(() => l3.style.marginTop = '3px', 300);
+      setTimeout(() => l1.style.width = '21px', 300);
+      setTimeout(() => l3.style.width = '21px', 300);
+      document.querySelector('body').style.overflow = 'auto';
+      document.querySelector('html').style.overflow = 'auto';
+    }
+    window.pageYOffset = window.pageYOffset - 150;
   }
-  else {
-    burgerMenu.style.opacity = '0';
-    setTimeout(() => burgerMenu.classList.remove('burger-flex'), 600);
-    setTimeout(() => l2.style.opacity = '1', 300);
-    setTimeout(() => l1.style.transform = 'rotate(0)', 300);
-    setTimeout(() => l1.style.marginTop = '0', 300);
-    setTimeout(() => l3.style.transform = 'rotate(0)', 300);
-    setTimeout(() => l3.style.marginTop = '3px', 300);
-    setTimeout(() => l1.style.width = '21px', 300);
-    setTimeout(() => l3.style.width = '21px', 300);
-    document.querySelector('body').style.overflow = 'auto';
-    document.querySelector('html').style.overflow = 'auto';
-  }
-}
+});
 let cursMobList = document.querySelector('.mobile-link-list');
 cursMobList.onclick = function () {
   let listMenu = document.querySelector('.list-script');
@@ -199,3 +202,7 @@ cursMobList.onclick = function () {
     setTimeout(() => listMenu.classList.remove('burger-flex'), 500);
   }
 }
+
+window.addEventListener('scroll', function () {
+  console.log(window.pageYOffset);
+});
