@@ -929,14 +929,15 @@ li {
 }
 
 @media screen and (max-width: 630px) {
+  .footer__info {
+    margin-left: 35px;
+  }
   .footer-container-column {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    position: relative;
   }
   .footer__right {
     -webkit-box-orient: vertical;
@@ -947,6 +948,11 @@ li {
   .footer__left {
     width: auto;
     margin-bottom: 20px;
+  }
+  .footer__social {
+    position: absolute;
+    top: -20px;
+    right: 20px;
   }
   .footer__social-network {
     -webkit-box-pack: center;
@@ -973,6 +979,9 @@ li {
 @media screen and (max-width: 346px) {
   .logo {
     margin-left: -70px;
+  }
+  .footer__logo {
+    width: 35vw;
   }
 }
 

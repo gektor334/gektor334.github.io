@@ -356,16 +356,21 @@ li
     width: 30px
 @media screen and ( max-width: 630px )
   .footer
+    &__info
+      margin-left: 35px
     &-container
       &-column
         flex-direction: column
-        align-items: center
+        position: relative
     &__right
       flex-direction: column
     &__left
       width: auto
       margin-bottom: 20px
     &__social
+      position: absolute
+      top: -20px
+      right: 20px
       &-network
         justify-content: center
         margin-bottom: 25px
@@ -383,3 +388,5 @@ li
 @media screen and ( max-width: 346px )
   .logo
     margin-left: -70px
+  .footer__logo
+    width: 35vw
