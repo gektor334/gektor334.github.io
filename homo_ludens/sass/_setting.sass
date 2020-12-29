@@ -24,16 +24,16 @@ header
   top: 1.6vw
   z-index: 999
   background: url('../img/list.svg') no-repeat
-  padding: 0.5vw 0.5vw 1vw 1vw
+  background-size: contain
+  padding: 1vw 0.5vw 1.5vw 1vw
   width: 13vw
-  background-size: cover
   line-height: 1
   font-weight: normal
   overflow: hidden
   max-height: 0
   transition: 0.8s
   &__link
-    margin-top: 1vw
+    margin-top: 1.3vw
     text-transform: none !important
     font-size: 0.85vw !important
     color: #595959 !important
@@ -45,6 +45,9 @@ header
   font-weight: 600
   color: #222222
   font-size: 0.95vw
+  transition: 0.6s
+  &:hover
+    color: #A5854F
   &-relative
     position: relative
     cursor: pointer
@@ -53,6 +56,9 @@ header
     text-transform: lowercase
     font-weight: 600
     color: #83723F
+    transition: 0.6s
+    &:hover
+      opacity: 0.7
 .social
   display: flex
   justify-content: space-between
