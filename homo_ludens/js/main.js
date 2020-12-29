@@ -203,3 +203,19 @@ cursMobList.onclick = function () {
     setTimeout(() => listMenu.classList.remove('burger-flex'), 500);
   }
 }
+
+
+let noHidden = document.querySelectorAll('.reviews-card');
+for (let i = 0; i < noHidden.length; i++) {
+  noHidden[i].classList.add('hidden');
+}
+let more = document.querySelector('.more-card');
+more.addEventListener('click', function () {
+  var showPerClick = 2;
+  var hidden = this.parentNode.querySelectorAll('div.hidden');
+  for (var i = 0; i < showPerClick; i++) {
+    if (!hidden[i]) return this.outerHTML = "";
+    hidden[i].classList.remove('hidden');
+  }
+});
+

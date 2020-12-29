@@ -370,6 +370,10 @@ header {
   width: 85vw;
 }
 
+.hidden {
+  display: none;
+}
+
 .mobile-menu {
   display: none;
 }
