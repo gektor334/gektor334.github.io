@@ -206,16 +206,19 @@ cursMobList.onclick = function () {
 
 
 let noHidden = document.querySelectorAll('.reviews-card');
-for (let i = 0; i < noHidden.length; i++) {
+for (let i = 15; i < noHidden.length; i++) {
   noHidden[i].classList.add('hidden');
 }
-let more = document.querySelector('.more-card');
-more.addEventListener('click', function () {
-  var showPerClick = 2;
-  var hidden = this.parentNode.querySelectorAll('div.hidden');
-  for (var i = 0; i < showPerClick; i++) {
-    if (!hidden[i]) return this.outerHTML = "";
-    hidden[i].classList.remove('hidden');
-  }
-});
+let more = document.querySelectorAll('.more-card');
 
+for (var i = 0; i < more.length; i++) {
+  more[i].addEventListener('click', function () {
+    var showPerClick = 2;
+
+    var hidden = this.parentNode.querySelectorAll('div.hidden');
+    for (var i = 0; i < showPerClick; i++) {
+      if (!hidden[i]) return this.outerHTML = "";
+      hidden[i].classList.remove('hidden');
+    }
+  });
+}

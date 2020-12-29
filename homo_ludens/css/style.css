@@ -4146,6 +4146,9 @@ li {
 }
 
 @media screen and (max-width: 648px) {
+  .corparate-main::after {
+    bottom: 275px;
+  }
   .corparate-top__img {
     max-width: 70px;
     margin-left: -20px;
