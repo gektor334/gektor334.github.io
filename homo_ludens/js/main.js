@@ -159,6 +159,8 @@ burger.onclick = function () {
     setTimeout(() => l3.style.transform = 'rotate(-45deg)', 300);
     setTimeout(() => l3.style.marginTop = '-9px', 300);
     setTimeout(() => l3.style.width = '25px', 300);
+    document.querySelector('body').style.overflow = 'hidden';
+    document.querySelector('html').style.overflow = 'hidden';
   }
   else {
     burgerMenu.style.opacity = '0';
@@ -170,6 +172,8 @@ burger.onclick = function () {
     setTimeout(() => l3.style.marginTop = '3px', 300);
     setTimeout(() => l1.style.width = '21px', 300);
     setTimeout(() => l3.style.width = '21px', 300);
+    document.querySelector('body').style.overflow = 'auto';
+    document.querySelector('html').style.overflow = 'auto';
   }
 }
 let cursMobList = document.querySelector('.mobile-link-list');
