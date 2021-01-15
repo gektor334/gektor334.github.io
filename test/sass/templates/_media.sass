@@ -48,7 +48,6 @@
   .hero
     &-container
       max-width: 800px
-      min-height: -webkit-fill-available
   .description
     &-container
       max-width: 800px
@@ -75,7 +74,7 @@
     top: 19px
   .phone
     left: 15px
-    top: 70px
+    top: 80px
   .nav
     background: url('../img/menu.png') no-repeat
     background-size: contain
@@ -100,9 +99,10 @@
     display: flex
     flex-direction: column
     align-items: center
-    justify-content: space-around
+    justify-content: center
     .link
       display: block
+      margin-bottom: 40px
     .phone
       display: flex
   .title
@@ -154,7 +154,7 @@
 @media screen and ( max-width: 480px )
   .modal
     .policy
-      font-size: 7px
+      font-size: 8px
       width: 100%
     .send
       align-items: flex-start
@@ -163,6 +163,8 @@
       label::before
         top: -5px
 @media screen and ( max-width: 400px )
+  .title
+    margin-top: 90px
   .btn
     font-size: 8px
     padding: 17px 15px 14px 14px
@@ -187,7 +189,7 @@
     width: 315px
   .cost
     .policy
-      font-size: 7px
+      font-size: 8px
       width: 100%
     .right-card
       max-width: 310px

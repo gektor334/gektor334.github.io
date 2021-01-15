@@ -673,7 +673,8 @@ p {
   max-width: 1529px;
   width: 100%;
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
 }
 
 .title {
@@ -1195,7 +1196,6 @@ p {
   }
   .hero-container {
     max-width: 800px;
-    min-height: -webkit-fill-available;
   }
   .description-container {
     max-width: 800px;
@@ -1234,7 +1234,7 @@ p {
   }
   .phone {
     left: 15px;
-    top: 70px;
+    top: 80px;
   }
   .nav {
     background: url("../img/menu.png") no-repeat;
@@ -1269,11 +1269,13 @@ p {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .mobile .link {
     display: block;
+    margin-bottom: 40px;
   }
   .mobile .phone {
     display: -webkit-box;
@@ -1352,7 +1354,7 @@ p {
 
 @media screen and (max-width: 480px) {
   .modal .policy {
-    font-size: 7px;
+    font-size: 8px;
     width: 100%;
   }
   .modal .send {
@@ -1369,6 +1371,9 @@ p {
 }
 
 @media screen and (max-width: 400px) {
+  .title {
+    margin-top: 90px;
+  }
   .btn {
     font-size: 8px;
     padding: 17px 15px 14px 14px;
@@ -1400,7 +1405,7 @@ p {
     width: 315px;
   }
   .cost .policy {
-    font-size: 7px;
+    font-size: 8px;
     width: 100%;
   }
   .cost .right-card {
