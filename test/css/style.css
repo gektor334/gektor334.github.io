@@ -1221,6 +1221,11 @@ p {
   }
   .header {
     width: 100%;
+    padding-top: 29px;
+    margin-top: 0;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
   .btn {
     left: 50%;
