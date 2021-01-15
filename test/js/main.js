@@ -96,7 +96,7 @@ document.querySelector('.cost .number-tel').onkeypress = function (e) {
 }
 
 document.querySelector('.cost .form-btn').onclick = function () {
-  let policy = document.querySelector('.cost #policy');
+  let policy = document.querySelector('.cost #polic');
   let err = document.querySelector('.cost .err')
   let errTel = document.querySelector('.cost .err-tel');
   if (policy.checked) {
