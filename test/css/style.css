@@ -1221,7 +1221,7 @@ p {
   }
   .header {
     width: 100%;
-    padding-top: 29px;
+    padding-top: 19px;
     margin-top: 0;
     -webkit-box-align: start;
         -ms-flex-align: start;
@@ -1230,7 +1230,7 @@ p {
   .btn {
     left: 50%;
     margin-left: -60px;
-    top: 0;
+    top: 19px;
   }
   .phone {
     left: 15px;
@@ -1242,6 +1242,7 @@ p {
     width: 50px;
     height: 30px;
     cursor: pointer;
+    z-index: 999;
   }
   .nav-close {
     position: fixed;
@@ -1324,6 +1325,9 @@ p {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
   .cost .policy {
     font-size: 12px;
@@ -1349,6 +1353,7 @@ p {
 @media screen and (max-width: 480px) {
   .modal .policy {
     font-size: 7px;
+    width: 100%;
   }
   .modal .send {
     -webkit-box-align: start;
@@ -1396,6 +1401,7 @@ p {
   }
   .cost .policy {
     font-size: 7px;
+    width: 100%;
   }
   .cost .right-card {
     max-width: 310px;
