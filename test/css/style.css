@@ -1240,7 +1240,7 @@ p {
   }
   .nav-close {
     position: fixed;
-    top: 0;
+    top: 20px;
     right: 20px;
     cursor: pointer;
     z-index: 99999;
@@ -1363,7 +1363,7 @@ p {
     font-size: 8px;
     padding: 17px 15px 14px 14px;
     margin-left: -19px;
-    max-width: 112px;
+    max-width: 113px;
   }
   .description-container {
     max-width: 310px;
