@@ -1339,7 +1339,7 @@ p {
     left: 0;
   }
   .cost .form-btn {
-    margin-top: 27px;
+    margin-top: 40px;
     padding-left: 20px;
     width: 100%;
     z-index: 999;
@@ -1349,6 +1349,9 @@ p {
   }
   .cost .right-card::before {
     top: 205px;
+  }
+  .modal .form-btn {
+    margin-top: 40px;
   }
 }
 
