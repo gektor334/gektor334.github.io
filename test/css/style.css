@@ -674,7 +674,6 @@ p {
   width: 100%;
   position: relative;
   height: 100vh;
-  height: -webkit-fill-available;
 }
 
 .title {
@@ -1235,6 +1234,7 @@ p {
   .phone {
     left: 15px;
     top: 80px;
+    z-index: 9;
   }
   .nav {
     background: url("../img/menu.png") no-repeat;
