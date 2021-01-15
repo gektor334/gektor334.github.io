@@ -375,3 +375,7 @@ html {
 ::-moz-placeholder          {opacity: 1; color: #6D6D6D}
 :-moz-placeholder           {opacity: 1; color: #6D6D6D}
 :-ms-input-placeholder      {opacity: 1; color: #6D6D6D}
+
+.mobile {
+  min-height: -webkit-fill-available
+}
