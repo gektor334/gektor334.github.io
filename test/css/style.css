@@ -1343,7 +1343,7 @@ p {
 
 @media screen and (max-width: 480px) {
   .modal .policy {
-    font-size: 8px;
+    font-size: 7px;
   }
   .modal .send {
     -webkit-box-align: start;
@@ -1363,6 +1363,7 @@ p {
     font-size: 8px;
     padding: 17px 15px 14px 14px;
     margin-left: -19px;
+    max-width: 112px;
   }
   .description-container {
     max-width: 310px;
@@ -1389,7 +1390,7 @@ p {
     width: 315px;
   }
   .cost .policy {
-    font-size: 8px;
+    font-size: 7px;
   }
   .cost .right-card {
     max-width: 310px;
