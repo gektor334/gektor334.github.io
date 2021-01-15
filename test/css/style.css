@@ -674,7 +674,7 @@ p {
   width: 100%;
   position: relative;
   height: 100vh;
-  min-height: -webkit-fill-available;
+  height: -webkit-fill-available;
 }
 
 .title {
@@ -1365,14 +1365,14 @@ p {
   .modal .right-card {
     max-width: 310px;
   }
-  .modal .right-card label::before {
-    top: -5px;
+  .modal-card .form-btn::after {
+    right: 50px;
   }
 }
 
 @media screen and (max-width: 400px) {
   .title {
-    margin-top: 90px;
+    margin-top: 120px;
   }
   .btn {
     font-size: 8px;
