@@ -96,16 +96,41 @@ try {
   }
 }
 catch { }
+let fLink = document.querySelectorAll('.footer__link')
 
+function backToTop() {
+  if (window.pageYOffset > 0) {
+    window.scrollBy(0, -80);
+    setTimeout(backToTop, 0);
+  }
+}
+fLink[0].style.cursor = 'pointer';
+let goTopBtn = fLink[0];
+goTopBtn.addEventListener('click', backToTop);
+let cursListLink = document.querySelectorAll('.curs-list__link');
 let cursList = document.querySelector('.curs-list');
+
+
+
 document.querySelector('.link-relative').onclick = function () {
+  for (let i = 0; i < cursListLink.length; i++) {
+    cursListLink[i].style.opacity = '0';
+  }
   if (cursList.style.display == 'flex') {
     cursList.style.maxHeight = '0';
-    setTimeout(() => cursList.style.display = 'none', 800);
+    for (let i = 0; i < cursListLink.length; i++) {
+      cursListLink[i].style.opacity = '0';
+    }
+    setTimeout(() => cursList.style.display = 'none', 600);
+    setTimeout(() => cursList.style.opacity = '0', 300);
   }
   else {
     cursList.style.display = 'flex';
+    setTimeout(() => cursList.style.opacity = '1', 100);
     setTimeout(() => cursList.style.maxHeight = '12vw', 50);
+    for (let i = 0; i < cursListLink.length; i++) {
+      setTimeout(() => cursListLink[i].style.opacity = '1', 300);
+    }
   }
 }
 
@@ -117,9 +142,40 @@ document.body.addEventListener('click', (e) => {
   else if (target.className == 'link link-relative') {
     return;
   }
+  else if (target.className == 'footer__link') {
+    return;
+  }
   cursList.style.maxHeight = '0';
-  setTimeout(() => cursList.style.display = 'none', 800);
+  setTimeout(() => cursList.style.opacity = '0', 300);
+  setTimeout(() => cursList.style.display = 'none', 600);
+  for (let i = 0; i < cursListLink.length; i++) {
+    cursListLink[i].style.opacity = '0';
+  }
 });
+
+
+
+goTopBtn.onclick = function () {
+  for (let i = 0; i < cursListLink.length; i++) {
+    cursListLink[i].style.opacity = '0';
+  }
+  if (cursList.style.display == 'flex') {
+    cursList.style.maxHeight = '0';
+    for (let i = 0; i < cursListLink.length; i++) {
+      cursListLink[i].style.opacity = '0';
+    }
+    setTimeout(() => cursList.style.display = 'none', 600);
+    setTimeout(() => cursList.style.opacity = '0', 300);
+  }
+  else {
+    cursList.style.display = 'flex';
+    setTimeout(() => cursList.style.opacity = '1', 100);
+    setTimeout(() => cursList.style.maxHeight = '12vw', 50);
+    for (let i = 0; i < cursListLink.length; i++) {
+      setTimeout(() => cursListLink[i].style.opacity = '1', 300);
+    }
+  }
+}
 try {
   let videoBtn = document.querySelector('.go-video');
   videoBtn.onclick = function () {
@@ -223,3 +279,21 @@ for (var i = 0; i < more.length; i++) {
     }
   });
 }
+
+let myDivs = document.querySelectorAll('.target');
+let observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('animate__fadeIn', 'animate__animated');
+    }
+    else {
+      entry.target.classList.remove('animate__fadeIn', 'animate__animated');
+    }
+  })
+},
+  {
+    rootMargin: '20% 0px 20% 0px'
+  });
+myDivs.forEach(myDiv => {
+  observer.observe(myDiv);
+});

@@ -370,6 +370,10 @@ header {
   width: 85vw;
 }
 
+.target {
+  --animate-duration: 2.6s;
+}
+
 .mobile-menu {
   display: none;
 }
@@ -411,6 +415,7 @@ header {
   color: #595959 !important;
   -webkit-transition: 0.4s;
   transition: 0.4s;
+  opacity: 0;
 }
 
 .curs-list__link:hover {
@@ -3716,6 +3721,11 @@ li {
           animation-name: fade;
   -webkit-animation-duration: 1.5s;
           animation-duration: 1.5s;
+  height: 500px;
+}
+
+.slider-item img, .slider-item1 img {
+  max-height: 100%;
 }
 
 .images-bottom {
