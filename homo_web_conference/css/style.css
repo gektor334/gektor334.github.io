@@ -810,6 +810,51 @@ img {
   margin-right: 25px;
 }
 
+.popup-1, .popup-2 {
+  position: absolute;
+  top: 0;
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  z-index: 999;
+  background-color: #2d2d2d;
+}
+
+.popup-card {
+  max-width: 1170px;
+  background-color: #afe5c5;
+  padding: 20px;
+  position: relative;
+}
+
+.popup-text {
+  color: #2d2d2d;
+}
+
+.popup-1 {
+  min-height: 100vh;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.close-2 {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
 @media screen and (max-width: 1200px) {
   .hero {
     height: 100%;
