@@ -1,9 +1,17 @@
-const fs = require('fs');
+var path = require('path');
+var request = require('request');
 
 const TelegramBot = require('node-telegram-bot-api');
 const token = '1559454263:AAE-yfmt_p4JFRXx0u7Rnb7WEc93RQtE1-Y';
 
 const bot = new TelegramBot(token, { polling: true });
+var baseRequest = request.defaults({
+  baseUrl: 'https://api.telegram.org/bot' + '1559454263:AAE-yfmt_p4JFRXx0u7Rnb7WEc93RQtE1-Y' + '/'
+});
+
+var noop = function (err) {
+  if (err) { console.log(err); }
+};
 
 const idAdmin = 441705395;
 
