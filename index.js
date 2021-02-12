@@ -105,7 +105,7 @@ function openKlava(chatId) {
         [
           {
             text: 'Посетить сайт McBrothers',
-            url: 'https://mcbrothers.ru/'
+            request_contact: true
           }
         ],
         [
