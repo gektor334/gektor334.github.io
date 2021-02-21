@@ -114,15 +114,16 @@ document.querySelector('.mobile-close').onclick = offerClose;
 
 let headerMenu = document.querySelector('.header');
 let scrollPos = 0;
-
 document.onscroll = function () {
   let position = window.scrollY;
-  if (position > scrollPos) {
-    headerMenu.style.transition = '0.55s';
-    headerMenu.style.marginTop = '-90px';
+  if (position > 200) {
+    if (position >= scrollPos) {
+      headerMenu.style.transition = '0.55s';
+      headerMenu.style.marginTop = '-100px';
+    }
+    else {
+      headerMenu.style.marginTop = '0';
+    }
+    scrollPos = position;
   }
-  else {
-    headerMenu.style.marginTop = '0';
-  }
-  scrollPos = position;
 }
