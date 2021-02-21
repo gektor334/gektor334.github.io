@@ -125,5 +125,12 @@ document.onscroll = function () {
       headerMenu.style.marginTop = '0';
     }
     scrollPos = position;
+    let heightBody = document.body.scrollHeight;
+    if ((heightBody - window.innerHeight - 100) < scrollPos) {
+      document.querySelector('.offer-button').style.opacity = '0';
+    }
+    else {
+      document.querySelector('.offer-button').style.opacity = '1';
+    }
   }
 }
