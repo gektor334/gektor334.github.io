@@ -412,6 +412,7 @@ img {
   position: relative;
   font-weight: 300;
   line-height: 37px;
+  z-index: 999;
 }
 
 .supdesc-black {
@@ -462,6 +463,123 @@ h2, h1, p {
 
 .row-five {
   margin-top: 338px;
+}
+
+.hover-img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
+}
+
+.bg-0 {
+  background: url("../img/0.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.bg-1 {
+  background: url("../img/1.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.bg-2 {
+  background: url("../img/2.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.bg-3 {
+  background: url("../img/3.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.bg-4 {
+  background: url("../img/4.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.bg-5 {
+  background: url("../img/5.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.bg-6 {
+  background: url("../img/6.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.bg-7 {
+  background: url("../img/7.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.bg-8 {
+  background: url("../img/8.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.bg-9 {
+  background: url("../img/9.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.bg-10 {
+  background: url("../img/10.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.bg-11 {
+  background: url("../img/11.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.bg-12 {
+  background: url("../img/12.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.bg-13 {
+  background: url("../img/13.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.bg-14 {
+  background: url("../img/14.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.bg-15 {
+  background: url("../img/15.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.bg-16 {
+  background: url("../img/16.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.active-hov-title {
+  -webkit-transition: 2s;
+  transition: 2s;
+  height: 100vh;
+  width: 100%;
+  cursor: pointer;
 }
 
 header {
@@ -898,18 +1016,41 @@ header {
 
 .project-list {
   background: #1B1C20;
-  padding: 90px 0 230px 0;
+  padding: 0;
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .project-list__block {
   color: #ffffff;
-  margin-top: 140px;
+  padding-top: 140px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+.project-list__block:nth-child(1) {
+  padding-top: 230px;
+}
+
+.project-list__block:last-child {
+  padding-bottom: 230px;
 }
 
 .project-list__title {
   margin-left: 59px;
   margin-top: 20px;
   font-weight: 300;
+  position: relative;
+  z-index: 999;
 }
 
 .team {

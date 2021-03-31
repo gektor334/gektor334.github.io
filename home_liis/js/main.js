@@ -1,3 +1,6 @@
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+}
 
 let body = document.body;
 let loading = document.querySelector('.loading');
@@ -28,3 +31,49 @@ setTimeout(() => animateTwoText.style.display = 'none', 6500);
 setTimeout(() => animateTwoImg.style.display = 'flex', 6500);
 setTimeout(() => animateTwoImg.style.opacity = '1', 6700);
 setTimeout(() => body.style.overflowY = 'auto', 6700);
+
+//hover block(project-liis)
+let hovBlock = document.querySelectorAll('.project-list__block');
+let hovTitle = document.querySelectorAll('.project-list__title');
+for (let i = 0; i < hovBlock.length; i++) {
+  function funcHov() {
+    this.classList.add('active-hov');
+    hovTitle[i].style.fontWeight = '400';
+  }
+  function funcClick() {
+    if (this.classList.contains('active-hov')) {
+      this.classList.remove('active-hov');
+      this.classList.remove('active-hov-title');
+      this.classList.remove('bg-' + i);
+      hovTitle[i].style.fontWeight = '300';
+    } else {
+      this.classList.add('active-hov');
+      this.classList.add('bg-' + i);
+      hovBlock[i].classList.add('active-hov-title');
+      hovTitle[i].style.fontWeight = '400';
+    }
+  }
+  function funcOffHov() {
+    if (!this.classList.contains('active-hov-title')) {
+      hovTitle[i].style.fontWeight = '300';
+      this.classList.remove('active-hov');
+    }
+  }
+  hovBlock[i].onmouseover = funcHov;
+  hovBlock[i].onmouseleave = funcOffHov;
+  hovBlock[i].onclick = funcClick;
+}
+for (let i = 0; i < hovTitle.length; i++) {
+  function funcHovTitle() {
+    for (let k = 0; k < hovBlock.length; k++) {
+      hovBlock[k].classList.remove('bg-' + k);
+      hovBlock[k].classList.remove('active-hov-title');
+    }
+    let sTop = hovBlock[i].getBoundingClientRect();
+    console.log(sTop.top);
+    hovBlock[i].classList.add('bg-' + i);
+    hovBlock[i].classList.add('active-hov-title');
+    hovBlock[i].scrollIntoView({ block: "start", behavior: "smooth" });
+  }
+  hovTitle[i].onmouseover = funcHovTitle;
+}
