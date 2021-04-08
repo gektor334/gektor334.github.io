@@ -77,3 +77,84 @@ for (let i = 0; i < hovTitle.length; i++) {
   }
   hovTitle[i].onmouseover = funcHovTitle;
 }
+
+
+
+let simplehome = document.querySelector('#simplehome');
+simplehome.onmouseenter = function () {
+  document.querySelector('.home-text1').style.opacity = '1';
+  document.querySelector('.home-text2').style.opacity = '1';
+  document.querySelector('#home-card-text').style.opacity = '0';
+  setTimeout(() => simplehome.classList.remove('card-noactive1'), 300);
+  setTimeout(() => {
+    document.querySelector('.hover-home').style.zIndex = '1';
+    document.querySelector('.home-img1').style.top = '-150%';
+    document.querySelector('.home-img2').style.bottom = '-150%';
+  }, 400);
+  setTimeout(() => {
+    document.querySelector('.hover-home').style.zIndex = '1';
+    document.querySelector('.home-img3').style.left = '120%';
+    document.querySelector('.home-img4').style.right = '120%';
+    document.querySelector('.home-img5').style.right = '120%';
+    document.querySelector('.home-img6').style.left = '120%';
+    document.querySelector('.home-text1').style.marginLeft = '0';
+    document.querySelector('.home-text2').style.marginLeft = '0';
+  }, 800);
+  setTimeout(() => document.querySelector('.home-text3').style.opacity = '1', 2000);
+}
+
+simplehome.onmouseleave = function () {
+  document.querySelector('.home-text1').style.opacity = '0';
+  document.querySelector('.home-text2').style.opacity = '0';
+  simplehome.classList.add('card-noactive1');
+  document.querySelector('#home-card-text').style.opacity = '1';
+  document.querySelector('.hover-home').style.zIndex = '-1';
+  document.querySelector('.home-img1').style.top = '0';
+  document.querySelector('.home-img2').style.bottom = '-5px';
+  document.querySelector('.home-img3').style.left = '-7vw';
+  document.querySelector('.home-img4').style.right = '-6vw';
+  document.querySelector('.home-img5').style.right = '-7vw';
+  document.querySelector('.home-img6').style.left = '-6vw';
+  document.querySelector('.home-text1').style.marginLeft = '-200%';
+  document.querySelector('.home-text2').style.marginLeft = '200%';
+  document.querySelector('.home-text3').style.opacity = '0';
+}
+
+
+
+let simplemedia = document.querySelector('#simplemedia');
+simplemedia.onmouseenter = function () {
+  document.querySelector('.media-text1').style.opacity = '1';
+  document.querySelector('.media-text2').style.opacity = '1';
+  document.querySelector('#media-card-text').style.opacity = '0';
+  setTimeout(() => simplemedia.classList.remove('card-noactive3'), 300);
+  setTimeout(() => {
+    document.querySelector('.media-hover').style.zIndex = '1';
+    document.querySelector('.media-img2 img').style.marginLeft = '150%';
+    document.querySelector('.media-cub1').style.marginLeft = '150%';
+    document.querySelector('.media-cub2').style.right = '150%';
+  }, 400);
+  setTimeout(() => {
+    document.querySelector('.media-img1 img').style.left = '150%';
+    document.querySelector('.media-img3 img').style.left = '-150%';
+    document.querySelector('.media-text1').style.marginLeft = '0';
+    document.querySelector('.media-text2').style.marginLeft = '0';
+  }, 600);
+  setTimeout(() => document.querySelector('.media-text3').style.opacity = '1', 2000);
+}
+
+simplemedia.onmouseleave = function () {
+  simplemedia.classList.add('card-noactive3');
+  document.querySelector('#media-card-text').style.opacity = '1';
+  document.querySelector('.media-hover').style.zIndex = '-1';
+  document.querySelector('.media-img1 img').style.left = '50%';
+  document.querySelector('.media-img2 img').style.marginLeft = '0';
+  document.querySelector('.media-img3 img').style.left = '0';
+  document.querySelector('.media-cub1').style.marginLeft = '0';
+  document.querySelector('.media-cub2').style.right = '0';
+  document.querySelector('.media-text1').style.marginLeft = '-200%';
+  document.querySelector('.media-text2').style.marginLeft = '200%';
+  document.querySelector('.media-text3').style.opacity = '0';
+  document.querySelector('.media-text1').style.opacity = '0';
+  document.querySelector('.media-text2').style.opacity = '0';
+}
