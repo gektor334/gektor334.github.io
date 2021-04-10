@@ -438,7 +438,7 @@ img {
 }
 
 .desc-animate {
-  font-size: 25px;
+  font-size: 1.303vw;
   color: #ffffff;
   line-height: 37.5px;
   margin-top: 40px;
@@ -450,9 +450,17 @@ img {
 }
 
 .title-animate {
-  font-size: 76px;
+  font-size: 3.96vw;
   line-height: 88.92px;
   color: #ffffff;
+}
+
+.title-home {
+  margin-top: -10px;
+}
+
+.title-media {
+  margin-top: -30px;
 }
 
 h2, h1, p {
@@ -803,7 +811,7 @@ header {
 }
 
 .loading {
-  font-size: 100px;
+  font-size: 120px;
   height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1246,6 +1254,7 @@ header {
   margin-left: -200%;
   -webkit-transition: margin-left 1.7s;
   transition: margin-left 1.7s;
+  font-weight: 700;
 }
 
 .home-text2 {
@@ -1257,6 +1266,7 @@ header {
   margin-left: 200%;
   -webkit-transition: margin-left 1.7s;
   transition: margin-left 1.7s;
+  font-weight: 700;
 }
 
 .home-text3 {
@@ -1282,6 +1292,7 @@ header {
   -webkit-transition: margin-left 1.7s;
   transition: margin-left 1.7s;
   margin-left: -200%;
+  font-weight: 700;
 }
 
 .office-text2 {
@@ -1292,6 +1303,7 @@ header {
   -webkit-transition: margin-left 1.7s;
   transition: margin-left 1.7s;
   margin-left: 200%;
+  font-weight: 700;
 }
 
 .office-text3 {
@@ -1339,6 +1351,7 @@ header {
   -webkit-transition: margin-left 1.7s;
   transition: margin-left 1.7s;
   margin-left: -200%;
+  font-weight: 700;
 }
 
 .media-text2 {
@@ -1349,6 +1362,7 @@ header {
   -webkit-transition: margin-left 1.7s;
   transition: margin-left 1.7s;
   margin-left: 200%;
+  font-weight: 700;
 }
 
 .media-text3 {

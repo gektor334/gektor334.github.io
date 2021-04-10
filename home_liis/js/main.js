@@ -17,8 +17,8 @@ body.style.overflow = 'hidden';
 home.style.marginTop = '115px';
 setTimeout(() => loading.style.opacity = '1', 800);
 setTimeout(() => home.style.marginTop = '0', 1200);
-setTimeout(() => home.style.marginTop = '-115px', 1700);
-setTimeout(() => home.style.marginTop = '-230px', 2200);
+setTimeout(() => home.style.marginTop = '-135px', 1700);
+setTimeout(() => home.style.marginTop = '-290px', 2200);
 setTimeout(() => loading.style.opacity = '0', 2800);
 setTimeout(() => hero.style.background = '#1B1C20', 3800);
 setTimeout(() => loading.style.display = 'none', 3800);
@@ -118,6 +118,24 @@ simplehome.onmouseleave = function () {
   document.querySelector('.home-text1').style.marginLeft = '-200%';
   document.querySelector('.home-text2').style.marginLeft = '200%';
   document.querySelector('.home-text3').style.opacity = '0';
+  setTimeout(() => simplehome.classList.add('card-noactive1'), 300);
+  setTimeout(() => {
+    document.querySelector('.hover-home').style.zIndex = '-1';
+    document.querySelector('.home-img1').style.top = '0';
+    document.querySelector('.home-img2').style.bottom = '-5px';
+  }, 400);
+  setTimeout(() => {
+    document.querySelector('.hover-home').style.zIndex = '-1';
+    document.querySelector('.home-img3').style.left = '-7vw';
+    document.querySelector('.home-img4').style.right = '-6vw';
+    document.querySelector('.home-img5').style.right = '-7vw';
+    document.querySelector('.home-img6').style.left = '-6vw';
+    document.querySelector('.home-text1').style.marginLeft = '-200%';
+    document.querySelector('.home-text2').style.marginLeft = '200%';
+  }, 800);
+  setTimeout(() => document.querySelector('.home-text3').style.opacity = '0', 1000);
+  setTimeout(() => document.querySelector('.home-text3').style.opacity = '0', 1500);
+  setTimeout(() => document.querySelector('.home-text3').style.opacity = '0', 2000);
 }
 
 
@@ -143,18 +161,27 @@ simplemedia.onmouseenter = function () {
   setTimeout(() => document.querySelector('.media-text3').style.opacity = '1', 2000);
 }
 
-simplemedia.onmouseleave = function () {
-  simplemedia.classList.add('card-noactive3');
-  document.querySelector('#media-card-text').style.opacity = '1';
-  document.querySelector('.media-hover').style.zIndex = '-1';
-  document.querySelector('.media-img1 img').style.left = '50%';
-  document.querySelector('.media-img2 img').style.marginLeft = '0';
-  document.querySelector('.media-img3 img').style.left = '0';
-  document.querySelector('.media-cub1').style.marginLeft = '0';
-  document.querySelector('.media-cub2').style.right = '0';
-  document.querySelector('.media-text1').style.marginLeft = '-200%';
-  document.querySelector('.media-text2').style.marginLeft = '200%';
-  document.querySelector('.media-text3').style.opacity = '0';
-  document.querySelector('.media-text1').style.opacity = '0';
-  document.querySelector('.media-text2').style.opacity = '0';
+function simplemediaLeave() {
+  setTimeout(() => {
+    simplemedia.classList.add('card-noactive3');
+    document.querySelector('#media-card-text').style.opacity = '1';
+    document.querySelector('.media-hover').style.zIndex = '-1';
+    document.querySelector('.media-img1 img').style.left = '50%';
+    document.querySelector('.media-img2 img').style.marginLeft = '0';
+    document.querySelector('.media-img3 img').style.left = '0';
+    document.querySelector('.media-cub1').style.marginLeft = '0';
+    document.querySelector('.media-cub2').style.right = '0';
+    document.querySelector('.media-text1').style.marginLeft = '-200%';
+    document.querySelector('.media-text2').style.marginLeft = '200%';
+    document.querySelector('.media-text3').style.opacity = '0';
+    document.querySelector('.media-text1').style.opacity = '0';
+    document.querySelector('.media-text2').style.opacity = '0';
+    //setTimeout(() => document.querySelector('.media-text3').style.opacity = '0', 1000);
+    //setTimeout(() => document.querySelector('.media-text3').style.opacity = '0', 1500);
+    //setTimeout(() => document.querySelector('.media-text3').style.opacity = '0', 2000);
+  }, 2000);
 }
+
+
+simplemedia.onmouseleave = simplemediaLeave;
+
