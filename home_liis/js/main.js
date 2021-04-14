@@ -253,3 +253,21 @@ function simplemediaLeave() {
 
 simplemedia.onmouseleave = simplemediaLeave;
 
+//header
+let scrollY = 0;
+window.onscroll = function () {
+  let pos = window.pageYOffset;
+  if (window.pageYOffset >= screen.height) {
+    if ((scrollY - pos) >= 0) {
+      document.querySelector('.header').style.marginTop = '0';
+    }
+    else {
+      document.querySelector('.header').style.marginTop = '-90px';
+    }
+  }
+  else {
+    document.querySelector('.header').style.marginTop = '-90px';
+  }
+  scrollY = pos;
+  console.log(scrollY);
+}

@@ -28,19 +28,40 @@ h1, h2, p
 body
   color: #000000
 html,body
-  font-family: Aktiv Grotesk Corp
+  font-family: Aktiv Grotesk Corp, Arial, Tahoma, Geneva, sans-serif
   font-weight: 300
+  overflow-x: hidden
 .red
   color: #FF6900
 .reg
   font-weight: 400
 .grey
   color: #c4c4c4
+  font-weight: 300
   &-2
     color: #7d7d7d
+    font-weight: 300
 .small
   &-18
     font-size: 18px
     line-height: 21px
 .big-padding
   padding: 43px 0 !important
+.bg
+  &-1
+    position: absolute
+    top: -77px
+    right: 0
+    max-width: 544px
+  &-2
+    position: absolute
+    bottom: -77px
+    left: 0
+    max-width: 680px
+  &-3
+    position: absolute
+    top: -83px
+    right: 0
+    max-width: 660px
+input:focus
+  outline: none

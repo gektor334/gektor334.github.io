@@ -58,3 +58,19 @@ document.querySelector('.blackout-link').onclick = function () {
   document.querySelector('.teacher').style.display = 'none';
   document.querySelector('.footer').style.display = 'none';
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  let timeStart = document.querySelector('.time-start');
+  let newTime = new Date();
+  if ((newTime.getUTCHours() + 3) >= 19) {
+    timeStart.innerHTML = 'Начало вебинара ' + (newTime.getDate() + 1) + '.' + (newTime.getMonth() + 1) + '.' + newTime.getFullYear() + ' в&nbsp;19:00 МСК';
+    if ((newTime.getMonth() + 1) < 10) {
+      timeStart.innerHTML = 'Начало вебинара ' + (newTime.getDate() + 1) + '.' + '0' + (newTime.getMonth() + 1) + '.' + newTime.getFullYear() + ' в&nbsp;19:00 МСК';
+    }
+  } else {
+    timeStart.innerHTML = 'Начало вебинара ' + newTime.getDate() + '.' + (newTime.getMonth() + 1) + '.' + newTime.getFullYear() + ' в&nbsp;19:00 МСК';
+    if ((newTime.getMonth() + 1) < 10) {
+      timeStart.innerHTML = newTime.getDate() + '.' + '0' + (newTime.getMonth() + 1) + '.' + newTime.getFullYear() + ' в&nbsp;19:00 МСК';
+    }
+  }
+});

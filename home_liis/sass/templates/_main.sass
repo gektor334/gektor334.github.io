@@ -62,7 +62,7 @@
   transition: 0.5s
 .maps
   background: #1B1C20
-  padding-top: 230px
+  padding-top: 150px
   color: #ffffff
   position: relative
   &-flex
@@ -70,26 +70,37 @@
     flex-direction: column
     align-items: center
   &-title
-    max-width: 434px
+    max-width: 784px
     font-weight: 300
   &-container
     display: flex
-  &-advantages
-    margin-top: 30px
-    margin-left: 198px
-    height: 154px
+  img
+    margin-top: -200px
+  &-adventure
     display: flex
-    flex-direction: column
     justify-content: space-between
-    &__supdesc
-      &::before
-        content: ''
-        width: 14px
-        height: 14px
-        position: absolute
-        left: -32px
-        top: 8px
-        background: #ffffff
+    width: 1210px
+    margin-bottom: 230px
+    margin-top: -150px
+    &__col
+      display: flex
+      flex-direction: column
+      height: 123px
+      justify-content: space-between
+  &-city
+    font-size: 18px
+    line-height: 21px
+    font-weight: 500
+    position: relative
+    &::before
+      position: absolute
+      content: ''
+      width: 10px
+      height: 10px
+      border-radius: 50%
+      background: #fff
+      left: -30px
+      top: 5px
 .philosophy
   padding: 230px 0 151px 0
   &-card
@@ -222,7 +233,7 @@
     &__hover
       display: flex
       flex-direction: column
-      margin-top: -260px
+      margin-top: -10.2vw
       position: absolute
       z-index: -1
   &-noactive
@@ -290,24 +301,30 @@
       height: 100%
   &-text
     &1
-      font-size: 90px
+      font-size: 80px
       color: #000000
       text-transform: uppercase
-      line-height: 83px
+      line-height: 73px
       transition: 0.4s
       font-weight: 700
     &2
-      font-size: 90px
+      font-size: 80px
       color: #FF6900
       text-transform: uppercase
-      line-height: 83px
+      line-height: 73px
       margin-top: -5px
       font-weight: 700
     &3
-      font-size: 25px
-      line-height: 32.5px
+      font-size: 18px
+      font-weight: 300
+      line-height: 28.8px
       color: #000000
       margin-top: 48px
+    &4
+      font-size: 18px
+      font-weight: 300
+      line-height: 21px
+      margin-top: 80px
 .hover
   &-home
     z-index: -1
@@ -336,40 +353,37 @@
     z-index: -1
   &-text
     &1
-      font-size: 90px
+      font-size: 80px
       color: #000000
       text-transform: uppercase
-      line-height: 83px
+      line-height: 73px
       font-weight: 700
     &2
-      font-size: 90px
+      font-size: 80px
       color: #3DBBEE
       text-transform: uppercase
-      line-height: 83px
+      line-height: 73px
       font-weight: 700
     &3
-      font-size: 25px
-      line-height: 32.5px
+      font-size: 18px
+      font-weight: 300
+      line-height: 28.8px
       color: #000000
       margin-top: 48px
       transition: 0.4s
       position: relative
-      &::before
-        content: ''
-        position: absolute
-        top: -45px
-        right: 0
-        background: url('../img/v1.svg') no-repeat
-        width: 40px
-        height: 61px
     &4
+      font-size: 18px
+      font-weight: 300
+      line-height: 21px
+      margin-top: 115px
     &__hover
       display: flex
       flex-direction: column
       position: absolute
       z-index: -1
       opacity: 0
-      margin-top: -13vw
+      margin-top: -12vw
   &-img
     position: absolute
     &1
@@ -459,36 +473,41 @@
 .media
   &-text
     &1
-      font-size: 90px
+      font-size: 80px
       color: #000000
       text-transform: uppercase
-      line-height: 83px
+      line-height: 73px
       transition: margin-left 1.7s
       margin-left: -200%
       font-weight: 700
     &2
-      font-size: 90px
+      font-size: 80px
       color: #DA1984
       text-transform: uppercase
-      line-height: 83px
+      line-height: 73px
       transition: margin-left 1.7s
       margin-left: 200%
       font-weight: 700
     &3
-      font-size: 25px
-      line-height: 32.5px
+      font-size: 18px
+      font-weight: 300
+      line-height: 28.8px
       color: #000000
       margin-top: 48px
       transition: 0.4s
       position: relative
       opacity: 0
     &4
+      font-size: 18px
+      font-weight: 300
+      line-height: 21px
       opacity: 0
       transition: 0.4s
+      margin-top: 115px
     &__hover
       display: flex
       flex-direction: column
-      margin-top: -260px
+      margin-top: -12vw
       position: absolute
   &-hover
     z-index: -1
