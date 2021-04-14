@@ -83,51 +83,118 @@ for (let i = 0; i < hovTitle.length; i++) {
 let simplehome = document.querySelector('#simplehome');
 simplehome.onmouseenter = function () {
   document.querySelector('#home-card-text').style.opacity = '0';
+  document.querySelector('.card-text__hover').style.visibility = 'visible';
   setTimeout(() => simplehome.classList.remove('card-noactive1'), 300);
   setTimeout(() => {
     document.querySelector('.hover-home').style.zIndex = '1';
-    document.querySelector('.home-img-div1').style.top = '150%';
-    document.querySelector('.home-img-div2').style.bottom = '150%';
-  }, 300);
+    document.querySelector('.card-text__hover').style.position = 'relative';
+  }, 200);
   setTimeout(() => {
-    document.querySelector('.home-cub1').style.bottom = '-150%';
-    document.querySelector('.home-cub2').style.top = '-150%';
-  }, 600);
-  setTimeout(() => {
-    document.querySelector('.home-text1').style.opacity = '1';
-    document.querySelector('.home-text2').style.opacity = '1';
-    document.querySelector('.home-text3').style.opacity = '1';
-    document.querySelector('.home-text4').style.opacity = '1';
-  }, 900);
+    document.querySelector('.card-text__hover').style.zIndex = '1';
+    document.querySelector('.home-cub1').style.left = '150%';
+    document.querySelector('.hover-home img').style.left = '-150%';
+    document.querySelector('.home-cub2').style.opacity = '0';
+  }, 400);
 }
 
+
 simplehome.onmouseleave = function () {
-  document.querySelector('.home-text1').style.opacity = '0';
-  document.querySelector('.home-text2').style.opacity = '0';
+  document.querySelector('.card-text__hover').style.position = 'absolute';
+  document.querySelector('.card-text__hover').style.zIndex = '-1';
+  document.querySelector('.card-text__hover').style.visibility = 'hidden';
   simplehome.classList.add('card-noactive1');
   document.querySelector('#home-card-text').style.opacity = '1';
   document.querySelector('.hover-home').style.zIndex = '-1';
-  document.querySelector('.home-img-div1').style.top = '0';
-  document.querySelector('.home-img-div2').style.bottom = '-5px';
-  document.querySelector('.home-text3').style.opacity = '0';
-  document.querySelector('.home-text4').style.opacity = '0';
   setTimeout(() => simplehome.classList.add('card-noactive1'), 300);
   setTimeout(() => {
     document.querySelector('.hover-home').style.zIndex = '-1';
-    document.querySelector('.home-img-div1').style.top = '0';
-    document.querySelector('.home-img-div2').style.bottom = '-5px';
-  }, 400);
+  }, 200);
   setTimeout(() => {
-    document.querySelector('.home-cub1').style.bottom = '0';
-    document.querySelector('.home-cub2').style.top = '-5px';
+    document.querySelector('.home-cub1').style.left = '0';
+    document.querySelector('.hover-home img').style.left = '0';
+    document.querySelector('.home-cub2').style.opacity = '1';
     document.querySelector('.hover-home').style.zIndex = '-1';
-  }, 800);
-  setTimeout(() => document.querySelector('.home-text1').style.opacity = '0', 900);
-  setTimeout(() => document.querySelector('.home-text2').style.opacity = '0', 900);
-  setTimeout(() => document.querySelector('.home-text3').style.opacity = '0', 900);
-  setTimeout(() => document.querySelector('.home-text4').style.opacity = '0', 900);
+  }, 400);
 }
 
+
+let simpleoffice = document.querySelector('#simpleoffice');
+simpleoffice.onmouseenter = function () {
+  document.querySelector('#office-card-text').style.opacity = '0';
+  setTimeout(() => simpleoffice.classList.remove('card-noactive2'), 300);
+  setTimeout(() => {
+    document.querySelector('.pho1').style.top = '-150%';
+    document.querySelector('.pho2').style.bottom = '-150%';
+    document.querySelector('.office-hover').style.zIndex = '1';
+    document.querySelector('.office-text__hover').style.position = 'relative';
+  }, 300);
+  setTimeout(() => {
+    document.querySelector('.bg-office').style.opacity = '1';
+    document.querySelector('.bg-office').style.transform = 'scale(3.6)';
+    document.querySelector('.bg-office').style.top = '-300%';
+  }, 900);
+  setTimeout(() => {
+    document.querySelector('.office-text__hover').style.opacity = '1';
+    document.querySelector('.office-text__hover').style.zIndex = '1';
+    document.querySelector('.office-img1').style.bottom = '80px';
+    document.querySelector('.office-img1').style.right = '30px';
+    document.querySelector('.office-img2').style.left = '150%';
+    document.querySelector('.office-img3').style.right = '100px';
+    document.querySelector('.office-img3').style.bottom = '20px';
+    document.querySelector('.office-img4').style.left = '150%';
+    document.querySelector('.office-img5').style.left = '150%';
+    document.querySelector('.office-img6').style.left = '150%';
+    document.querySelector('.office-img7').style.bottom = '109px';
+    document.querySelector('.office-img8').style.left = '-393px';
+    document.querySelector('.office-img8').style.bottom = '213px';
+    document.querySelector('.office-img9').style.left = '-560px';
+    document.querySelector('.office-img9').style.bottom = '122px';
+    document.querySelector('.office-img10').style.bottom = '70px';
+    document.querySelector('.office-img11').style.left = '150%';
+    document.querySelector('.office-img12').style.bottom = '90px';
+  }, 1100);
+  setTimeout(() => {
+    document.querySelector('.office-img1').style.bottom = '-180px';
+    document.querySelector('.office-img1').style.right = '70px';
+    document.querySelector('.office-img3').style.right = '130px';
+    document.querySelector('.office-img3').style.bottom = '-160px';
+    document.querySelector('.office-img7').style.bottom = '-149px';
+    document.querySelector('.office-img12').style.bottom = '-34px';
+    document.querySelector('.office-img10').style.left = '-150%';
+  }, 2400);
+}
+
+simpleoffice.onmouseleave = function () {
+  document.querySelector('.office-text__hover').style.opacity = '0';
+  document.querySelector('.office-text__hover').style.position = 'absolute';
+  document.querySelector('.office-text__hover').style.zIndex = '-1';
+  document.querySelector('#office-card-text').style.opacity = '1';
+  simpleoffice.classList.add('card-noactive2');
+  document.querySelector('.office-hover').style.zIndex = '-1';
+  document.querySelector('.office-img1').style.bottom = '-180px';
+  document.querySelector('.office-img1').style.right = '-40px';
+  document.querySelector('.office-img2').style.left = '-60px';
+  document.querySelector('.office-img3').style.right = '-130px';
+  document.querySelector('.office-img3').style.bottom = '-160px';
+  document.querySelector('.office-img4').style.left = '-210px';
+  document.querySelector('.office-img5').style.left = '-160px';
+  document.querySelector('.office-img6').style.left = '-240px';
+  document.querySelector('.office-img7').style.bottom = '-149px';
+  document.querySelector('.office-img8').style.left = '540px';
+  document.querySelector('.office-img8').style.bottom = '-213px';
+  document.querySelector('.office-img9').style.left = '383px';
+  document.querySelector('.office-img9').style.bottom = '-122px';
+  document.querySelector('.office-img10').style.bottom = '-39px';
+  document.querySelector('.office-img10').style.left = '70px';
+  document.querySelector('.office-img11').style.left = '-540px';
+  document.querySelector('.office-img12').style.bottom = '-34px';
+  document.querySelector('.pho1').style.top = '-5.5vw';
+  document.querySelector('.pho2').style.bottom = '-5.5vw';
+  document.querySelector('.bg-office').style.opacity = '0';
+  document.querySelector('.bg-office').style.transform = 'scale(1.6)';
+  document.querySelector('.bg-office').style.top = '0';
+
+}
 
 
 let simplemedia = document.querySelector('#simplemedia');
@@ -137,6 +204,7 @@ simplemedia.onmouseenter = function () {
   document.querySelector('#media-card-text').style.opacity = '0';
   setTimeout(() => simplemedia.classList.remove('card-noactive3'), 300);
   setTimeout(() => {
+    document.querySelector('.media-text__hover').style.position = 'relative';
     document.querySelector('.media-hover').style.zIndex = '1';
     document.querySelector('.media-img2 img').style.marginLeft = '150%';
     document.querySelector('.media-cub1').style.marginLeft = '150%';
@@ -154,6 +222,7 @@ simplemedia.onmouseenter = function () {
 
 function simplemediaLeave() {
   simplemedia.classList.add('card-noactive3');
+  document.querySelector('.media-text__hover').style.position = 'absolute';
   document.querySelector('#media-card-text').style.opacity = '1';
   document.querySelector('.media-hover').style.zIndex = '-1';
   document.querySelector('.media-img1 img').style.left = '50%';

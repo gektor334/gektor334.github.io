@@ -159,7 +159,7 @@
     position: relative
     z-index: 999
 .team
-  padding: 230px 0
+  padding: 230px 0 375px 0
   &-desc
     &__one
       width: 547px
@@ -168,6 +168,14 @@
     max-width: 399px
     &__supdesc
       margin-top: 60px
+      &1
+        max-width: 308px
+      &2
+        max-width: 430px
+      &3
+        max-width: 336px
+      &4
+        max-width: 381px
     &__three
       max-width: 482px
       margin-left: 600px
@@ -215,6 +223,8 @@
       display: flex
       flex-direction: column
       margin-top: -260px
+      position: absolute
+      z-index: -1
   &-noactive
     &1
       background: url('../img/bg-1.png') no-repeat
@@ -228,21 +238,22 @@
 .home
   &-cub
     &1
-      background: #212121
-      position: absolute
-      height: 50%
-      width: 100%
-      right: 0
-      bottom: 0
-      transition: 0.8s
-    &2
       background: #FF7819
-      height: 50%
+      position: absolute
+      height: 35%
+      width: 50%
+      left: 0
+      top: 0
+      transition: 1s linear
+      z-index: 999
+    &2
+      background: #000000
+      height: 100%
       width: 100%
       position: absolute
       left: 0
-      top: -5px
-      transition: 0.8s
+      top: 0
+      transition: 1.4s linear
   &-img
     &1
       position: absolute
@@ -284,7 +295,6 @@
       text-transform: uppercase
       line-height: 83px
       transition: 0.4s
-      opacity: 0
       font-weight: 700
     &2
       font-size: 90px
@@ -292,39 +302,50 @@
       text-transform: uppercase
       line-height: 83px
       margin-top: -5px
-      opacity: 0
-      transition: 0.4s
       font-weight: 700
     &3
       font-size: 25px
       line-height: 32.5px
       color: #000000
       margin-top: 48px
-      opacity: 0
-      transition: 0.4s
-    &4
-      opacity: 0
-      transition: 0.4s
 .hover
   &-home
     z-index: -1
+    img
+      position: absolute
+      left: 0
+      top: 0
+      width: 100%
+      z-index: 9999
+      transition: 1.4s linear
+.pho
+  &1
+    position: absolute
+    top: -5.5vw
+    left: 0
+    width: 100%
+    transition: 1.3s linear
+  &2
+    position: absolute
+    bottom: -5.5vw
+    left: 0
+    width: 100%
+    transition: 1.3s linear
 .office
+  &-hover
+    z-index: -1
   &-text
     &1
       font-size: 90px
       color: #000000
       text-transform: uppercase
       line-height: 83px
-      transition: margin-left 1.7s
-      margin-left: -200%
       font-weight: 700
     &2
       font-size: 90px
       color: #3DBBEE
       text-transform: uppercase
       line-height: 83px
-      transition: margin-left 1.7s
-      margin-left: 200%
       font-weight: 700
     &3
       font-size: 25px
@@ -333,7 +354,6 @@
       margin-top: 48px
       transition: 0.4s
       position: relative
-      opacity: 0
       &::before
         content: ''
         position: absolute
@@ -343,12 +363,97 @@
         width: 40px
         height: 61px
     &4
-      opacity: 0
-      transition: 0.4s
     &__hover
       display: flex
       flex-direction: column
-      margin-top: -260px
+      position: absolute
+      z-index: -1
+      opacity: 0
+      margin-top: -13vw
+  &-img
+    position: absolute
+    &1
+      width: 135px
+      height: 167px
+      bottom: -180px
+      right: -40px
+      transition: 1.5s
+    &2
+      width: 54px
+      height: 54px
+      bottom: 160px
+      left: -60px
+      transition: 1.5s linear
+    &3
+      width: 120px
+      height: 140px
+      bottom: -160px
+      right: -130px
+      transition: 2s
+    &4
+      width: 200px
+      height: 170px
+      bottom: 40px
+      left: -210px
+      transition: 1.8s linear
+    &5
+      width: 140px
+      height: 140px
+      bottom: 160px
+      left: -160px
+      transition: 1.8s linear
+    &6
+      width: 224px
+      height: 10px
+      bottom: 80px
+      left: -240px
+      transition: 2s
+    &7
+      width: 136px
+      height: 139px
+      bottom: -149px
+      left: 40%
+      transition: 1.5s
+    &8
+      width: 383px
+      height: 213px
+      bottom: -122px
+      left: 540px
+      transition: 2s
+    &9
+      width: 540px
+      height: 122px
+      bottom: -122px
+      left: 540px
+      transition: 2s
+    &10
+      width: 29px
+      height: 29px
+      bottom: -39px
+      left: 70px
+      transition: 2s
+    &11
+      width: 170px
+      height: 140px
+      bottom: 160px
+      left: -540px
+      transition: 2s linear
+    &12
+      width: 25px
+      height: 24px
+      bottom: -34px
+      left: 30%
+      transition: 1.5s linear
+.bg-office
+  position: absolute
+  width: 100%
+  height: 120%
+  top: 0
+  left: 0
+  transform: scale(1.6)
+  transition: top 1.4s, transform 2s linear
+  z-index: 999
+  opacity: 0
 .blue
   color: #3DBBEE
 .media
@@ -384,6 +489,7 @@
       display: flex
       flex-direction: column
       margin-top: -260px
+      position: absolute
   &-hover
     z-index: -1
     position: absolute

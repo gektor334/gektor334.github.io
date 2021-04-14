@@ -408,10 +408,10 @@ img {
 }
 
 .supdesc {
-  font-size: 25px;
+  font-size: 18px;
   position: relative;
   font-weight: 300;
-  line-height: 37px;
+  line-height: 28px;
   z-index: 999;
 }
 
@@ -432,9 +432,9 @@ img {
 }
 
 .desc {
-  font-size: 48px;
+  font-size: 44px;
   font-weight: 300;
-  line-height: 74px;
+  line-height: 68px;
 }
 
 .desc-animate {
@@ -445,22 +445,14 @@ img {
 }
 
 .title {
-  font-size: 80px;
-  line-height: 92px;
+  font-size: 72px;
+  line-height: 84px;
 }
 
 .title-animate {
   font-size: 3.96vw;
-  line-height: 88.92px;
+  line-height: 1.1;
   color: #ffffff;
-}
-
-.title-home {
-  margin-top: -10px;
-}
-
-.title-media {
-  margin-top: -30px;
 }
 
 h2, h1, p {
@@ -475,15 +467,15 @@ h2, h1, p {
 }
 
 .row-three {
-  margin-top: 196px;
+  margin-top: 200px;
 }
 
 .row-four {
-  margin-top: 246px;
+  margin-top: 441px;
 }
 
 .row-five {
-  margin-top: 338px;
+  margin-top: 410px;
 }
 
 .hover-img {
@@ -1094,7 +1086,7 @@ header {
 }
 
 .team {
-  padding: 230px 0;
+  padding: 230px 0 375px 0;
 }
 
 .team-desc__one {
@@ -1108,6 +1100,22 @@ header {
 
 .team-block-text__supdesc {
   margin-top: 60px;
+}
+
+.team-block-text__supdesc1 {
+  max-width: 308px;
+}
+
+.team-block-text__supdesc2 {
+  max-width: 430px;
+}
+
+.team-block-text__supdesc3 {
+  max-width: 336px;
+}
+
+.team-block-text__supdesc4 {
+  max-width: 381px;
 }
 
 .team-block-text__three {
@@ -1191,6 +1199,8 @@ header {
       -ms-flex-direction: column;
           flex-direction: column;
   margin-top: -260px;
+  position: absolute;
+  z-index: -1;
 }
 
 .card-noactive1 {
@@ -1209,25 +1219,26 @@ header {
 }
 
 .home-cub1 {
-  background: #212121;
+  background: #FF7819;
   position: absolute;
-  height: 50%;
-  width: 100%;
-  right: 0;
-  bottom: 0;
-  -webkit-transition: 0.8s;
-  transition: 0.8s;
+  height: 35%;
+  width: 50%;
+  left: 0;
+  top: 0;
+  -webkit-transition: 1s linear;
+  transition: 1s linear;
+  z-index: 999;
 }
 
 .home-cub2 {
-  background: #FF7819;
-  height: 50%;
+  background: #000000;
+  height: 100%;
   width: 100%;
   position: absolute;
   left: 0;
-  top: -5px;
-  -webkit-transition: 0.8s;
-  transition: 0.8s;
+  top: 0;
+  -webkit-transition: 1.4s linear;
+  transition: 1.4s linear;
 }
 
 .home-img1 {
@@ -1279,7 +1290,6 @@ header {
   line-height: 83px;
   -webkit-transition: 0.4s;
   transition: 0.4s;
-  opacity: 0;
   font-weight: 700;
 }
 
@@ -1289,9 +1299,6 @@ header {
   text-transform: uppercase;
   line-height: 83px;
   margin-top: -5px;
-  opacity: 0;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
   font-weight: 700;
 }
 
@@ -1300,18 +1307,41 @@ header {
   line-height: 32.5px;
   color: #000000;
   margin-top: 48px;
-  opacity: 0;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-
-.home-text4 {
-  opacity: 0;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
 }
 
 .hover-home {
+  z-index: -1;
+}
+
+.hover-home img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+  -webkit-transition: 1.4s linear;
+  transition: 1.4s linear;
+}
+
+.pho1 {
+  position: absolute;
+  top: -5.5vw;
+  left: 0;
+  width: 100%;
+  -webkit-transition: 1.3s linear;
+  transition: 1.3s linear;
+}
+
+.pho2 {
+  position: absolute;
+  bottom: -5.5vw;
+  left: 0;
+  width: 100%;
+  -webkit-transition: 1.3s linear;
+  transition: 1.3s linear;
+}
+
+.office-hover {
   z-index: -1;
 }
 
@@ -1320,9 +1350,6 @@ header {
   color: #000000;
   text-transform: uppercase;
   line-height: 83px;
-  -webkit-transition: margin-left 1.7s;
-  transition: margin-left 1.7s;
-  margin-left: -200%;
   font-weight: 700;
 }
 
@@ -1331,9 +1358,6 @@ header {
   color: #3DBBEE;
   text-transform: uppercase;
   line-height: 83px;
-  -webkit-transition: margin-left 1.7s;
-  transition: margin-left 1.7s;
-  margin-left: 200%;
   font-weight: 700;
 }
 
@@ -1345,7 +1369,6 @@ header {
   -webkit-transition: 0.4s;
   transition: 0.4s;
   position: relative;
-  opacity: 0;
 }
 
 .office-text3::before {
@@ -1358,12 +1381,6 @@ header {
   height: 61px;
 }
 
-.office-text4 {
-  opacity: 0;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-
 .office-text__hover {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1372,7 +1389,138 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-top: -260px;
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  margin-top: -13vw;
+}
+
+.office-img {
+  position: absolute;
+}
+
+.office-img1 {
+  width: 135px;
+  height: 167px;
+  bottom: -180px;
+  right: -40px;
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
+}
+
+.office-img2 {
+  width: 54px;
+  height: 54px;
+  bottom: 160px;
+  left: -60px;
+  -webkit-transition: 1.5s linear;
+  transition: 1.5s linear;
+}
+
+.office-img3 {
+  width: 120px;
+  height: 140px;
+  bottom: -160px;
+  right: -130px;
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+.office-img4 {
+  width: 200px;
+  height: 170px;
+  bottom: 40px;
+  left: -210px;
+  -webkit-transition: 1.8s linear;
+  transition: 1.8s linear;
+}
+
+.office-img5 {
+  width: 140px;
+  height: 140px;
+  bottom: 160px;
+  left: -160px;
+  -webkit-transition: 1.8s linear;
+  transition: 1.8s linear;
+}
+
+.office-img6 {
+  width: 224px;
+  height: 10px;
+  bottom: 80px;
+  left: -240px;
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+.office-img7 {
+  width: 136px;
+  height: 139px;
+  bottom: -149px;
+  left: 40%;
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
+}
+
+.office-img8 {
+  width: 383px;
+  height: 213px;
+  bottom: -122px;
+  left: 540px;
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+.office-img9 {
+  width: 540px;
+  height: 122px;
+  bottom: -122px;
+  left: 540px;
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+.office-img10 {
+  width: 29px;
+  height: 29px;
+  bottom: -39px;
+  left: 70px;
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+.office-img11 {
+  width: 170px;
+  height: 140px;
+  bottom: 160px;
+  left: -540px;
+  -webkit-transition: 2s linear;
+  transition: 2s linear;
+}
+
+.office-img12 {
+  width: 25px;
+  height: 24px;
+  bottom: -34px;
+  left: 30%;
+  -webkit-transition: 1.5s linear;
+  transition: 1.5s linear;
+}
+
+.bg-office {
+  position: absolute;
+  width: 100%;
+  height: 120%;
+  top: 0;
+  left: 0;
+  -webkit-transform: scale(1.6);
+          transform: scale(1.6);
+  -webkit-transition: top 1.4s, -webkit-transform 2s linear;
+  transition: top 1.4s, -webkit-transform 2s linear;
+  transition: top 1.4s, transform 2s linear;
+  transition: top 1.4s, transform 2s linear, -webkit-transform 2s linear;
+  z-index: 999;
+  opacity: 0;
 }
 
 .blue {
@@ -1427,6 +1575,7 @@ header {
       -ms-flex-direction: column;
           flex-direction: column;
   margin-top: -260px;
+  position: absolute;
 }
 
 .media-hover {
