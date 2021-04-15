@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container-menu {
+      display: flex;
+      justify-content: center;
+    }
+
+    .kitchen-menu {
+      text-align: right;
+      min-width: 150px;
+      font-family: 'Montserrat', sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 400px;
+      padding-right: 20px;
+    }
+
+    .kitchen-menu__nav {
+      text-decoration: none;
+      list-style: none;
+      cursor: pointer;
+      text-transform: uppercase;
+      font-size: 12px;
+      color: #77544c;
+      transition: all 0.2s;
+    }
+
+    .kitchen-menu__nav:hover {
+      font-weight: 700;
+    }
+
+    .description__sub {
+      margin: 0;
+      font-style: italic;
+    }
+
+    .border {
+      width: 980px;
+      min-height: 500px;
+      border-radius: 15px;
+      display: flex;
+      padding: 30px 20px;
+      background-color: #fcefe2;
+      overflow: auto;
+    }
+
+    .menu-description {
+      position: relative;
+    }
+
+    .description {
+      width: 370px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 12px;
+      color: #77544c;
+      padding-bottom: 20px;
+      padding-left: 15px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      border-left: 1px solid #77544c;
+    }
+
+    .description:nth-child(odd) {
+      margin-right: 20px;
+    }
+
+    .description__title {
+      font-weight: bold;
+      line-height: 15px;
+      padding-bottom: 3px;
+      font-style: normal;
+    }
+
+    .no-active {
+      display: none;
+    }
+
+    .active {
+      position: absolute;
+      display: flex;
+      flex-wrap: wrap;
+      width: 800px;
+    }
+
+    .selected {
+      font-weight: 700;
+    }
+
+    @media screen and (max-width: 1199px) {
+      .border {
+        min-height: 400px;
+        width: 90vw;
+      }
+
+      .kitchen-menu {
+        min-height: 400px;
+      }
+
+      .kitchen-menu__nav {
+        font-size: 11px;
+      }
+
+      .active {
+        width: 700px;
+      }
+
+      .description {
+        width: 320px;
+      }
+    }
+
+    @media screen and (max-width: 959px) {
+
+      .active {
+        width: 60vw;
+      }
+
+      .description {
+        width: 60vw;
+      }
+    }
+
+    @media screen and (max-width: 639px) {
+
+      .kitchen-menu__nav {
+        font-size: 9px;
+      }
+
+      .active {
+        width: 60vw;
+      }
+
+      .description {
+        width: 55vw;
+      }
+
+      .kitchen-menu {
+        min-width: 0;
+        padding-right: 5px;
+        width: 25vw;
+
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container-menu">
+    <div class="border">
+
+      <div class="kitchen-menu">
+        <li class="kitchen-menu__nav selected" data-num="1" id="menuNav1">САЛАТЫ</li>
+        <li class="kitchen-menu__nav" data-num="2" id="menuNav2">ХОЛОДНЫЕ ЗАКУСКИ</li>
+        <li class="kitchen-menu__nav" data-num="3" id="menuNav3">ГОРЯЧИЕ ЗАКУСКИ</li>
+        <li class="kitchen-menu__nav" data-num="4" id="menuNav4">РОЛЛЫ</li>
+        <li class="kitchen-menu__nav" data-num="5" id="menuNav5">СУПЫ</li>
+        <li class="kitchen-menu__nav" data-num="6" id="menuNav6">ВЫПЕЧКА</li>
+        <li class="kitchen-menu__nav" data-num="7" id="menuNav7">Лепка</li>
+        <li class="kitchen-menu__nav" data-num="8" id="menuNav8">ГОРЯЧЕЕ</li>
+        <li class="kitchen-menu__nav" data-num="9" id="menuNav9">ГОРЯЧЕЕ НА УГЛЯХ</li>
+        <li class="kitchen-menu__nav" data-num="10" id="menuNav10">ГАРНИРЫ</li>
+        <li class="kitchen-menu__nav" data-num="11" id="menuNav11">ДЕСЕРТЫ</li>
+        <li class="kitchen-menu__nav" data-num="12" id="menuNav12">ДЕТСКОЕ МЕНЮ</li>
+      </div>
+
+      <div class="menu-description">
+        <!-- Салаты -->
+        <div class="no-active active" id="menu1">
+          <div class="description">
+            <p class="description__sub description__title">Лосось и авокадо 570р</p>
+            <p class="description__sub">Лосось слабой соли, авокадо, перец болгарский, огурцы, помидоры, масло
+              оливковое,
+              зелень, салат мангольд,
+              икра тобибко, лимон, семена кунжута. Соус на основе кунжутного масла, Чили перца и домашнего майонеза</p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Салат с ростбифом и имбирной заправкой 560р</p>
+            <p class="description__sub">Ростбиф, огурцы, томаты Черри, салат айсберг, зелень, орех миндаль спайс, соус
+              имбирный, заправка для
+              говядины.</p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title"> Витаминка 230р</p>
+            <p class="description__sub">Подквашенная капуста на брусничном соке,
+              сельдерей, редька, зеленое яблоко, крымский лук, кубанское масло, тыквенные
+              семечки и ягоды брусники.</p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title"> Спелые томаты с брынзой 430р</p>
+            <p class="description__sub">Томаты, домашний соленый сыр, красный лук, перец, огурец, базилик, маслины и
+              томатно-базиликовый соус.</p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title"> Деревенский на углях с курицей 480р</p>
+            <p class="description__sub">Курица, запеченная на углях, листья салата, твердый сыр, самодельный
+              майонез на анчоусах, подается в хрустящем свежеиспеченном хлебе.</p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title"> Деревенский на углях с креветками 640р</p>
+            <p class="description__sub">Креветки, запеченные на углях, листья салата, твердый сыр, самодельный майонез
+              на
+              анчоусах, подается в
+              хрустящем свежеиспеченном хлебе. </p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title"> Мурманская треска с картошкой 440р</p>
+            <p class="description__sub">Нежная печень мурманской трески, засоленной в море, печеная картошка, лук
+              и соленые огурцы.</p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title"> Праздничный с домашней бужениной 380р</p>
+            <p class="description__sub">Домашняя буженина, печеные овощи, соленые огурцы, горошек, икра, яйца
+              перепелов и самодельный майонез.</p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title"> Салат праздничный с красной рыбой 410р</p>
+            <p class="description__sub">Красная рыба, печеные овощи, соленые огурцы, горошек, икра, яйца перепелов и
+              самодельный майонез.</p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Яйцо пашот 370р</p>
+            <p class="description__sub">Огурцы, помидоры, болгарский перец, шпинат, яйцо куриное, семена подсолнечника,
+              сметана.</p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Теплый салат с кальмаром 480р</p>
+            <p class="description__sub">Кальмар мурманский, картофель, фасоль стручковая, салат мангольд, томаты Черри,
+              орех грецкий, соус песто,
+              лимон.</p>
+          </div>
+        </div>
+
+        <!-- Холодные закуски -->
+        <div class="no-active" id="menu2">
+          <div class="description">
+            <p class="description__sub description__title">Корзина хрустящих овощей и зелени в сметанном соусе 450р</p>
+            <p class="description__sub">Набор свежей зелени по сезону</p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Лесные грибы 390р</p>
+            <p class="description__sub"></p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Бабушкино лечо 190р</p>
+            <p class="description__sub">Сладкий перец, грунтовые томаты, томленные с морковью, чесноком и луком.</p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Маринады-бочковые из погреба 320р</p>
+            <p class="description__sub"></p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Икра заморская 190р</p>
+            <p class="description__sub">Баклажанная/ Кабачковая</p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Селедка с молодой картошкой 310р</p>
+            <p class="description__sub"></p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Соленья бочковые из погреба 390р</p>
+            <p class="description__sub"></p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Фермерские копчености 670р</p>
+            <p class="description__sub"></p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Деревенский холодец 390р</p>
+            <p class="description__sub"></p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Выдержанные сыры 670</p>
+            <p class="description__sub"></p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Красная рыба домашнего посола 540р</p>
+            <p class="description__sub"></p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Ассорти три селедки 480р</p>
+            <p class="description__sub"></p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Тушенка 390р</p>
+            <p class="description__sub">Кролик</p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Дедушкина мясная тарелка 690</p>
+            <p class="description__sub">Шпигованная чесноком и пряными травами буженина, ростбиф, обжаренный в травах и
+              перце с зерновой горчицей, куриный рулет с сыром, орехами, черносливом и курагой, телячий язык с хреном.
+            </p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Печень трески 390р</p>
+            <p class="description__sub">Рубленный паштет из печени мраморной трески, засоленной в море, с красным луком,
+              травами и чесноком, подается с ломтями свежеиспеченного бородинского хлеба.</p>
+          </div>
+        </div>
+
+        <!-- ГОРЯЧИЕ ЗАКУСКИ -->
+        <div class="no-active" id="menu3">
+          <div class="description">
+            <p class="description__sub description__title">Деруны со шкварками 340р</p>
+            <p class="description__sub">Смачные картофельные дерны, домашнее сало, жаренный лук, деревенская сметана.
+            </p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Сливочные запеченки под сырной корочкой 380р</p>
+            <p class="description__sub">Креветки, кальмары, мидии</p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Мидии в белом вине 590р</p>
+            <p class="description__sub"></p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Хрустящие сыры 460р</p>
+            <p class="description__sub">Пармезан, дорблю и чеддер, обжаренные до золотистой корочки, подаются с ягодным
+              соусом.</p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Сливочные запеченки под сырной корочкой 340р</p>
+            <p class="description__sub">Грибы с курицей</p>
+          </div>
+        </div>
+
+        <!-- РОЛЛЫ -->
+        <div class="no-active" id="menu4">
+          <div class="description">
+            <p class="description__sub description__title">Красная рыба с сыром 570р</p>
+            <p class="description__sub">Красная рыба, сливочный сыр, огурец, икра тобико.</p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Авокадо угорь 690р</p>
+            <p class="description__sub">Угорь, авокадо, сливочный сыр, огурец, икра тобико.</p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Запеченные мидии 520р</p>
+            <p class="description__sub">Мидии, угорь, твердый сыр, спайси соус.</p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Копченая красная рыба 630р</p>
+            <p class="description__sub">Обжаренная копченая красная рыба, тунец, сливочный сыр, огурец, авокадо.</p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Манго креветка 530р</p>
+            <p class="description__sub">Креветки, манго, огурец, темпура, спайси соус.</p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Запеченые суши 190р</p>
+            <p class="description__sub">Лосось/ Креветка/ Тунец</p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Запеченые суши 250р</p>
+            <p class="description__sub">Камчатский краб</p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Острые суши 190р</p>
+            <p class="description__sub">Лосось/ Креветка/ Тунец</p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Острые суши 250р</p>
+            <p class="description__sub">Камчатский краб</p>
+          </div>
+        </div>
+
+        <!-- СУПЫ -->
+        <div class="no-active" id="menu5">
+          <div class="description">
+            <p class="description__sub description__title">Куриный бульон с лапшой и гренками 280 р</p>
+            <p class="description__sub"></p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Острый охотничий на сливках с колбасками 440р</p>
+            <p class="description__sub"></p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Солянка на домашних копченостях 430р</p>
+            <p class="description__sub"></p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Гороховый суп с гренками и чесноком 360р</p>
+            <p class="description__sub"></p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Щучья уха на карасях в котелке 480р</p>
+            <p class="description__sub">Наваристая походная уха на четырех рыбах, лаврухе, перце и луке с водкой.</p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Смачный борщ с пампушками 380р</p>
+            <p class="description__sub">Настоящий славянский борщ на давленом сале с чесноком, пампушками и деревенской
+              сметаной.</p>
+          </div>
+        </div>
+
+        <!-- ВЫПЕЧКА -->
+        <div class="no-active" id="menu6">
+          <div class="description">
+            <p class="description__sub description__title">Большой сырный пирог 430р</p>
+            <p class="description__sub">Пирог из дровяной печи с сыром сулугуни.</p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Картофельные печенги с сыром и сметаной 210р</p>
+            <p class="description__sub"></p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Корзина красной шапочки 240р</p>
+            <p class="description__sub">Домашние пирожки с печенью, капустой, рисом и яйцом, картошкой и грибами — 4шт.
+            </p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title"> Корзинка Машеньки 240р</p>
+            <p class="description__sub">Домашние пирожки со сладкой начинкой — 4шт.</p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Чебуреки 1 шт. 250р / 2 шт. 490р</p>
+            <p class="description__sub">Набор свежей зелени по сезону</p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Хлебная корзина 220р</p>
+            <p class="description__sub">Шесть ломтей хлеба из собственной печи.</p>
+          </div>
+        </div>
+
+        <!-- Лепка -->
+        <div class="no-active" id="menu7">
+          <div class="description">
+            <p class="description__sub description__title">Пельмени с теленком и поросем 390р</p>
+            <p class="description__sub">Настоящие самолепные вареники из пушистого теста на деревенских желтках и
+              сметане.
+            </p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Пельмени с бараниной и луком 490р</p>
+            <p class="description__sub">Настоящие самолепные вареники из пушистого теста на деревенских желтках и
+              сметане.
+            </p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Вареники с домашним творогом 340р</p>
+            <p class="description__sub">Настоящие самолепные вареники из пушистого теста на деревенских желтках и
+              сметане.
+            </p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Вареники со спелой вишней 340р</p>
+            <p class="description__sub">Настоящие самолепные вареники из пушистого теста на деревенских желтках и
+              сметане.
+            </p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Вареники с клубникой 340р</p>
+            <p class="description__sub">Настоящие самолепные вареники из пушистого теста на деревенских желтках и
+              сметане
+            </p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Вареники с картофелем и грибами 340р</p>
+            <p class="description__sub">Настоящие самолепные вареники из пушистого теста на деревенских желтках и
+              сметане
+            </p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Домашняя тянутая лапша 430р</p>
+            <p class="description__sub">Лапша из твердой пшеницы на деревенских желтках с жареным поросенком, сыром и
+              давленным черным перцем.</p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Перлотто свекольное 310р</p>
+            <p class="description__sub">Отборная перловка на давленном свекольном соке, пропаренная в печи с мягким
+              сливочным сыром. </p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Перлотто тыквенное 310р</p>
+            <p class="description__sub">Отборная перловка на давленном тыквенном соке с кусочками копченой тыквы и
+              курицы,
+              пропаренная в печи с расплавленным твердым сыром.</p>
+          </div>
+        </div>
+
+        <!-- ГОРЯЧЕЕ -->
+        <div class="no-active" id="menu8">
+          <div class="description">
+            <p class="description__sub description__title">Отбивная из поросенка 490р</p>
+            <p class="description__sub">Толстый кусок парной свинины с томатами и грибами под сырной корочкой.</p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Азу из баранины 470р</p>
+            <p class="description__sub">Молодой барашек, тушеной в горшочке с томатами, солеными огурцами, картошкой и
+              кинзой.</p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Жаркое из поросенка 430р</p>
+            <p class="description__sub">Копченая свинина, томленная в печи с овощами, чесноком и травами под пшеничной
+              шапкой.</p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Картошка с можжевельником 490р</p>
+            <p class="description__sub">Печеная картошка в кожуре с шипящей копченой грудинкой, можжевеловыми ягодами и
+              гречишным хлебом из муки собственного помола.</p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Копченая грудинка в брусничном соусе 520р</p>
+            <p class="description__sub">Томленная в красном вине грудинка с печеной картошкой.</p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Котлеты с мятой картошкой 480р</p>
+            <p class="description__sub">Теленок с поросем.</p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Котлеты с мятой картошкой 560р</p>
+            <p class="description__sub">Щука</p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Плов 520р</p>
+            <p class="description__sub">Плов на углях из правильного риса с бараниной, пряностями и овощами на курдючном
+              сале.</p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Судак запеченный 540р</p>
+            <p class="description__sub">Филе судака с картошкой, деревенской сметаной, травами и луком.</p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Теленок в сливочном соусе с грибами 530р</p>
+            <p class="description__sub"></p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Телячьи мозги 480р</p>
+            <p class="description__sub">Телячьи мозги в хрустящей корочке с овощами на углях.</p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Телячьи хвосты 430р</p>
+            <p class="description__sub">Телячьи хвосты, томленные с брусникой и зеленью, подаются с тушеной капустой.
+            </p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Утка с тыквой 870р</p>
+            <p class="description__sub">Утиная грудка с тыквой, взваленная в меде с апельсиновым вареньем </p>
+          </div>
+        </div>
+
+        <!-- ГОРЯЧЕЕ НА УГЛЯХ -->
+        <div class="no-active" id="menu9">
+          <div class="description">
+            <p class="description__sub description__title">Сет гриль мясной 2690р</p>
+            <p class="description__sub">Шашлык из ягненка, шашлык из цыпленка, шашлык из свинины, крылья куриные, ребра
+              свиные, свежие овощи, лаваш, соуса.</p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Сет гриль рыбный 2690р</p>
+            <p class="description__sub">Дорадо, стейк красной рыбы, кальмар, скумбрия целая, печёный картофель, овощи на
+              углях, масло чесночное, соус медовый, песто, лимон.</p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Чак ролл 950р</p>
+            <p class="description__sub">Говядина, соус томатно-шашлычный</p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Черная треска на гриле 820р</p>
+            <p class="description__sub">Чёрная треска, кабачки, томаты Черри, лимон.</p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Медальон из говядины с соусом из белых грибов 950р</p>
+            <p class="description__sub"></p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Цыпленок в чесноке и специях 530р</p>
+            <p class="description__sub"></p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Ягнятина на вертеле 820р</p>
+            <p class="description__sub"></p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Цыпленок на вертеле 490р</p>
+            <p class="description__sub"></p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Теленок на вертеле 820р</p>
+            <p class="description__sub"></p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Сочный кусок красной рыбы с медовым песто 790р</p>
+            <p class="description__sub"></p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Свинокабан на вертеле 560р</p>
+            <p class="description__sub"></p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Ребра в горчице на меду 590р</p>
+            <p class="description__sub"></p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Обожженное каре ягненка 920р</p>
+            <p class="description__sub"></p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Кусок порося на кости 640р</p>
+            <p class="description__sub"></p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Креветки с пряными травами 1170р</p>
+            <p class="description__sub"></p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Красная рыба на вертеле 840р</p>
+            <p class="description__sub"></p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Деликатесные гребешки 1 шт. — 145р</p>
+            <p class="description__sub"></p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Куриные крылья 480р</p>
+            <p class="description__sub"></p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Мурманские кальмары с чесночным маслом 420р</p>
+            <p class="description__sub"></p>
+          </div>
+        </div>
+
+        <!-- ГАРНИРЫ -->
+        <div class="no-active" id="menu10">
+          <div class="description">
+            <p class="description__sub description__title">Гречка с грибами и шкварками 210р</p>
+            <p class="description__sub"></p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Жаренка из варенки 180р</p>
+            <p class="description__sub"></p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Картоха с салом, луком и грибами 210р</p>
+            <p class="description__sub"></p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Овощи на углях на пару 290р</p>
+            <p class="description__sub"></p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Початки с топленым маслом 180р</p>
+            <p class="description__sub"></p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Толченка с маслом 180р</p>
+            <p class="description__sub"></p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Рис 130р</p>
+            <p class="description__sub"></p>
+          </div>
+        </div>
+
+        <!-- ДЕСЕРТЫ -->
+        <div class="no-active" id="menu11">
+          <div class="description">
+            <p class="description__sub description__title">Грушевый наполеон 330р</p>
+            <p class="description__sub"></p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title"> Бабушкин сметанник — 290р</p>
+            <p class="description__sub"></p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Большой чайный набор 960р</p>
+            <p class="description__sub"></p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Буше 180р</p>
+            <p class="description__sub"></p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Графские развалины 330р</p>
+            <p class="description__sub"></p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Сметанный песочник 290р</p>
+            <p class="description__sub"></p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Маковый торт с соленой карамелью 330р</p>
+            <p class="description__sub"></p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Грильяж на сгущенке 280р</p>
+            <p class="description__sub"></p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Заварной медовик 290р</p>
+            <p class="description__sub"></p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Десерт картошка 140р</p>
+            <p class="description__sub"></p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Ежик в лесу 260р</p>
+            <p class="description__sub"></p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Избушка 330р</p>
+            <p class="description__sub"></p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Медовик на топленом шоколаде 290р</p>
+            <p class="description__sub"></p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Муравейник 260р</p>
+            <p class="description__sub"></p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Эклер расписной 170р</p>
+            <p class="description__sub">С ванильным сыром/ сливочно-заварной/ шоколадный/ с вареной сгущенкой </p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Новгородский праздничный 310р</p>
+            <p class="description__sub"></p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Пряный морковник 320р</p>
+            <p class="description__sub"></p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Птичье молоко 320р</p>
+            <p class="description__sub"></p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Халва 170р</p>
+            <p class="description__sub">Подсолнечник/ арахис/ тыква </p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Шоколадник 320р</p>
+            <p class="description__sub"></p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Шоколадные-няшки 70р</p>
+            <p class="description__sub">Черная слива/ сливочный миндаль/ белый абрикос/ заварной кедровый орешек/ белая
+              брусника/ дедушкина пьяная вишня</p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Ягодная корзинка 190р</p>
+            <p class="description__sub"></p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Ленинградская трубочка 140р</p>
+            <p class="description__sub"></p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Заварное кольцо 140р</p>
+            <p class="description__sub"></p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Мороженое 130р</p>
+            <p class="description__sub">Ваниль/ Какао/ Клубника/ Липа, мед/ Тыква/ Сорбет облепиха/ Сорбет клюква/
+              Сорбет
+              пряник</p>
+          </div>
+        </div>
+
+        <!-- ДЕТСКОЕ МЕНЮ -->
+        <div class="no-active" id="menu12">
+          <div class="description">
+            <p class="description__sub description__title">Салат «Зайка» 190р</p>
+            <p class="description__sub">Картофель, яйцо перепелиное, огурцы, морковь, майонез, зелень, буженина, яйцо
+              куриное, горошек консервир., томаты черри, оливки, перец болгарский, соль, специи. </p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Крабик с фри 250р</p>
+            <p class="description__sub">Круассан, сыр креметте, огурцы, айсберг, буженина, майонез, кортофель фри, перец
+              болгарский.</p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Сырники «Печки-лавочки» 190р</p>
+            <p class="description__sub">Творог, крупа манная, сахарная пудра, яйцо куриное, специи, соль, мука, мята,
+              сахарная пудра, масло растительное, масло сливочное</p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Суп «Курочка Ряба» 140р</p>
+            <p class="description__sub">Куриная тушка, морковь, макароны, зелень, яйцо, соль, специи. </p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Рыбные наггетсы 280р</p>
+            <p class="description__sub">Судак, яйцо куриное, мука, сухари панировочные, бульон куриный, сливки, сыр
+              креметте, соль</p>
+          </div>
+
+          <div class="description">
+            <p class="description__sub description__title">Сырные колобки с пюре 260р</p>
+            <p class="description__sub">Куриное бедро, яйцо куриное, соль, специи, сливки, сыр креметте, картофель,
+              молоко, масло слив., зелень.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.kitchen-menu__nav').click(function (event) {
+        $('.no-active').removeClass('active');
+        var num = $(this).attr('data-num');
+        $('#menu' + num).addClass('active');
+        $('.kitchen-menu__nav').removeClass('selected');
+        $('#menuNav' + num).addClass('selected');
+      });
+    });
+  </script>
+
+</body>
+
+</html>

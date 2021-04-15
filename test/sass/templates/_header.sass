@@ -1,0 +1,59 @@
+.header
+  display: flex
+  justify-content: space-between
+  width: 1529px
+  align-items: center
+  margin-top: 29px
+  padding-left: 15px
+.nav
+  width: 738px
+  display: flex
+  justify-content: space-between
+  &-close
+    display: none
+.link
+  font-weight: 700
+  color: F9F8FA
+  letter-spacing: 0.02em
+  font-size: 14px
+  text-transform: uppercase
+  position: relative
+  &::before
+    content: ''
+    position: absolute
+    height: 2px
+    bottom: -13px
+    width: 100%
+    transition: 0.5s
+  &:hover
+    &::before
+      background: #F04C23
+.phone
+  display: flex
+  margin-right: -12px
+.city
+  display: flex
+  flex-direction: column
+  &:last-child
+    margin-left: 29px
+  &-name
+    margin-bottom: 5px
+    text-transform: uppercase
+    font-size: 13px
+    font-weight: 700
+    color: #F04C23
+    letter-spacing: 0.02em
+  &-phone
+    font-size: 17px
+    color: #ffffff
+.btn
+  background: transparent
+  padding: 17px 33px 14px 32px
+  border: 1px solid #ffffff
+  font-weight: 700
+  letter-spacing: 0.05em
+  line-height: 15px
+  font-size: 13px
+  text-transform: uppercase
+  color: #ffffff
+  cursor: pointer

@@ -1,0 +1,306 @@
+.corparate
+  display: flex
+  &-container
+    display: flex
+    flex-direction: column
+    align-items: center
+  &-row
+    display: flex
+  &-top
+    display: flex
+    align-items: center
+    margin-left: -38vw
+    &__img
+      max-width: 11vw
+  &__title
+    margin-left: 1vw
+  &-right
+    max-width: 42vw
+    margin-top: 5vw
+  &-left
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin-right: 2vw
+    &__img
+      &-2
+        max-width: 15vw
+        margin-top: 7vw
+  &-list
+    margin-top: 5vw
+    &__title
+      position: relative
+      &::before
+        content: ''
+        position: absolute
+        width: 20vw
+        height: 4vw
+        bottom: -3.2vw
+        left: -0.3vw
+        background: url('../img/corparate/v.svg') no-repeat
+        background-size: contain
+  &-bottom
+    max-width: 36.5vw
+    margin-top: 4vw
+    margin-bottom: 22vw
+    &__1
+      position: relative
+      &::after
+        content: ''
+        position: absolute
+        width: 16.5vw
+        height: 4vw
+        bottom: -2vw
+        right: 0
+        background: url('../img/corparate/bg-v1.svg') no-repeat
+        background-size: contain
+    &__2
+      position: relative
+      &::after
+        content: ''
+        position: absolute
+        width: 16.5vw
+        height: 6vw
+        bottom: -9vw
+        right: -7vw
+        background: url('../img/corparate/bg-v2.svg') no-repeat
+        background-size: contain
+  &-li
+    position: relative
+    z-index: 1
+    &:nth-child(2)
+      &::before
+        content: ''
+        position: absolute
+        width: 3vw
+        height: 2.2vw
+        bottom: -0.1vw
+        left: -1.2vw
+        background: url('../img/corparate/v1.svg') no-repeat
+        background-size: contain
+        z-index: -1
+    &:nth-child(3)
+      &::before
+        content: ''
+        position: absolute
+        width: 2.5vw
+        height: 2vw
+        top: 0.2vw
+        left: -1.6vw
+        background: url('../img/corparate/v2.svg') no-repeat
+        background-size: contain
+        z-index: -1
+    &:nth-child(4)
+      &::before
+        content: ''
+        position: absolute
+        width: 3vw
+        height: 2.3vw
+        top: -0.5vw
+        left: -1.6vw
+        background: url('../img/corparate/v3.svg') no-repeat
+        background-size: contain
+        z-index: -1
+    &:nth-child(5)
+      &::before
+        content: ''
+        position: absolute
+        width: 3vw
+        height: 2.3vw
+        top: -0.5vw
+        left: -1.6vw
+        background: url('../img/corparate/v4.svg') no-repeat
+        background-size: contain
+        z-index: -1
+    &:nth-child(6)
+      &::before
+        content: ''
+        position: absolute
+        width: 2.7vw
+        height: 2.3vw
+        top: -0.5vw
+        left: -1.6vw
+        background: url('../img/corparate/v5.svg') no-repeat
+        background-size: contain
+        z-index: -1
+    &:nth-child(7)
+      &::before
+        content: ''
+        position: absolute
+        width: 2.7vw
+        height: 2.3vw
+        top: -0.5vw
+        left: -1.6vw
+        background: url('../img/corparate/v6.svg') no-repeat
+        background-size: contain
+        z-index: -1
+    &:nth-child(8)
+      &::before
+        content: ''
+        position: absolute
+        width: 2.8vw
+        height: 2.5vw
+        top: -0.5vw
+        left: -1.5vw
+        background: url('../img/corparate/v7.svg') no-repeat
+        background-size: contain
+        z-index: -1
+    &:nth-child(9)
+      &::before
+        content: ''
+        position: absolute
+        width: 2.6vw
+        height: 2.5vw
+        top: 0
+        left: -1.6vw
+        background: url('../img/corparate/v8.svg') no-repeat
+        background-size: contain
+        z-index: -1
+    &:nth-child(10)
+      &::before
+        content: ''
+        position: absolute
+        width: 2.6vw
+        height: 2.5vw
+        top: -0.7vw
+        left: -1.6vw
+        background: url('../img/corparate/v9.svg') no-repeat
+        background-size: contain
+        z-index: -1
+    &:nth-child(11)
+      &::before
+        content: ''
+        position: absolute
+        width: 2vw
+        height: 2.5vw
+        top: 0
+        left: -1.5vw
+        background: url('../img/corparate/v10.svg') no-repeat
+        background-size: contain
+        z-index: -1
+    &:nth-child(12)
+      &::before
+        content: ''
+        position: absolute
+        width: 2.7vw
+        height: 2.5vw
+        top: -0.7vw
+        left: -1.6vw
+        background: url('../img/corparate/v11.svg') no-repeat
+        background-size: contain
+        z-index: -1
+  &-main
+    position: relative
+    &::after
+      content: ''
+      position: absolute
+      width: 27vw
+      height: 37vw
+      bottom: 40vw
+      right: 0
+      background: url('../img/corparate/bg-v.svg') no-repeat
+      background-size: contain
+@media screen and ( max-width: 1200px )
+  .corparate
+    &-right
+      max-width: 100%
+      margin-top: 0
+    &-list
+      padding-left: 0
+    &-row
+      flex-direction: column
+    &-top
+      margin-left: 0
+      &__img
+        max-width: 70px
+    &-left
+      &__img
+        max-width: 60%
+        &-2
+          margin-top: -20px
+    &-bottom
+      max-width: 100%
+      &__1
+        z-index: 12
+        &::after
+          display: none
+@media screen and ( max-width: 648px )
+  .corparate-main::after
+    bottom: 275px
+  .corparate
+    &-top
+      &__img
+        max-width: 70px
+        margin-left: -20px
+    &-left
+      &__img
+        max-width: 100%
+    &-li
+      position: relative
+      z-index: 1
+      &:nth-child(2)
+        &::before
+          width: 30px
+          height: 30px
+          top: 0
+          left: -10px
+      &:nth-child(3)
+        &::before
+          width: 30px
+          height: 30px
+          top: 0
+          left: -10px
+      &:nth-child(4)
+        &::before
+          width: 30px
+          height: 30px
+          top: 0
+          left: -10px
+      &:nth-child(5)
+        &::before
+          width: 30px
+          height: 30px
+          top: 0
+          left: -10px
+      &:nth-child(6)
+        &::before
+          width: 30px
+          height: 30px
+          top: 0
+          left: -10px
+      &:nth-child(7)
+        &::before
+          width: 30px
+          height: 30px
+          top: 0
+          left: -10px
+      &:nth-child(8)
+        &::before
+          width: 30px
+          height: 30px
+          top: 0
+          left: -10px
+      &:nth-child(9)
+        &::before
+          width: 30px
+          height: 30px
+          top: 0
+          left: -10px
+      &:nth-child(10)
+        &::before
+          width: 30px
+          height: 30px
+          top: 0
+          left: -10px
+      &:nth-child(11)
+        &::before
+          width: 30px
+          height: 30px
+          top: 0
+          left: -10px
+      &:nth-child(12)
+        &::before
+          width: 30px
+          height: 30px
+          top: 0
+          left: -10px

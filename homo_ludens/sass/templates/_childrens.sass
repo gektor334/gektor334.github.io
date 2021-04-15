@@ -1,0 +1,286 @@
+.childrens
+  background: #E2CEEC
+  width: 100%
+  display: flex
+  align-items: center
+  flex-direction: column
+  &-prev, &-prev1
+    position: absolute
+    width: 1.6vw
+    left: -4vw
+    top: 50%
+    margin-top: -1.5vw
+    transform: rotate(180deg)
+    cursor: pointer
+  &-next, &-next1
+    position: absolute
+    width: 1.6vw
+    right: -4vw
+    top: 50%
+    margin-top: -1.5vw
+    cursor: pointer
+  &-row
+    display: flex
+    &__bottom
+      align-items: center
+  &-top
+    &__desc
+      margin-top: 1.6vw
+      max-width: 49vw
+      margin-bottom: 4.3vw
+  &-container
+    display: flex
+    flex-direction: column
+    align-items: center
+  &-video
+    background: url('../img/children/bg.svg') no-repeat #E2CEEC
+    background-size: cover
+    width: 100%
+    height: 100%
+    display: flex
+    justify-content: center
+    padding: 5.3vw 0
+    &__video
+      max-width: 49vw
+  &-title
+    margin-left: 0.85vw
+  &__title
+    &-img
+      max-width: 10.95vw
+    &-img2
+      max-width: 19.9vw
+      margin-left: 22vw
+  &-desc
+    &__bg
+      position: relative
+      &::before
+        content: ''
+        position: absolute
+        top: -3vw
+        left: -15vw
+        width: 12vw
+        height: 11vw
+        background: url('../img/children/img3.svg') no-repeat
+        background-size: contain
+      &::after
+        content: ''
+        position: absolute
+        top: -3vw
+        right: -11vw
+        width: 7.51vw
+        height: 7.8vw
+        background: url('../img/children/img4.svg') no-repeat
+        background-size: contain
+  &-bottom
+    padding-bottom: 12vw
+    position: relative
+    z-index: 1
+    &::after
+      content: ''
+      position: absolute
+      bottom: 25vw
+      left: 0
+      width: 25vw
+      height: 25vw
+      background: url('../img/children/v5.svg') no-repeat
+      background-size: contain
+      z-index: -1
+    &__title
+      position: relative
+      margin-bottom: 4vw
+      margin-top: -0.5vw
+      &::before
+        content: ''
+        position: absolute
+        bottom: -1vw
+        left: -1.9vw
+        width: 22vw
+        height: 0.75vw
+        background: url('../img/children/v3.svg') no-repeat
+        background-size: contain
+    &__desc
+      margin-top: 7.4vw
+      &-bottom
+        margin-right: 8vw
+        margin-top: 12vw
+    &__bg
+      position: relative
+      z-index: 1
+      &::before
+        content: ''
+        position: absolute
+        bottom: -1vw
+        left: -0.3vw
+        width: 30vw
+        height: 4vw
+        background: url('../img/children/v7.svg') no-repeat
+        background-size: contain
+        z-index: -1
+  &-list
+    & .desc
+      position: relative
+      &:nth-child(2n + 2)
+        &::before
+          content: ''
+          position: absolute
+          bottom: 0
+          left: -3vw
+          width: 2vw
+          height: 2vw
+          background: url('../img/children/v1.svg') no-repeat
+          background-size: contain
+      &:nth-child(2n + 3)
+        &::before
+          content: ''
+          position: absolute
+          bottom: 0
+          left: -3vw
+          width: 2vw
+          height: 2vw
+          background: url('../img/children/v2.svg') no-repeat
+          background-size: contain
+.title
+  &-container
+    margin-left: -5vw
+    margin-top: 2.8vw
+    display: flex
+    align-items: center
+.slider
+  animation-name: fade
+  animation-duration: 1.5s
+  &-img
+    position: relative
+    margin-top: 9.9vw
+    margin-right: 15.834vw
+  &-img2
+    margin-top: 11.9vw
+    margin-right: 0
+    z-index: 1
+    &::before
+      content: ''
+      position: absolute
+      top: -9vw
+      right: -9vw
+      width: 17vw
+      height: 17vw
+      background: url('../img/children/v4.svg') no-repeat
+      background-size: contain
+      z-index: -1
+  &-item, &-item1
+    animation-name: fade
+    animation-duration: 1.5s
+    height: 500px
+    img
+      max-height: 100%
+.images-bottom
+  margin-left: -20vw
+  max-width: 11vw
+  margin-top: 5vw
+@keyframes fade
+  from
+    opacity: .4
+  to
+    opacity: 1
+.childrens-video-before
+  position: relative
+  cursor: pointer
+  &::before
+    content: ''
+    position: absolute
+    background: url('../img/video-before.jpg') no-repeat
+    background-size: contain
+    width: 50vw
+    height: 33vw
+    top: 0
+    left: 0
+    transition: 0.4s
+  &::after
+    content: ''
+    position: absolute
+    background: url('../img/video-btn.png') no-repeat
+    background-size: contain
+    width: 8vw
+    height: 7vw
+    top: 40%
+    left: 45%
+    transition: 0.4s
+  &:hover
+    &::after
+      opacity: 0.6
+@media screen and ( max-width: 1200px )
+  .slider
+    &-img
+      margin-top: 30%
+      margin-right: 50px
+  .childrens
+    &-prev
+      top: 33%
+    &-next
+      top: 33%
+  .childrens-video
+    &__video
+      width: 85%
+      max-width: 85%
+      iframe
+        width: 100% !important
+        height: 50vw !important
+    &-before
+      position: relative
+      cursor: pointer
+      &::before
+        width: 101%
+        height: 50vw
+      &::after
+        top: 45%
+        left: 45%
+@media screen and ( max-width: 660px )
+  .childrens
+    &-top
+      &__desc
+        max-width: 90%
+    &-row
+      flex-direction: column
+  .slider
+    &-img
+      margin-top: 50px
+      margin-right: 0
+  .childrens
+    &-prev
+      top: 45%
+      width: 15px
+      left: -20px
+    &-next
+      top: 45%
+      width: 15px
+      right: -20px
+    &-bottom
+      &__title::before
+        bottom: -10px
+        left: 0
+        width: 240px
+        height: 10px
+  .childrens-list
+    .desc
+      &:nth-child(2n+2)::before
+        left: -20px
+        width: 20px
+        height: 20px
+        top: 0
+      &:nth-child(2n+3)::before
+        left: -20px
+        width: 20px
+        height: 20px
+        top: 0
+  .childrens-prev1
+    width: 15px
+    left: -20px
+    top: 45%
+  .childrens-next1
+    width: 15px
+    right: -20px
+    top: 45%
+  .childrens__title-img2
+    max-width: 33vw
+    margin-left: 11px
+  .childrens__title-img
+    max-width: 90px

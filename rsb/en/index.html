@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="http://fonts.cdnfonts.com/css/montserrat" rel="stylesheet">
+  <link rel="shortcut icon" href="../img/rsb.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../css/style.css">
+  <title>Rosbank _ with you despite the distance</title>
+</head>
+
+<body>
+  <div class="bg-en pc">
+    <section class="hero hero-en panel">
+      <div class="container">
+        <div class="fixed">
+          <div class="fixed-container">
+            <ul class="language">
+              <li class="language-li">EN</li>
+              <li class="language-li language-li2"><a href="../index.html">RU</a></li>
+            </ul>
+          </div>
+        </div>
+        <a href="#subscription" class="hero-btn btn-animated">
+          <img src="../img/arrow.png" alt="Вниз">
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <div class="bg-en-mb mb">
+    <section class="bg-m-en hero panel">
+      <div class="container">
+        <div class="fixed">
+          <div class="fixed-container">
+            <ul class="language">
+              <li class="language-li">EN</li>
+              <li class="language-li language-li2"><a href="../index.html">RU</a></li>
+            </ul>
+          </div>
+        </div>
+        <a href="#subscription" class="hero-btn btn-animated">
+          <img src="../img/arrow.png" alt="Вниз">
+        </a>
+      </div>
+    </section>
+  </div>
+
+
+  <section class="subscription panel" id="subscription">
+    <div class="container-two">
+      <div class="left-block">
+        <div class="tower">
+          <img src="../img/eifel.png" alt="башня">
+        </div>
+        <div class="mt">
+          <a href="https://hd.kinopoisk.ru/selection/5fb6a41f0bd70100213cdb0a?selectionWindowId=ya_external"
+            class="sub-btn">The best French films</a>
+        </div>
+      </div>
+
+      <div class="text">
+        <div class="logo">
+          <img src="../img/hd.png" alt="Кинопоиск">
+        </div>
+        <p class="desc">Let us invite you to visit the best places of France together with Rosbank and annual
+          subscription to Kinopoisk HD.
+        </p>
+        <a href="https://plus.yandex.ru/gift" class="desc-btn">Sign up</a>
+        <div class="line"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <script>
+    let bgEn = document.querySelector('.hero-en');
+    let bgEnM = document.querySelector('.bg-m-en');
+    let bgEn2 = document.querySelector('.bg-en');
+    let bgEnM2 = document.querySelector('.bg-en-mb');
+    window.onload = function () {
+      bgEn.style.backgroundImage = "url(../img/RSB_START_GIF-EN.gif?" + new Date().getTime() + ")";
+      bgEn2.style.backgroundImage = "url(../img/bg-en.gif?" + new Date().getTime() + ")";
+      bgEnM.style.backgroundImage = "url(../img/1-mob-EN.gif?" + new Date().getTime() + ")";
+      bgEnM2.style.backgroundImage = "url(../img/bg-en-mb.gif?" + new Date().getTime() + ")";
+      bgEnM.style.backgroundRepeat = "no-repeat";
+      bgEn.style.backgroundSize = 'contain';
+      bgEn2.style.backgroundSize = 'cover';
+
+
+      let ul = document.querySelectorAll('.language');
+      let li = document.querySelectorAll('.language-li');
+
+      document.body.onclick = function (e) {
+        for (let i = 0; i < ul.length; i++) {
+          if (e.target.className == 'language-li') {
+            if (ul[i].style.height == '34px') {
+              ul[i].style.height = '15px';
+            }
+            else {
+              ul[i].style.height = '34px';
+            }
+          }
+          else {
+            ul[i].style.height = '15px';
+          }
+        }
+      }
+
+
+      let btn = document.querySelectorAll('.hero-btn');
+
+      setTimeout(() => btn[0].style.display = 'block', 20000);
+      setTimeout(() => btn[1].style.display = 'block', 19500);
+
+
+      let observer = new MutationObserver(function (mutations) {
+        mutations.forEach(function (mutationRecord) {
+          window.addEventListener('wheel', function (e) {
+            if (e.deltaY >= 1) {
+              window.location = '#subscription';
+            }
+          });
+          let arrTouch = [];
+          function startMobile(e) {
+            arrTouch = [];
+            let touches = e.changedTouches;
+            arrTouch.push(touches[0].pageY)
+          }
+          document.querySelector('.mb').addEventListener("touchstart", startMobile);
+
+          function endMobile(e) {
+            console.log(arrTouch);
+            let touches = e.changedTouches;
+            if (arrTouch[0] > touches[0].pageY) {
+              window.location = '#subscription';
+            }
+          }
+          document.querySelector('.mb').addEventListener("touchmove", endMobile);
+        });
+      });
+
+      let target = document.querySelector('.hero-btn');
+      observer.observe(target, { attributes: true, attributeFilter: ['style'] });
+    }
+  </script>
+</body>
+
+</html>

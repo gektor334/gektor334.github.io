@@ -1,0 +1,415 @@
+html, body
+  font-family: 'Montserrat', sans-serif
+  overflow-x: hidden
+header
+  display: flex
+  justify-content: space-between
+  padding-top: 31px
+  align-items: center
+  width: 85vw
+.target
+  --animate-duration: 2.6s
+.mobile
+  &-menu
+    display: none
+.title
+  font-size: 1.8vw
+  font-weight: 700
+  line-height: 2.4vw
+  letter-spacing: 5%
+  color: #222222
+  text-transform: uppercase
+.curs-list
+  display: none
+  flex-direction: column
+  position: absolute
+  top: 1.6vw
+  z-index: 999
+  background: url('../img/list.svg') no-repeat
+  background-size: contain
+  padding: 1vw 0.5vw 1.5vw 1vw
+  width: 13vw
+  line-height: 1
+  font-weight: normal
+  overflow: hidden
+  max-height: 0
+  transition: 0.8s
+  &__link
+    margin-top: 1.3vw
+    text-transform: none !important
+    font-size: 0.85vw !important
+    color: #595959 !important
+    transition: 0.4s
+    opacity: 0
+    &:hover
+      color: #D85D32 !important
+.link
+  text-transform: lowercase
+  font-weight: 600
+  color: #222222
+  font-size: 0.95vw
+  transition: 0.6s
+  &:hover
+    color: #A5854F
+  &-relative
+    position: relative
+    cursor: pointer
+  &-right
+    font-size: 0.843vw
+    text-transform: lowercase
+    font-weight: 600
+    color: #83723F
+    transition: 0.6s
+    &:hover
+      opacity: 0.7
+.social
+  display: flex
+  justify-content: space-between
+  width: 5.797vw
+  align-items: center
+  position: relative
+  &::after
+    content: ''
+    background: url('../img/line-left.svg') no-repeat
+    position: absolute
+    width: 27.66vw
+    height: 1.5vw
+    left: 0
+    top: 2.7vw
+    background-size: contain
+.insta
+  width: 1.897vw
+.facebook
+  width: 2.318vw
+img
+  width: 100%
+.nav
+  &__link
+    width: 26vw
+    display: flex
+    justify-content: space-between
+.logo
+  width: 15.388vw
+.left-nav
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  height: 5vw
+  margin-bottom: 3vw
+.right-nav
+  display: flex
+  flex-direction: column
+  align-items: flex-end
+  justify-content: space-between
+  height: 4vw
+  margin-bottom: 2vw
+  &__link
+    width: 15.81vw
+    display: flex
+    justify-content: space-between
+    position: relative
+    &::after
+      content: ''
+      background: url('../img/line-right.svg') no-repeat
+      position: absolute
+      width: 27.66vw
+      height: 1vw
+      right: 0
+      top: 1.8vw
+      background-size: contain
+.desc
+  font-weight: 400
+  letter-spacing: -0.025em
+  font-size: 1.159vw
+  line-height: 1.7vw
+  color: #222222
+  &-bold
+    font-weight: 700
+li
+  margin-top: 2vw
+.footer
+  background: #222222
+  width: 100%
+  display: flex
+  justify-content: center
+  padding-top: 4vw
+  padding-bottom: 2vw
+  &__logo
+    width: 13vw
+  &__left
+    display: flex
+    justify-content: space-between
+    width: 54vw
+    align-items: center
+  &__row
+    display: flex
+    flex-wrap: wrap
+    max-width: 34.5vw
+  &__link
+    margin-right: 1.5vw
+    text-transform: lowercase
+    margin-bottom: 0.4vw
+    margin-top: 0.8vw
+    font-size: 0.9vw
+  &__right
+    display: flex
+    align-items: flex-end
+    justify-content: space-between
+    width: 26vw
+  &__phone
+    color: #ffffff
+    font-size: 0.9vw
+    text-align: right
+    line-height: 0.3vw
+    margin-bottom: 1vw
+  &__social
+    &-network
+      display: flex
+      justify-content: flex-end
+      margin-bottom: 1.9vw
+      position: relative
+      &--img
+        margin-left: 1.3vw
+        width: 2vw
+      &::before
+        content: ''
+        position: absolute
+        background: url('../img/footerv.svg')  no-repeat
+        background-size: contain
+        width: 6.4vw
+        height: 1vw
+        right: 0
+        bottom: -1.7vw
+.container
+  width: 85vw
+  display: flex
+  justify-content: space-between
+.information
+  color: #ffffff
+  text-align: right
+  font-size: 0.7vw
+.burger
+  display: none
+@media screen and (max-width: 1200px)
+  .title
+    font-size: 24px
+    line-height: 1.1
+  .desc
+    font-size: 18px
+    line-height: 1.3
+  .nav__link
+    width: 33vw
+  .left-nav
+    height: 6vw
+    .nav__link
+      width: 29vw
+  .link
+    font-size: 12px
+    &-right
+      font-size: 12px
+  .right-nav
+    height: 6vw
+    &__link
+      width: 24vw
+      &::after
+        width: 34vw
+        top: 2.5vw
+  .social
+    width: 7vw
+    &::after
+      width: 30vw
+  .insta
+    width: 2.8vw
+  .facebook
+    width: 3.2vw
+  .footer
+    &__social-network
+      &::before
+        width: 100px
+        height: 10px
+        right: 0
+        bottom: -10px
+      &--img
+        width: 36px
+        margin-left: 15px
+    &__phone
+      font-size: 12px
+    &__row
+      display: none
+    &__logo
+      width: 150px
+    &__right
+      width: 80vw
+      align-items: center
+  .information
+    font-size: 10px
+@media screen and ( max-width: 767px )
+  .list-script
+    display: none
+    flex-direction: column
+    height: 0
+    justify-content: space-between
+    transition: 0.5s
+    margin-top: 0
+    overflow: hidden
+    margin-bottom: 0
+    opacity: 0
+  .mobile
+    &-menu
+      min-height: 100vh
+      /* mobile viewport bug fix */
+      min-height: -webkit-fill-available
+      width: 100vw
+      background: #222222
+      position: fixed
+      top: 0
+      left: 0
+      z-index: 99
+      display: none
+      flex-direction: column
+      justify-content: space-between
+      padding: 40px 20px
+      box-sizing: border-box
+      transition: 0.7s
+      opacity: 0
+      &-top
+        display: flex
+        flex-direction: column
+        height: 60vh
+        justify-content: space-between
+      &-back
+        width: 100vw
+        min-height: 100vh
+        background: #222222
+        display: none
+        position: fixed
+        top: 0
+        left: 0
+        z-index: 99
+        opacity: 0
+        transition: 0.7s
+    &-link
+      color: #c5c5c5
+      font-size: 20px
+      font-weight: 600
+      transition: 0.9s
+      &-list
+        display: flex
+        flex-direction: column
+        position: relative
+        cursor: pointer
+        &::after
+          content: '\25BC'
+          position: absolute
+          left: 75px
+          font-size: 10px
+          top: 9px
+          transform: var(--sq-transform)
+          transition: 0.7s
+      &__curs
+        color: #c5c5c5
+        font-weight: 400
+        font-size: 15px
+    &-tel
+      color: #f3c075
+      position: relative
+      &::before
+        content: ''
+        position: absolute
+        background: url('../img/footerv.svg')  no-repeat
+        background-size: contain
+        width: 180px
+        height: 10px
+        left: 0
+        top: -30px
+  .burger
+    display: flex
+    flex-direction: column
+    position: fixed
+    right: 40px
+    top: 40px
+    cursor: pointer
+    z-index: 999
+    &::before
+      content: ''
+      position: absolute
+      background: url('../img/curs/b1.svg') no-repeat
+      background-size: contain
+      width: 58px
+      height: 58px
+      top: -19px
+      left: -17px
+      z-index: -1
+    &-flex
+      display: flex
+    &-line
+      width: 21px
+      height: 3px
+      background: #222222
+      margin-top: 3px
+      transition: 0.5s
+    &-block
+      display: block
+  .nav
+    &__link
+      display: none
+  .right-nav
+    display: none
+  .left-nav
+    height: 0
+  header
+    position: relative
+    height: 48px
+    padding-bottom: 20px
+  .logo
+    position: absolute
+    left: 50%
+    margin-left: -89px
+    width: 150px
+  .social
+    width: 60px
+    margin-top: -15px
+    &::after
+      display: none
+  .insta
+    width: 26px
+  .facebook
+    width: 30px
+@media screen and ( max-width: 630px )
+  .footer
+    &__info
+      margin-left: 35px
+    &-container
+      &-column
+        flex-direction: column
+        position: relative
+    &__right
+      flex-direction: column
+    &__left
+      width: auto
+      margin-bottom: 20px
+    &__social
+      position: absolute
+      top: -5px
+      right: 20px
+      &-network
+        justify-content: center
+        margin-bottom: 15px
+        &::before
+          left: 0
+          width: 135px
+        &--img
+          width: 30px
+    &__phone
+      line-height: 0.8
+      margin-bottom: 25px
+      text-align: left
+  .information
+    text-align: left
+    font-size: 12px
+    line-height: 1.4
+@media screen and ( max-width: 346px )
+  .logo
+    margin-left: -70px
+  .footer__logo
+    width: 35vw

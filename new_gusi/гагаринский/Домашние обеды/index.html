@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap" rel="stylesheet">
+  <title>Document</title>
+</head>
+
+<body>
+  <style>
+    .block__block__menu {
+      width: 500px;
+      height: 479px;
+      border: 1px solid #9b4e3e;
+      border-radius: 15px;
+      text-align: center;
+      position: relative;
+      box-sizing: border-box;
+      background-color: #eddbc7;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .block__block__menu-title {
+      color: #af7000;
+      text-transform: uppercase;
+      position: relative;
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    .rhombus-1::before {
+      content: '';
+      position: absolute;
+      width: 7px;
+      height: 7px;
+      border: 1px solid #af7000;
+      transform: rotate(45deg);
+      left: 101px;
+      top: 8px;
+    }
+
+    .rhombus-2::before {
+      content: '';
+      position: absolute;
+      width: 7px;
+      height: 7px;
+      border: 1px solid #af7000;
+      transform: rotate(45deg);
+      left: 76px;
+      top: 8px;
+    }
+
+    .rhombus-3::before {
+      content: '';
+      position: absolute;
+      width: 7px;
+      height: 7px;
+      border: 1px solid #af7000;
+      transform: rotate(45deg);
+      left: 51px;
+      top: 8px;
+    }
+
+    .rhombus-1::after {
+      content: '';
+      position: absolute;
+      width: 7px;
+      height: 7px;
+      border: 1px solid #af7000;
+      transform: rotate(45deg);
+      right: 101px;
+      top: 8px;
+    }
+
+    .rhombus-2::after {
+      content: '';
+      position: absolute;
+      width: 7px;
+      height: 7px;
+      border: 1px solid #af7000;
+      transform: rotate(45deg);
+      right: 76px;
+      top: 8px;
+    }
+
+    .rhombus-3::after {
+      content: '';
+      position: absolute;
+      width: 7px;
+      height: 7px;
+      border: 1px solid #af7000;
+      transform: rotate(45deg);
+      right: 51px;
+      top: 8px;
+    }
+
+    .menu__active {
+      border-bottom: 1px #614c2c solid;
+      padding-bottom: 3px;
+      color: #614c2c;
+    }
+
+    .product__menu {
+      margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      height: 380px;
+    }
+
+    .content__items {
+      display: flex;
+      flex-direction: column;
+      font-size: 13px;
+      color: #614c2c;
+      font-family: 'Tenor Sans', sans-serif;
+    }
+
+    .img__menu {
+      position: absolute;
+      top: 100px;
+    }
+
+    .img__menu-left {
+      left: 30px;
+    }
+
+    .img__menu-right {
+      right: 30px;
+    }
+
+    .block__block__menu-border2 {
+      border: 1px solid #9b4e3e;
+      border-radius: 15px;
+      text-align: center;
+      box-sizing: border-box;
+      margin: 7px;
+    }
+
+    .block__block__menu-border3 {
+      border: 1px solid #9b4e3e;
+      border-radius: 15px;
+      text-align: center;
+      position: relative;
+      box-sizing: border-box;
+      padding-top: 20px;
+      margin: 7px;
+    }
+
+    @media screen and (max-width: 540px) {
+      .block__block__menu {
+        max-width: 500px;
+        width: 100%;
+        height: 473px;
+      }
+
+      .block__block__menu-border2 {
+        margin: 7px 5px 7px 5px;
+      }
+
+      .block__block__menu-border3 {
+        margin: 7px 5px 7px 5px;
+      }
+
+      .block__block__menu-title {
+        font-size: 16px;
+      }
+
+      .btn {
+        text-transform: uppercase;
+        font-size: 12px;
+      }
+
+      .rhombus-1::before {
+        display: none;
+      }
+
+      .rhombus-2::before {
+        display: none;
+      }
+
+      .rhombus-3::before {
+        display: none;
+      }
+
+      .rhombus-1::after {
+        display: none;
+      }
+
+      .rhombus-2::after {
+        display: none;
+      }
+
+      .rhombus-3::after {
+        display: none;
+      }
+
+      .img__menu-left {
+        left: 5px;
+      }
+
+      .img__menu-right {
+        right: 5px;
+      }
+    }
+  </style>
+  <!-- html -->
+  <div class="block__block__menu">
+    <div class="block__block__menu-border2">
+      <div class="block__block__menu-border3">
+        <h2 class="block__block__menu-title">Домашние обеды
+          <div class="rhombus-1"></div>
+          <div class="rhombus-2"></div>
+          <div class="rhombus-3"></div>
+        </h2>
+        <div class="slider">
+
+          <!-- Горячие блюда -->
+          <div class="item">
+            <div class="product__menu">
+              <div class="content__items">
+                <span><b>По будням с 12:00 до 16:00</b></span>
+                <span>Стоимость: <b>500 р.</b></span>
+              </div>
+
+              <div class="content__items">
+                <span><b>Салат</b></span>
+                <span>Овощной <br> лесными грибами и печеным картофелем</span>
+              </div>
+
+              <div class="content__items">
+                <span><b>Суп</b></span>
+                <span>Борщ
+                  <br>Грибная похлебка
+                  <br>Окрошка</span>
+              </div>
+
+              <div class="content__items">
+                <span><b>Горячее</b></span>
+                <span>уриная котлета с картофельным пюре
+                  <br>Картофель жаренный с лисичками
+                  <br>Судак с рисом и сливочным соусом</span>
+              </div>
+
+              <div class="content__items">
+                <span><b>Хлеб</b></span>
+              </div>
+
+              <div class="content__items">
+                <span><b>Напиток</b></span>
+                <span>Чай (черный/ зеленый)
+                  <br>Кофе (эспрессо/ американо)
+                  <br>Вода (с газом/ без газа)
+                  <br>Компот (сухофрукты/ вишня)</span>
+              </div>
+            </div>
+          </div>
+
+          <img class="img__menu img__menu-left"
+            src="https://static.tildacdn.com/tild6366-3332-4134-a663-313066663534/vek.png" alt="">
+          <img class="img__menu img__menu-right"
+            src="https://static.tildacdn.com/tild6366-3332-4134-a663-313066663534/vek.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

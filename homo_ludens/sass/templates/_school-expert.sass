@@ -1,0 +1,98 @@
+.school-expert
+  width: 85vw
+  padding-bottom: 10vw
+  &__title
+    margin-left: 13vw
+    margin-top: 7.5vw
+    margin-bottom: 4vw
+    position: relative
+    letter-spacing: 0.05em
+    &::before
+      content: ''
+      position: absolute
+      background: url('../img/school-expert/vec1.svg')  no-repeat
+      background-size: contain
+      width: 8vw
+      height: 7vw
+      left: -7.5vw
+      top: -2.5vw
+      z-index: 1
+    &::after
+      content: ''
+      position: absolute
+      background: url('../img/school-expert/vec2.svg')  no-repeat
+      background-size: contain
+      width: 11vw
+      height: 9vw
+      left: -11.5vw
+      top: -4.8vw
+.teachers
+  display: flex
+  flex-wrap: wrap
+  width: 92vw
+  &__img
+    max-width: 23vw
+  &__desc
+    max-width: 23vw
+    margin-left: 2vw
+    margin-bottom: 3.3vw
+  &__card
+    margin-right: 4vw
+    margin-bottom: 3.6vw
+  &__title
+    text-transform: uppercase
+    margin-left: 2vw
+  &__btn
+    margin-left: 2vw
+    border: 2px solid #222222
+    color: #222222
+    font-weight: 700
+    font-size: 0.87vw
+    text-transform: uppercase
+    border-radius: 35px
+    padding: 1.15vw 2.605vw
+    transition: 0.6s
+    &:hover
+      border: #ca9688 2px solid
+      color: #ca9688
+  &__describe
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    height: 17vw
+@media screen and ( max-width: 1200px )
+  .teachers
+    &__card
+      flex-basis: 50%
+      margin-right: 0
+    &__desc
+      max-width: 80%
+    &__describe
+      height: auto
+  .nopc1200
+    display: none
+@media screen and ( max-width: 670px )
+  .teachers
+    &__card
+      flex-basis: 100%
+      margin-bottom: 50px
+    &__img
+      max-width: 80vw
+    &__btn
+      font-size: 12px
+      padding: 8px 12px
+    &__text
+      margin-bottom: 20px
+  .school
+    &-expert
+      &__title
+        &::after
+          width: 60px
+          height: 69px
+          left: -61px
+          top: -19px
+        &::before
+          width: 40px
+          height: 50px
+          left: -45px
+          top: -16px

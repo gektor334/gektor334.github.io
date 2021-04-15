@@ -1,0 +1,102 @@
+.hero
+  position: relative
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: flex-start
+  padding-top: 100px
+  background: $dark url('../img/hero-bg.jpg') no-repeat center / cover
+  height: 95vh
+  color: $light
+  &::before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: rgba($dark, 0.7)
+  &__text
+    font-size: 1.57em
+    max-width: 500px
+    line-height: 1.4
+    margin-top: 1rem
+    margin-bottom: 3.5rem
+  &__content
+    position: relative
+    max-width: 47.85rem
+    margin-left: 4.28rem
+  &__button
+    margin-right: 17px
+    padding: 18px 28px
+    &-outline
+      padding: 18px 46px
+  &__instagram
+    position: absolute
+    left: 0
+    top: 0
+    max-width: 80px
+    height: 100%
+  &__scroll-down
+    position: absolute
+    display: flex
+    justify-content: center
+    align-items: center
+    left: 0
+    bottom: -3.4rem
+    min-width: 17.6rem
+    min-height: 6.93rem
+    background-color: $dark 
+    text-transform: uppercase
+    text-decoration: none
+    font-family: 'Yeseva One', cursive
+    font-size: 0.85rem
+    color: $light  
+    &::after
+      content: ''
+      background: url('../img/arrow-down.svg') no-repeat center
+      width: 30px
+      height: 30px
+      border: 2px solid $primary
+      border-radius: 50%
+      margin-left: 20px
+      transition: 0.4s
+.instagram 
+  display: flex
+  justify-content: center
+  align-items: center
+  background-color: $dark 
+  &--active
+    transition: font-size 0.3s
+    font-size: 0.9rem
+    &:hover
+      font-size: 1.1rem
+  &__link
+    display: flex
+    align-items: center
+    text-decoration: none
+    text-transform: uppercase
+    color: $primary
+    transform: rotate(90deg)
+    line-height: 16px;
+    font-family: 'Futura Demi', sans-serif
+    &::after
+      content: ''
+      width: 50px
+      height: 1px
+      background-color: $primary
+      margin-left: 1.2rem
+.title
+  margin: 0  
+  font-family: 'Yeseva One', cursive
+  text-transform: uppercase
+  font-size: 2.857rem
+  line-height: 1.3
+  &--primary
+    color: $primary
+.scroll-down--active
+  transition: 0.4s
+  &:hover
+    color: darken($light, 20%)
+    &::after
+      border-color: lighten($primary, 10%)

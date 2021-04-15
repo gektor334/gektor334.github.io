@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="img/rsb.ico" type="image/x-icon">
+  <link href="http://fonts.cdnfonts.com/css/montserrat" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Rosbank _ with you despite the distance</title>
+</head>
+
+<body>
+  <!--pc(первый экран)-->
+  <div class="bg-ru pc">
+    <section class="hero hero-ru panel">
+      <div class="container">
+        <div class="fixed">
+          <div class="fixed-container">
+            <ul class="language">
+              <li class="language-li">RU</li>
+              <li class="language-li language-li2"><a href="en/index.html">EN</a></li>
+            </ul>
+          </div>
+        </div>
+        <a href="#subscription" class="hero-btn btn-animated">
+          <img src="img/arrow.png" alt="Вниз">
+        </a>
+      </div>
+    </section>
+  </div>
+  <!--mobile(первый экран)-->
+  <div class="bg-ru mb ">
+    <section class="bg-m-ru hero panel">
+      <div class="container">
+        <div class="fixed">
+          <div class="fixed-container">
+            <ul class="language">
+              <li class="language-li">RU</li>
+              <li class="language-li language-li2"><a href="en/index.html">EN</a></li>
+            </ul>
+          </div>
+        </div>
+        <a href="#subscription" class="hero-btn btn-animated">
+          <img src="img/arrow.png" alt="Вниз">
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <!-- pc(второй экран) -->
+  <section class="subscription panel" id="subscription">
+    <div class="container-two">
+      <div class="left-block">
+        <div class="tower">
+          <img src="img/eifel.png" alt="башня">
+        </div>
+        <div class="mt">
+          <a href="https://hd.kinopoisk.ru/selection/5fb6a41f0bd70100213cdb0a?selectionWindowId=ya_external"
+            class="sub-btn">Лучшее французское кино</a>
+        </div>
+      </div>
+
+      <div class="text">
+        <div class="logo">
+          <img src="img/hd.png" alt="Кинопоиск">
+        </div>
+        <p class="desc">Приглашаем вас
+          <br>в путешествие по лучшим местам Франции вместе
+          <br>с годовой подпиской Кинопоиск HD
+          <br>и
+          Росбанком
+        </p>
+        <a href="https://plus.yandex.ru/gift" class="desc-btn">Зарегистрироваться</a>
+        <div class="line"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <script>
+    let bgRu = document.querySelector('.hero-ru');
+    let bgRuM = document.querySelector('.bg-m-ru');
+    let bgRuM2 = document.querySelector('.bg-ru-mb');
+    let bgRu2 = document.querySelectorAll('.bg-ru');
+    window.onload = function () {
+      bgRu.style.backgroundImage = "url(img/RSB_START_GIF-RU.gif?" + new Date().getTime() + ")";
+      bgRu2[0].style.backgroundImage = "url(img/bg-ru.gif?" + new Date().getTime() + ")";
+      bgRu2[1].style.backgroundImage = "url(img/bg-ru.gif?" + new Date().getTime() + ")";
+      bgRuM.style.backgroundImage = "url(img/1-mob-RU.gif?" + new Date().getTime() + ")";
+      bgRuM.style.backgroundRepeat = "no-repeat";
+      bgRu.style.backgroundSize = 'contain';
+
+      let ul = document.querySelectorAll('.language');
+      let li = document.querySelectorAll('.language-li');
+
+      document.body.onclick = function (e) {
+        for (let i = 0; i < ul.length; i++) {
+          if (e.target.className == 'language-li') {
+            if (ul[i].style.height == '34px') {
+              ul[i].style.height = '15px';
+            }
+            else {
+              ul[i].style.height = '34px';
+            }
+          }
+          else {
+            ul[i].style.height = '15px';
+          }
+        }
+      }
+
+
+      let btn = document.querySelectorAll('.hero-btn');
+
+      setTimeout(() => btn[0].style.display = 'block', 14000);
+      setTimeout(() => btn[1].style.display = 'block', 14000);
+
+
+      let observer = new MutationObserver(function (mutations) {
+        mutations.forEach(function (mutationRecord) {
+          window.addEventListener('wheel', function (e) {
+            if (e.deltaY >= 1) {
+              window.location = '#subscription';
+            }
+          });
+          let arrTouch = [];
+          function startMobile(e) {
+            arrTouch = [];
+            let touches = e.changedTouches;
+            arrTouch.push(touches[0].pageY)
+          }
+          document.querySelector('.mb').addEventListener("touchstart", startMobile);
+
+          function endMobile(e) {
+            console.log(arrTouch);
+            let touches = e.changedTouches;
+            if (arrTouch[0] > touches[0].pageY) {
+              window.location = '#subscription';
+            }
+          }
+          document.querySelector('.mb').addEventListener("touchmove", endMobile);
+        });
+      });
+
+      let target = document.querySelector('.hero-btn');
+      observer.observe(target, { attributes: true, attributeFilter: ['style'] });
+    }
+  </script>
+</body>
+
+</html>

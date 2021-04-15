@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap" rel="stylesheet">
+  <title>Document</title>
+</head>
+
+<body>
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .block__menu {
+      width: 500px;
+      height: 510px;
+      border: 1px solid #9b4e3e;
+      border-radius: 15px;
+      text-align: center;
+      position: relative;
+      box-sizing: border-box;
+    }
+
+    h2 {
+      margin: 0;
+    }
+
+    .block__menu-title {
+      color: #af7000;
+      text-transform: uppercase;
+      position: relative;
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    .rhombus-1::before {
+      content: '';
+      position: absolute;
+      width: 7px;
+      height: 7px;
+      border: 1px solid #af7000;
+      transform: rotate(45deg);
+      left: 101px;
+      top: 8px;
+    }
+
+    .rhombus-2::before {
+      content: '';
+      position: absolute;
+      width: 7px;
+      height: 7px;
+      border: 1px solid #af7000;
+      transform: rotate(45deg);
+      left: 76px;
+      top: 8px;
+    }
+
+    .rhombus-3::before {
+      content: '';
+      position: absolute;
+      width: 7px;
+      height: 7px;
+      border: 1px solid #af7000;
+      transform: rotate(45deg);
+      left: 51px;
+      top: 8px;
+    }
+
+    .rhombus-1::after {
+      content: '';
+      position: absolute;
+      width: 7px;
+      height: 7px;
+      border: 1px solid #af7000;
+      transform: rotate(45deg);
+      right: 101px;
+      top: 8px;
+    }
+
+    .rhombus-2::after {
+      content: '';
+      position: absolute;
+      width: 7px;
+      height: 7px;
+      border: 1px solid #af7000;
+      transform: rotate(45deg);
+      right: 76px;
+      top: 8px;
+    }
+
+    .rhombus-3::after {
+      content: '';
+      position: absolute;
+      width: 7px;
+      height: 7px;
+      border: 1px solid #af7000;
+      transform: rotate(45deg);
+      right: 51px;
+      top: 8px;
+    }
+
+
+    .menu-prev,
+    .menu-next {
+      cursor: pointer;
+      position: absolute;
+      top: 56px;
+      color: #9b4e3e;
+      font-size: 22px;
+    }
+
+    .menu-prev {
+      left: 10px;
+    }
+
+    .menu-next {
+      right: 10px;
+    }
+
+    .slider .item {
+      -webkit-animation-name: fade;
+      -webkit-animation-duration: 1.5s;
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+
+    .slideText {
+      display: flex;
+      justify-content: space-around;
+      position: relative;
+      font-family: 'Tenor Sans', sans-serif;
+    }
+
+    .btn {
+      cursor: pointer;
+      text-transform: uppercase;
+      font-size: 15px;
+      color: #757474;
+    }
+
+    @-webkit-keyframes fade {
+      from {
+        opacity: .4
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+
+    @keyframes fade {
+      from {
+        opacity: .4
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+
+    .menu__active {
+      border-bottom: 1px #614c2c solid;
+      padding-bottom: 3px;
+      color: #614c2c;
+    }
+
+    .product__menu {
+      margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      height: 380px;
+    }
+
+    .content__items {
+      display: flex;
+      flex-direction: column;
+      font-size: 13px;
+      color: #614c2c;
+      font-family: 'Tenor Sans', sans-serif;
+    }
+
+    .img__menu {
+      position: absolute;
+      top: 150px;
+    }
+
+    .img__menu-left {
+      left: 30px;
+    }
+
+    .img__menu-right {
+      right: 30px;
+    }
+
+    .block__menu-border2 {
+      border: 1px solid #9b4e3e;
+      border-radius: 15px;
+      text-align: center;
+      box-sizing: border-box;
+      margin: 7px;
+    }
+
+    .block__menu-border3 {
+      border: 1px solid #9b4e3e;
+      border-radius: 15px;
+      text-align: center;
+      position: relative;
+      box-sizing: border-box;
+      padding-top: 20px;
+      margin: 7px;
+    }
+
+    .images-left-menu {
+      height: 510px;
+      max-width: 400px;
+      margin-right: 10px;
+    }
+
+    .images-left-menu img {
+      height: 100%;
+      width: 100%;
+    }
+
+    .menu__container {
+      display: flex;
+      max-width: 970px;
+      justify-content: space-between;
+    }
+
+    @media screen and (max-width: 960px) {
+      .menu__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .images-left-menu {
+        margin-bottom: 20px;
+      }
+    }
+
+    @media screen and (max-width: 540px) {
+      .block__menu {
+        max-width: 500px;
+        width: 100%;
+        height: 500px;
+      }
+
+      .block__menu-border2 {
+        margin: 7px 5px 7px 5px;
+      }
+
+      .block__menu-border3 {
+        margin: 7px 5px 7px 5px;
+      }
+
+      .block__menu-title {
+        font-size: 16px;
+      }
+
+      .btn {
+        text-transform: uppercase;
+        font-size: 12px;
+      }
+
+      .rhombus-1::before {
+        display: none;
+      }
+
+      .rhombus-2::before {
+        display: none;
+      }
+
+      .rhombus-3::before {
+        display: none;
+      }
+
+      .rhombus-1::after {
+        display: none;
+      }
+
+      .rhombus-2::after {
+        display: none;
+      }
+
+      .rhombus-3::after {
+        display: none;
+      }
+
+      .menu-prev,
+      .menu-next {
+        font-size: 14px;
+      }
+
+      .menu-prev {
+        left: 3px;
+      }
+
+      .menu-next {
+        right: 3px;
+      }
+
+      .img__menu-left {
+        left: 5px;
+      }
+
+      .img__menu-right {
+        right: 5px;
+      }
+    }
+  </style>
+  <!-- html -->
+  <div class="menu__container">
+    <div class="images-left-menu imgHolder" id="imgHolder">
+      <img src="https://static.tildacdn.com/tild6136-3730-4434-b633-643239336231/img1.jpg" alt="">
+    </div>
+    <div class="block__menu">
+      <div class="block__menu-border2">
+        <div class="block__menu-border3">
+          <h2 class="block__menu-title">Основное меню
+            <div class="rhombus-1"></div>
+            <div class="rhombus-2"></div>
+            <div class="rhombus-3"></div>
+          </h2>
+          <div class="slider">
+
+            <!-- Горячие блюда -->
+            <div class="item">
+              <div class="slideText" id="Select">
+                <span class="btn imgItem"
+                  data-img-path="https://static.tildacdn.com/tild6134-6239-4363-b030-326133343733/desert.jpg"
+                  onclick="minusSlide()">&#10094; Десерты</span>
+                <span class="btn menu__active">Горячие блюда</span>
+                <span class="btn imgItem"
+                  data-img-path="https://static.tildacdn.com/tild6532-3231-4662-b333-303836653565/zakuski.jpg"
+                  onclick="plusSlide()">Закуски &#10095;</span>
+              </div>
+              <div class="product__menu">
+                <div class="content__items">
+                  <span>Филе-миньон с жареными персиками</span>
+                  <span>и соусом из голубого сыра</span>
+                  <span><b>1300</b></span>
+                </div>
+
+                <div class="content__items">
+                  <span>Нежный лосось со свекольным пюре</span>
+                  <span>и грибным соусом</span>
+                  <span><b>1300</b></span>
+                </div>
+
+                <div class="content__items">
+                  <span>Бефстроганов</span>
+                  <span><b>860</b></span>
+                </div>
+
+                <div class="content__items">
+                  <span>Свиной бок, томлённый в квасе</span>
+                  <span><b>690</b></span>
+                </div>
+
+                <div class="content__items">
+                  <span>"Ладожский" судак в винном соусе</span>
+                  <span><b>690</b></span>
+                </div>
+
+                <div class="content__items">
+                  <span>Картофель с лисичками</span>
+                  <span><b>390</b></span>
+                </div>
+
+                <div class="content__items">
+                  <span>Хлебная корзина</span>
+                  <span><b>140</b></span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Закуски -->
+            <div class="item">
+              <div class="slideText" id="Select">
+                <span class="btn imgItem"
+                  data-img-path="https://static.tildacdn.com/tild6136-3730-4434-b633-643239336231/img1.jpg"
+                  onclick="minusSlide()">&#10094; Горячие</span>
+                <span class="btn menu__active">Закуски</span>
+                <span class="btn imgItem"
+                  data-img-path="https://static.tildacdn.com/tild6366-6466-4330-a539-326564383334/lepka.jpg"
+                  onclick="plusSlide()">Лепка &#10095;</span>
+              </div>
+              <div class="product__menu">
+                <div class="content__items">
+                  <span>Грибы соленые со сметаной,</span>
+                  <span>зеленью и чесноком</span>
+                  <span><b>450</b></span>
+                </div>
+
+                <div class="content__items">
+                  <span>Сельдь Олюторская с луком</span>
+                  <span>и печёной картошкой</span>
+                  <span><b>390</b></span>
+                </div>
+
+                <div class="content__items">
+                  <span>Тартинки с телятиной</span>
+                  <span>и сельдью</span>
+                  <span><b>360</b></span>
+                </div>
+
+                <div class="content__items">
+                  <span>Холодная буженина</span>
+                  <span>с вишневым соусом</span>
+                  <span><b>520</b></span>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Лепка -->
+            <div class="item">
+              <div class="slideText" id="Select">
+                <span class="btn imgItem"
+                  data-img-path="https://static.tildacdn.com/tild6532-3231-4662-b333-303836653565/zakuski.jpg"
+                  onclick="minusSlide()">&#10094; Закуски</span>
+                <span class="btn menu__active">Лепка</span>
+                <span class="btn imgItem"
+                  data-img-path="https://static.tildacdn.com/tild3833-3037-4032-a234-366337356462/soup.jpg"
+                  onclick="plusSlide()">Супы &#10095;</span>
+              </div>
+              <div class="product__menu">
+                <div class="content__items">
+                  <span>Пельмени "По-домашнему"</span>
+                  <span><b>490</b></span>
+                </div>
+
+                <div class="content__items">
+                  <span>Вареники с картофелем</span>
+                  <span>и грибами</span>
+                  <span><b>350</b></span>
+                </div>
+
+                <div class="content__items">
+                  <span>Вареники с вишней</span>
+                  <span><b>330</b></span>
+                </div>
+
+                <div class="content__items">
+                  <span>Пирожок с печенью/ с капустой/</span>
+                  <span>с картошкой</span>
+                  <span><b>70</b></span>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Супы -->
+            <div class="item">
+              <div class="slideText" id="Select">
+                <span class="btn imgItem"
+                  data-img-path="https://static.tildacdn.com/tild6366-6466-4330-a539-326564383334/lepka.jpg"
+                  onclick="minusSlide()">&#10094; Лепка</span>
+                <span class="btn menu__active">Супы</span>
+                <span class="btn imgItem"
+                  data-img-path="https://static.tildacdn.com/tild6461-3331-4364-b132-653837376135/salst.jpg"
+                  onclick="plusSlide()">салаты &#10095;</span>
+              </div>
+              <div class="product__menu">
+                <div class="content__items">
+                  <span>Беломорская уха по дедушкиному</span>
+                  <span>рецепту с водкой</span>
+                  <span><b>530</b></span>
+                </div>
+
+                <div class="content__items">
+                  <span>Похлебка из белых грибов</span>
+                  <span><b>420</b></span>
+                </div>
+
+                <div class="content__items">
+                  <span>Окрошка на квасе/ на кефире</span>
+                  <span><b>340</b></span>
+                </div>
+
+                <div class="content__items">
+                  <span>Борщ "Малороссийский"</span>
+                  <span><b>390</b></span>
+                </div>
+
+                <div class="content__items">
+                  <span>Куриный суп с лисичками</span>
+                  <span><b>350</b></span>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Салаты -->
+            <div class="item">
+              <div class="slideText" id="Select">
+                <span class="btn imgItem"
+                  data-img-path="https://static.tildacdn.com/tild3833-3037-4032-a234-366337356462/soup.jpg"
+                  onclick="minusSlide()">&#10094; Супы</span>
+                <span class="btn menu__active">Салаты</span>
+                <span class="btn imgItem"
+                  data-img-path="https://static.tildacdn.com/tild6134-6239-4363-b030-326133343733/desert.jpg"
+                  onclick="plusSlide()">Десерты &#10095;</span>
+              </div>
+              <div class="product__menu">
+                <div class="content__items">
+                  <span>Оливье с раковыми</span>
+                  <span>шейками</span>
+                  <span><b>520</b></span>
+                </div>
+
+                <div class="content__items">
+                  <span>Салат с семушкой</span>
+                  <span><b>490</b></span>
+                </div>
+
+                <div class="content__items">
+                  <span>Салат "Овощной"</span>
+                  <span><b>310</b></span>
+                </div>
+
+                <div class="content__items">
+                  <span>Салат с лесными грибами,</span>
+                  <span>печёным картофелем</span>
+                  <span>и сладким огурцом</span>
+                  <span><b>360</b></span>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Десерты -->
+            <div class="item">
+              <div class="slideText" id="Select">
+                <span class="btn imgItem"
+                  data-img-path="https://static.tildacdn.com/tild6461-3331-4364-b132-653837376135/salst.jpg"
+                  onclick="minusSlide()">&#10094; Салаты</span>
+                <span class="btn menu__active">Десерты</span>
+                <span class="btn imgItem"
+                  data-img-path="https://static.tildacdn.com/tild6136-3730-4434-b633-643239336231/img1.jpg"
+                  onclick="plusSlide()">Горячие &#10095;</span>
+              </div>
+              <div class="product__menu">
+                <div class="content__items">
+                  <span>Чизкейк манго-маракуйя</span>
+                  <span><b>350</b></span>
+                </div>
+
+                <div class="content__items">
+                  <span>Морковный торт</span>
+                  <span><b>320</b></span>
+                </div>
+
+                <div class="content__items">
+                  <span>Медовик на топленом шоколаде</span>
+                  <span><b>290</b></span>
+                </div>
+
+                <div class="content__items">
+                  <span>Маковый торт</span>
+                  <span><b>320</b></span>
+                </div>
+
+                <div class="content__items">
+                  <span>Сметанный песочник</span>
+                  <span><b>290</b></span>
+                </div>
+
+                <div class="content__items">
+                  <span>Эклер расписной в ассортименте</span>
+                  <span><b>170</b></span>
+                </div>
+
+                <div class="content__items">
+                  <span>Мороженое клубничное/ ванильное</span>
+                  <span><b>150</b></span>
+                </div>
+
+                <div class="content__items">
+                  <span>Сорбет облепиховый/ клюквенный</span>
+                  <span><b>150</b></span>
+                </div>
+
+              </div>
+            </div>
+
+            <img class="img__menu img__menu-left"
+              src="https://static.tildacdn.com/tild6366-3332-4134-a663-313066663534/vek.png" alt="">
+            <img class="img__menu img__menu-right"
+              src="https://static.tildacdn.com/tild6366-3332-4134-a663-313066663534/vek.png" alt="">
+
+            <a class="menu-prev" onclick="minusSlide()"></a>
+            <a class="menu-next" onclick="plusSlide()"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script>
+
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    function plusSlide() {
+      showSlides(slideIndex += 1);
+    }
+    function minusSlide() {
+      showSlides(slideIndex -= 1);
+    }
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("item");
+      if (n > slides.length) {
+        slideIndex = 1
+      }
+      if (n < 1) {
+        slideIndex = slides.length;
+      }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slides[slideIndex - 1].style.display = "block";
+      var elements = document.getElementsByClassName("btn");
+      for (var i = 0; i < elements.length; i++) {
+      }
+    }
+
+    $(document).ready(function () {
+      $('#Select .imgItem').on('click', function () {
+        var imgPath;
+        imgPath = $(this).attr('data-img-path');
+        $('#imgHolder img').fadeOut(500, function () {
+          $('#imgHolder img').attr('src', imgPath).fadeIn(300);
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap" rel="stylesheet">
+  <title>Document</title>
+</head>
+
+<body>
+  <style>
+    body {
+      font-family: 'Tenor Sans', sans-serif;
+    }
+
+    .container-menu1 {
+      display: flex;
+      justify-content: center;
+    }
+
+    .kitchen-menu1 {
+      text-align: right;
+      width: 150px;
+      min-height: 400px;
+      padding-right: 20px;
+    }
+
+    .kitchen-menu__nav1 {
+      text-decoration: none;
+      list-style: none;
+      cursor: pointer;
+      text-transform: uppercase;
+      font-size: 14px;
+      color: #273e56;
+      transition: all 0.2s;
+      margin-bottom: 40px;
+    }
+
+    .kitchen-menu__nav1:hover {
+      font-weight: 700
+    }
+
+    .description1__sub {
+      margin: 0;
+    }
+
+    .description1__sup {
+      margin: 0 0 10px 0;
+      font-weight: bold
+    }
+
+    .border1 {
+      width: 740px;
+      min-height: 500px;
+      border-radius: 15px;
+      border: 1px solid #af7004;
+      display: flex;
+      padding: 30px 20px;
+      overflow-y: auto;
+      overflow-x: hidden;
+      margin: 5px;
+    }
+
+    .menu-description1 {
+      position: relative;
+    }
+
+    .description1 {
+      font-size: 14px;
+      color: #614c2c;
+      padding-bottom: 20px;
+      padding-left: 15px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      border-left: 1px solid;
+    }
+
+    .description1:nth-child(odd) {
+      margin-right: 20px;
+    }
+
+    .description1__title {
+      font-weight: bold;
+      line-height: 15px;
+      padding-bottom: 3px;
+      font-style: normal;
+      text-transform: uppercase;
+      color: #af7000;
+    }
+
+    .no-active1 {
+      display: none;
+    }
+
+    .active1 {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      width: 550px;
+    }
+
+    .selected1 {
+      font-weight: 700;
+    }
+
+    .frame__menu-bar {
+      border: 1px solid #af7000;
+      border-radius: 15px;
+      background-color: #eddbc7;
+    }
+
+    .frame2__menu-bar {
+      border: 1px solid #af7000;
+      margin: 5px;
+      border-radius: 15px;
+    }
+
+    @media screen and (max-width: 959px) {
+      .active1 {
+        width: 470px;
+      }
+
+      .border1 {
+        width: 630px;
+      }
+    }
+
+    @media screen and (max-width: 639px) {
+      .active1 {
+        width: 190px;
+      }
+
+      .border1 {
+        width: 290px;
+        padding: 5px 5px;
+      }
+
+      .kitchen-menu1 {
+        text-align: center;
+        width: 100px;
+        padding-right: 10px;
+      }
+
+      .kitchen-menu__nav1 {
+        font-size: 10px;
+      }
+
+      .description1 {
+        font-size: 12px;
+      }
+    }
+  </style>
+  <div class="container-menu1">
+    <div class="frame__menu-bar">
+      <div class="frame2__menu-bar">
+        <div class="border1">
+
+          <div class="kitchen-menu1">
+            <li class="kitchen-menu__nav1 selected1" data-num="1" id="menuNa1">БЕЗАЛКОГОЛЬНЫЕ НАПИТКИ</li>
+            <li class="kitchen-menu__nav1" data-num="2" id="menuNa2">АЛКОГОЛЬНЫЕ НАПИТКИ</li>
+            <li class="kitchen-menu__nav1" data-num="3" id="menuNa3">ПИВО</li>
+          </div>
+
+          <div class="menu-description1">
+            <!-- БЕЗАЛКОГОЛЬНЫЕ НАПИТКИ -->
+            <div class="no-active1 active1" id="men1">
+              <div class="description1">
+                <p class="description1__sub description1__title">Водицы(0,5л)</p>
+
+                <p class="description1__sub">Брусничка</p>
+                <p class="description1__sup">190 р.</p>
+              </div>
+
+              <div class="description1">
+                <p class="description1__sub description1__title">КОФЕ</p>
+                <p class="description1__sub">Ристретто/ Эспрессо/ Американо</p>
+                <p class="description1__sup">160 р.</p>
+
+                <p class="description1__sub">Капучино</p>
+                <p class="description1__sup">180 р.</p>
+
+                <p class="description1__sub">Латте</p>
+                <p class="description1__sup">200 р.</p>
+
+              </div>
+
+              <div class="description1">
+                <p class="description1__sub description1__title">Сок (Нектар) (0,33л)</p>
+                <p class="description1__sub">Апельсиновый/ Томатный,/ Яблочный</p>
+                <p class="description1__sup">200 р.</p>
+              </div>
+
+              <div class="description1">
+                <p class="description1__sub description1__title">ЧАИ В ЗАПАРНИКЕ (1,0л)</p>
+                <p class="description1__sub">Малина с чабрецом/ Облепихово-имбирный/ Клубника с розмарином /Курильский
+                  чай
+                </p>
+                <p class="description1__sup">490 р.</p>
+              </div>
+
+              <div class="description1">
+                <p class="description1__sub description1__title">Чай (0.5л)</p>
+                <p class="description1__sub">Ассам/ Сенча/ Эрл грей/ Молочный улун/ Белый чай со смородиной/ Зеленый с
+                  жасмином/ Цитрусовый ройбуш</p>
+                <p class="description1__sup">190 р. </p>
+              </div>
+
+              <div class="description1">
+                <p class="description1__sub description1__title">МОЛОЧНЫЕ КОКТЕЙЛИ</p>
+                <p class="description1__sub">из мороженного в ассортименте </p>
+                <p class="description1__sup">260 р.</p>
+              </div>
+
+              <div class="description1">
+                <p class="description1__sub description1__title">ПРОХЛАДИТЕЛЬНЫЕ НАПИТКИ </p>
+                <p class="description1__sub">Кола / Кола Зеро (0,33л)</p>
+                <p class="description1__sup">240 р.</p>
+
+                <p class="description1__sub">Тоник(0,25л)</p>
+                <p class="description1__sup">190 р.</p>
+
+                <p class="description1__sub">ВодаDolomiaExclusive cгазом / без газа (0,33 л)</p>
+                <p class="description1__sup">290 р.</p>
+
+                <p class="description1__sub">Вода IceMountain c газом (0,25 л)</p>
+                <p class="description1__sup">120 р.</p>
+              </div>
+
+              <div class="description1">
+                <p class="description1__sub description1__title">НАПИТКИ СОБСТВЕННОГО ПРОИЗВОДСТВА</p>
+                <p class="description1__sub">Клюквейн б.а</p>
+                <p class="description1__sup">220 р.</p>
+
+                <p class="description1__sub">Компот из сухофруктов домашний</p>
+                <p class="description1__sup">175 р.</p>
+
+                <p class="description1__sub">Компот Вишневый пряный</p>
+                <p class="description1__sup">175 р</p>
+
+                <p class="description1__sub">Морс клюквенно-брусничный (0,33 л)</p>
+                <p class="description1__sup">200 р.</p>
+              </div>
+
+              <div class="description1">
+                <p class="description1__sub description1__title">ДОМАШНИЕ ЛИМОНАДЫ (0,5л) </p>
+                <p class="description1__sub">Малиновый/ Клубнично-базиликовый/ Облепиховый/ Огуречно-базиликовый</p>
+                <p class="description1__sup">290 р.</p>
+
+                <p class="description1__sub">Мохито б.а.</p>
+                <p class="description1__sup">260 р.</p>
+              </div>
+            </div>
+
+            <!-- АЛКОГОЛЬНЫЕ НАПИТКИ -->
+            <div class="no-active1" id="men2">
+              <div class="description1">
+                <p class="description1__sub description1__title">ВОДКА (0.05 л)</p>
+                <p class="description1__sub">Царская серебро</p>
+                <p class="description1__sup">190 р.</p>
+
+                <p class="description1__sub">Царская золотая</p>
+                <p class="description1__sup">260 р.</p>
+
+                <p class="description1__sub">Белуга</p>
+                <p class="description1__sup">340 р. </p>
+
+                <p class="description1__sub">Онегин</p>
+                <p class="description1__sup">390 р.</p>
+              </div>
+
+              <div class="description1">
+                <p class="description1__sub description1__title">ВОДКА ОСОБАЯ</p>
+                <p class="description1__sub">Дж.Дж.Курберг Хмель Органик/ Дж. Дж. Курберг" Золотой Корень</p>
+                <p class="description1__sup">430 р.</p>
+
+                <p class="description1__sub">Filliers, Dry Gin 28 "Sloe Gin",</p>
+                <p class="description1__sup">690 р.</p>
+
+                <p class="description1__sub">"Першачок ад Дзеда" Традыцыйны С хреном</p>
+                <p class="description1__sup">290 р.</p>
+
+                <p class="description1__sub">Самовар яблочный/ сливовый</p>
+                <p class="description1__sup">390 р.</p>
+
+                <p class="description1__sub">Самовар грушевый</p>
+                <p class="description1__sup">430 р.</p>
+
+                <p class="description1__sub">Ракия Саймекс Айвовая/ Грушевая/ Сливовая</p>
+                <p class="description1__sup">390 р.</p>
+
+                <p class="description1__sub">Армениан Гарден Кизиловый/ Арцах Тутовый Серебряный</p>
+                <p class="description1__sup">390 р.</p>
+              </div>
+
+              <div class="description1">
+                <p class="description1__sub description1__title">ДИСТИЛЯТЫ (0.05 л)</p>
+                <p class="description1__sub">Самовар Купеческий/ Деревенский Ржаной/ Деревенский самогон пшеница</p>
+                <p class="description1__sup">290 р.</p>
+
+                <p class="description1__sub">Хлебное вино солодовое</p>
+                <p class="description1__sup">490 р.</p>
+
+                <p class="description1__sub">Зерногон ячменный/ Зерногон Овес</p>
+                <p class="description1__sup">290 р.</p>
+
+                <p class="description1__sub"> "Першачок ад Дзеда" Традыцыйны Пшенично-ржаной</p>
+                <p class="description1__sup">290 р.</p>
+
+                <p class="description1__sub">"Першачок ад Дзеда" Традыцыйны</p>
+                <p class="description1__sup">290 р.</p>
+
+                <p class="description1__sub">"Першачок ад Дзеда" Люты</p>
+                <p class="description1__sup">290 р.</p>
+              </div>
+
+              <div class="description1">
+                <p class="description1__sub description1__title">ДЕГУСТАЦИОННЫЙ СЕТ</p>
+                <p class="description1__sub">Самогонов зерновых(5 по 50 мл на выбор из зерновых самогонов)</p>
+                <p class="description1__sup">1200 р.</p>
+
+                <p class="description1__sub">Плодовых и солодовых самогонов(5 по 50 на выбор из плодовых самогонов и
+                  солодового хлебного вина)</p>
+                <p class="description1__sup">1600 р.</p>
+
+                <p class="description1__sub">Полугаров(5 по 50 мл на выбор из зерновых самогонов)</p>
+                <p class="description1__sup">1800 р.</p>
+
+                <p class="description1__sub">Водок Особых(3 по 50 мл на выбор из зерновых самогонов)</p>
+                <p class="description1__sup">1200 р.</p>
+
+                <p class="description1__sub">Пяти порций на Ваш выбор</p>
+                <p class="description1__sup">700 р.</p>
+              </div>
+
+              <div class="description1">
+                <p class="description1__sub description1__title">СОГРЕВАЮЩИЕ НАПИТКИ</p>
+                <p class="description1__sub">КОКТЕЙЛИ АЛКОГОЛЬНЫЕ (0,25 л)</p>
+                <p class="description1__sub">Здоровье/ Рассвет/ Красная поляна/ Гусарский/ Бабье лето</p>
+                <p class="description1__sup">390 р.</p>
+
+                <p class="description1__sub">МОХИТО (0.35 л)</p>
+                <p class="description1__sub">Клубничный/ Малиновый/ Облепиховый/ Классический</p>
+                <p class="description1__sup">390 р.</p>
+
+                <p class="description1__sub">НАСТОЙКИ (0.05 л)</p>
+                <p class="description1__sub">Вишневка/ Клюковка/ Перцовка/ Хреновуха/ Клубника на коньяке/ Укроповка/
+                  Чайная
+                  с малиной/ Черная смородина на коньяке</p>
+                <p class="description1__sup">290 р.</p>
+              </div>
+
+            </div>
+
+            <!-- Пиво -->
+            <div class="no-active1" id="men3">
+              <div class="description1">
+                <p class="description1__sub description1__title">РАЗЛИВНОЕ ПИВО</p>
+                <p class="description1__sub">Пиво Клаштер светлое (Чехия)</p>
+                <p class="description1__sup">0,3л/0,5л <br>240/340 р.</p>
+              </div>
+
+              <div class="description1">
+                <p class="description1__sub description1__title">БУТЫЛОЧНОЕ ПИВО</p>
+                <p class="description1__sub">Maisel`s Weisse Alkoholfrei(0,5л)</p>
+                <p class="description1__sup">390 р.</p>
+
+                <p class="description1__sub">
+                  "Maisel's Weisse" Original/"Майзель'с Вайсе"
+                  <br>Оригинальное(0.5 л)
+                  <br>Светлое пшеничное (Германия)
+                </p>
+                <p class="description1__sup">390 р.</p>
+              </div>
+
+              <div class="description1">
+                <p class="description1__sub description1__title">БУТЫЛОЧНОЕ ПИВО САНКТ-ПЕТЕРБУРГА</p>
+                <p class="description1__sub">Kriek de Lutin/Вишневый Эль (0.33л)</p>
+                <p class="description1__sup">340 р.</p>
+
+                <p class="description1__sub">Specialty Ale «Сhalk of fate»/Специальный Эль«Мел Судьбы» (0,375 л)</p>
+                <p class="description1__sup">490 р.</p>
+
+                <p class="description1__sub">English Barleywine/Английский Барливайн (0,375 л)</p>
+                <p class="description1__sup">690 р.</p>
+
+                <p class="description1__sub">Cider Semi-dry/Сидр полусухой (0.33л)</p>
+                <p class="description1__sup">340 р.</p>
+
+                <p class="description1__sub">Puare Semi-dry/Пуаре полусухой (0,33 л)</p>
+                <p class="description1__sup">340 р.</p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.kitchen-menu__nav1').click(function (event) {
+        $('.no-active1').removeClass('active1');
+        var num = $(this).attr('data-num');
+        $('#men' + num).addClass('active1');
+        $('.kitchen-menu__nav1').removeClass('selected1');
+        $('#menuNa' + num).addClass('selected1');
+      });
+    });
+  </script>
+</body>
+
+</html>
